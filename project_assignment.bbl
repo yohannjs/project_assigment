@@ -1,0 +1,269 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{espen}{report}{}
+      \name{author}{1}{}{%
+        {{hash=723af5b2242b694edc94243c5bf03ed6}{%
+           family={Waaga},
+           familyi={W\bibinitperiod},
+           given={Espen},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{723af5b2242b694edc94243c5bf03ed6}
+      \strng{fullhash}{723af5b2242b694edc94243c5bf03ed6}
+      \strng{bibnamehash}{723af5b2242b694edc94243c5bf03ed6}
+      \strng{authorbibnamehash}{723af5b2242b694edc94243c5bf03ed6}
+      \strng{authornamehash}{723af5b2242b694edc94243c5bf03ed6}
+      \strng{authorfullhash}{723af5b2242b694edc94243c5bf03ed6}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Machine Learning for Automatic Classification of Wind Turbines}
+      \field{type}{Master thesis}
+      \field{year}{2019}
+    \endentry
+    \entry{ml_for_wt_cond_monit_rev}{article}{}
+      \name{author}{8}{}{%
+        {{hash=046c3df9d9a3c554e5dc27e5450a00ff}{%
+           family={Stetco},
+           familyi={S\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6710e600c2fe33788cba45dd965d469f}{%
+           family={Dinmohammadi},
+           familyi={D\bibinitperiod},
+           given={Fateme},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ce8bdf26512fc6ba6077c11af09691a8}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Xingyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=17eae82bf918cce6367751ff51cd57a6}{%
+           family={Robu},
+           familyi={R\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=8203c46986abcdec01a47dbe2854f9f6}{%
+           family={Flynn},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6911d88cbaeffd808267e734673654b4}{%
+           family={Barnes},
+           familyi={B\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8812a00b5f17adf9c30f204aec0ff809}{%
+           family={Keane},
+           familyi={K\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7eb52cf7fdd8fd69f1fbce8f1c390582}{%
+           family={Nenadic},
+           familyi={N\bibinitperiod},
+           given={Goran},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Ltd}%
+      }
+      \strng{namehash}{adf3691951c2275186c961257e8e8121}
+      \strng{fullhash}{d6e90d88516a10d971f632b942873fd0}
+      \strng{bibnamehash}{adf3691951c2275186c961257e8e8121}
+      \strng{authorbibnamehash}{adf3691951c2275186c961257e8e8121}
+      \strng{authornamehash}{adf3691951c2275186c961257e8e8121}
+      \strng{authorfullhash}{d6e90d88516a10d971f632b942873fd0}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{<p>This paper reviews the recent literature on machine learning (ML) models that have been used for condition monitoring in wind turbines (e.g. blade fault detection or generator temperature monitoring). We classify these models by typical ML steps, including data sources, feature selection and extraction, model selection (classification, regression), validation and decision-making. Our findings show that most models use SCADA or simulated data, with almost two-thirds of methods using classification and the rest relying on regression. Neural networks, support vector machines and decision trees are most commonly used. We conclude with a discussion of the main areas for future work in this domain.</p>}
+      \field{issn}{0960-1481}
+      \field{journaltitle}{Renewable Energy}
+      \field{title}{Machine learning methods for wind turbine condition monitoring: A review}
+      \field{volume}{133}
+      \field{year}{2019}
+      \field{pages}{620\bibrangedash 635}
+      \range{pages}{16}
+      \keyw{Renewable Energy ; Wind Farms ; Condition Monitoring ; Machine Learning ; Prognostic Maintenance ; Engineering}
+    \endentry
+    \entry{brockwell_davis_advanced}{book}{}
+      \name{author}{2}{}{%
+        {{hash=c23a4ba530c4691d74464c64be44c297}{%
+           family={Brockwell},
+           familyi={B\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=8a2bb053c938a3254c68ec9fb886a907}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Richard\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag New York, Inc.}%
+      }
+      \strng{namehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{fullhash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{bibnamehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{authorbibnamehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{authornamehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{authorfullhash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Time Series: Theory and Methods Second Edition}
+      \field{year}{1991}
+    \endentry
+    \entry{tsc_rev}{article}{}
+      \name{author}{3}{}{%
+        {{hash=62fd240774506ceaf8d208ed9c0a89ef}{%
+           family={Aghabozorgi},
+           familyi={A\bibinitperiod},
+           given={Saeed},
+           giveni={S\bibinitperiod}}}%
+        {{hash=770ba86e813a5c222735dc6d67b858a9}{%
+           family={Shirkhorshidi},
+           familyi={S\bibinitperiod},
+           given={Ali\bibnamedelima Seyed},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=013c115a2e6120f83443cfbf00420f9a}{%
+           family={Wah},
+           familyi={W\bibinitperiod},
+           given={Teh\bibnamedelima Ying},
+           giveni={T\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V.}%
+      }
+      \strng{namehash}{58dc156424df8694530c6f9733b36f18}
+      \strng{fullhash}{58dc156424df8694530c6f9733b36f18}
+      \strng{bibnamehash}{58dc156424df8694530c6f9733b36f18}
+      \strng{authorbibnamehash}{58dc156424df8694530c6f9733b36f18}
+      \strng{authornamehash}{58dc156424df8694530c6f9733b36f18}
+      \strng{authorfullhash}{58dc156424df8694530c6f9733b36f18}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0306-4379}
+      \field{journaltitle}{Information Systems}
+      \field{title}{Time-series clustering - A decade review}
+      \field{volume}{53}
+      \field{year}{2015}
+      \field{pages}{16}
+      \range{pages}{1}
+      \keyw{Computer Science – Analysis ; Gene Expression – Analysis ; Financial Markets – Analysis}
+    \endentry
+    \entry{ts_data_mining}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7530d2777f6fd2e9eb6345cabc7cf6f9}{%
+           family={Philippe\bibnamedelima Esling},
+           familyi={P\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Carlos\bibnamedelima Agon},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
+      \strng{fullhash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
+      \strng{bibnamehash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
+      \strng{authorbibnamehash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
+      \strng{authornamehash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
+      \strng{authorfullhash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Cumputing Surveys}
+      \field{number}{45}
+      \field{title}{Time-series data mining}
+      \field{year}{2012}
+    \endentry
+    \entry{brockwell_davis}{book}{}
+      \name{author}{2}{}{%
+        {{hash=c23a4ba530c4691d74464c64be44c297}{%
+           family={Brockwell},
+           familyi={B\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=8a2bb053c938a3254c68ec9fb886a907}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Richard\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing Switzerland}%
+      }
+      \strng{namehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{fullhash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{bibnamehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{authorbibnamehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{authornamehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \strng{authorfullhash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Time Series and Forecasting Third Edition}
+      \field{year}{2016}
+    \endentry
+    \entry{stoch_pros}{book}{}
+      \name{author}{1}{}{%
+        {{hash=bf5f2440b50cd085a0515d2dd4c3cf92}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={Sheldon\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press Elsevier Inc.}%
+      }
+      \strng{namehash}{bf5f2440b50cd085a0515d2dd4c3cf92}
+      \strng{fullhash}{bf5f2440b50cd085a0515d2dd4c3cf92}
+      \strng{bibnamehash}{bf5f2440b50cd085a0515d2dd4c3cf92}
+      \strng{authorbibnamehash}{bf5f2440b50cd085a0515d2dd4c3cf92}
+      \strng{authornamehash}{bf5f2440b50cd085a0515d2dd4c3cf92}
+      \strng{authorfullhash}{bf5f2440b50cd085a0515d2dd4c3cf92}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Probability Models 11th Edition}
+      \field{year}{2014}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

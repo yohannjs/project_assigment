@@ -1,0 +1,67 @@
+\documentclass[11pt,english,a4paper,openright]{report}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amsthm,bm} % Math packages
+\usepackage{graphicx} % To include figures
+\usepackage{fancyhdr} % Allows for headers
+\usepackage{lastpage} % Allows for page numbering in footer
+\usepackage{hyperref} % To include hyperlinks in the text and footnotes
+\usepackage{tcolorbox} % To make colourful boxes (objectives)
+\usepackage[Lenny]{fncychap} % To get fance chapter headings. Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+%\usepackage{minted} % To include code in project
+% Check out https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted for examples!
+\usepackage[citestyle=numeric, bibstyle=numeric, sorting=none]{biblatex} % For references
+\addbibresource{references_books.bib}
+\addbibresource{references_tsc.bib}
+\addbibresource{references_ml_wind_turbine.bib}
+
+
+\newtheorem{theorem}{Definition} % To allow labelled definitions
+
+\begin{document}
+
+\setlength\parindent{0pt} % Zero Indent in paragraphs
+
+\pagestyle{fancy}
+
+\begin{titlepage}
+    \centering
+    
+    {\LARGE A Literature Review of Unsupervised Machine Learning Techniques Used for Condition Monitoring of Wind Turbines} \\ [\baselineskip]
+    
+    {\Large Written by} \\ 
+    {\Large Yohann Jacob Sandvik } \\
+
+    \begin{abstract}
+        Here the abstract will be.
+    \end{abstract}
+
+\end{titlepage}
+
+
+\pagenumbering{arabic} % Page numbering in the table of contents
+\fancyhf{}
+%\lhead{left header}
+%\rhead{right header}
+%\lfoot{left footer}
+\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+\tableofcontents
+\newpage
+
+
+\input{intro/intro.tex}
+
+\input{intro/method.tex}
+
+\input{wind_turbine/wind_turbine.tex}
+
+\input{theory/theory.tex}
+
+\input{discussion_conclusion/discussion_conclusion.tex}
+
+% \input{9_appendix/}
+
+\printbibliography
+
+\end{document}

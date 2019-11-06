@@ -1,0 +1,79 @@
+\newpage
+\chapter{Time Series Clustering}
+Time-series clustering (TSC) can be divided into three components. How the time series is represented, which metric is used to measure similarity between time series, and what algorithm is used to cluster a set of time series. This chapter will give a short description of what specific type of TSC that this report will consider, it will go through the aforementioned steps of a TSC system, give an in-depth description of some time-series models and finally show some metrics used to evaluate a TSC system. 
+
+
+In this report we will deal with \textit{discrete time series}. A time series is defined as a set of observations $\{x_t\}$ recorded at a specific time $t$. A discrete time series is a time series where the set of times when observations are made ($T_0$) is discrete \cite{brockwell_davis_advanced}. A multivariate time series can be viewed as a set of vectors $\{\mathbf{x}_t\}$ where each set of vector elements $\{x^i_t\}$ is an individual time series. This means that the elements of the same vector $[x^1_t, x^2_t,...,x^N_t]$ are separate observations made at the same time instance $t$. In a wind turbine, measurements of the temperature in the gear box made every 10 seconds can be considered a univariate time series. While the set of measurements made every 10 seconds of the temperature in the gear box, the power produced by the turbine, and the wind speed ahead of the blades can be considered a multivariate time series.
+  
+
+\section{Types of Times-Series Clustering}
+There are three types of TSC, \textit{whole-series TSC}, \textit{subsequence TSC} and \textit{time-point TSC}. Whole-series TSC is when multiple ''whole'' time series are clustered with respect to each other. Subsequence TSC comprises the clustering of subsequences of the same time series with respect to each other. The defining difference between whole-series and subsequence TSC is that whole-series TSC clusters multiple time series while subsequence TSC clusters clusters different subsequences of the same time series. In time-point clustering one clusters individual data points from multiple time-series with the same timestamp with respect to each other. One can consider it as regular clustering on the datapoints of a time series at a single time-instance. 
+
+\section{Representation Methods}
+% Present the different ways that times series can be represented, time-domain, DFT, Wavelet transform, etc. Transition into time series models by ending section with the fact that time series can be modeled by making assumptions about how data was generated creating \textbf{models}.
+There are numerous ways which a time series can be represented. \textcite{tsc_rev} define a time series representation given time series data $\{x_t\} = \{x_1, x_2, ... ,x_T\}$ as transforming the time series into another vector $\{x_t\} = \{\hat{x}_1, \hat{x}_2, ... ,\hat{x}_L\}$ where $L < T$. In theory $L=T$, but most often the point in transforming a time series is to reduce the amount of information present in the raw time series to more easily reveal patterns of interest. According to \textcite{tsc_rev, ts_data_mining} representation methods can broadly be categorized into four categories: % Add papers that this paper cites for this reference 
+
+\begin{itemize}
+    \item \textbf{Non-data adaptive}: Here the parameters of the transformation are the same for every time series \cite{ts_data_mining}. Spectral transformations such as the Discrete Fourier Transform (DFT) and the Discrete Wavelet Transform (DWT) fall within this category. 
+    \item \textbf{Data adaptive}: The name here implies that the parameters of the transformation such as the length of the time series can change for every specific time series \cite{ts_data_mining}. These methods focus on approximating a given time series in the best possible manner by reducing the global reconstruction error \cite{tsc_rev}.
+    \item \textbf{Model based}: These representations attempt to fit a stochastic model to the data \cite{tsc_rev}. Examples of models include Autoregressive Moving Average (ARMA) models, and Hidden Markov Models (HMM).
+    \item \textbf{Data dictated}: This representation method differs from the aforementioned methods in as much that it automatically chooses the compression ratio based on the characteristics of the raw time series \cite{tsc_rev}.
+\end{itemize}
+
+Data adaptive representations will be better at approximating time series than non-adaptive methods, but since transformation parameters can change for different time series it is harder to compare time series \cite{tsc_rev}. What is worth noting about model based representation methods is that they make assumptions about the underlying process that is generating the time series data \cite{ts_data_mining}. Hence, it can be a good way of integrating a priori knowledge about the time series into the clustering system (\textbf{correct word}?). % In this review we will mostly deal with non-data adaptive representations and model based representations.
+In the sub-section below there is a more in-depth description of the two common time series models ARMA models, and HMM. % In the section \ref{s:wt_cond_mon} we will give a description of the general behaviour of wind turbines and what knowledge is appropriate to include into a model.
+
+\section{Time Series Models}
+% Define a \textbf{time series model}
+To select suitable mathematical models for a dataset, we have to allow for the random nature of future observations. This is done by assuming that each observation in a time series $x_t$ is a realization of a particular random variable $X_t$. The time series can then be modelled as a collection/set of random variables $\{X_t\}$, also known as a \textit{stochastic process} \cite{brockwell_davis_advanced}. \newline
+
+To define an ARMA model, one needs to have a clear understanding of the terms white noise process, and stationary process. We say that the stochastic process $\{Z_t\}$ is ''white noise'' with zero mean, and variance $\sigma^2$ ($\{Z_t\} \sim WN(0, \sigma^2)$) if and only if $\{Z_t\}$ is zero mean, and every random variable contained in $\{Z_t\}$ is uncorrelated with every other random variable contained in $\{Z_t\}$. % There is a more rigourus definition of this in page 77 of \cite{brockwell_davis_advanced}, but it requires the definition of the autocorrelation function.
+A stochastic process $\{X_t\}$ is said to be weakly wide-sense stationary if the mean, and variance are constant for all terms in the process. $\{X_t\}$ is said to be weakly short-term stationary if the mean and variance of terms are constant for distinct time periods within the duration of the process, but are not constant for all terms in the process. For brevity the term ''stationary process'' will be used when refering to a \textit{weakly wide-sense stationary process}. 
+
+\subsection{Autoregressive Moving Average Models}
+An ARMA model descirbes a time series in terms of difference equations. It can be considered a combination of two smaller models, an autoregressive (AR) model and a moving average (MA) model. Let $\{X_t\}$ be a stationary process. An $\mathrm{MA}(q)$ model will describe every term $X_t$ as a linear combination of $q$ distinct white noise terms as in equation \eqref{eq:MA_q}.
+
+\begin{equation}
+    X_t = Z_{t} + \theta_1 Z_{t-1} + ... + \theta_q Z_{t-q}
+    \label{eq:MA_q}
+\end{equation}
+
+Whereas an $\mathrm{AR}(p)$ model will describe every term $X_t$ as a linear combination of $p$ previous terms of $\{X_t\}$ as in equation \eqref{eq:AR_p}
+
+\begin{equation}
+    X_t = \phi_1 X_{t-1} + ... + \phi_p X_{t-p}
+    \label{eq:AR_p}
+\end{equation}
+
+Putting equations \eqref{eq:AR_p} and \eqref{eq:MA_q} together, an $\mathrm{ARMA}(p,q)$ model will describe every term $X_t$ as a linear combination of $p$ previous terms, and $q$ white noise terms as in equation \eqref{eq:ARMA_p_q}.
+
+\begin{equation}
+    X_t - \phi_1 X_{t-1} - ... - \phi_p X_{t-p} = Z_{t} + \theta_1 Z_{t-1} + ... + \theta_q Z_{t-q}
+    \label{eq:ARMA_p_q}
+\end{equation}
+
+Given that the polynomials $1 + \theta_1 z + \theta_2 z^2 + ... + \theta_q z^q$ and $1 - \phi_1 z - \phi_2 z^2 - ... - \phi_p z^p$ have no common factors \cite{brockwell_davis}.
+
+\subsection{Hidden Markov Models} \label{s:hmm}
+Let $\{X_n\}$ be a stochastic process where the random variables contained in $\{X_n\}$ only can take on a finite number of values which we will call states. Let $X_n$ denote the state at time period $n$. The probability of $X_n$ transitioning from state $i$ to state $j$ at the next time period $n+1$ is denoted $p_{ij}$. It might seem natural that $p_{ij}$ is conditional on what the state was in the last time period. $\{X_t\}$ is said to be a \textit{Markov chain} if $p_{ij}$ only is conditional on the last past state, as shown in equation \eqref{eq:markov_property}
+
+\begin{equation}
+    \begin{split}
+        p_{ij} &= P(X_n = i | X_{n-1} = i_{n-1}, X_{n-2} = i_{n-2},..., X_{1} = i_{1}, X_{0} = i_{0}) \\
+        &= P(X_n = i| X_{n-1} = i_{n-1})      
+    \end{split}
+    \label{eq:markov_property}
+\end{equation}
+
+% Missing
+% Initial state probabilities
+% difference between markov chain and process
+
+Suppose now that the states that the process is in are hidden from the observer. Instead there exists a finite set of signals $\{S\}$ that are emmitted when the process enters a state. In addition, let the probability of emmitting signal $s$, at time period $n$, in state $j$ ($P(S_n = s | X_n = j)$) be independent of previous states, and signals emmitted. A model of this type where the signals $S_1, S_2, ...$ are observed, and the underlying Markov states remain hidden is called a \textit{hidden Markov chain model} \cite{stoch_pros}. 
+
+\section{Similarity Metrics}
+
+\section{Clustering Algorithms}
+Brief introduction to clustering techniques. Go through how the different algorithms cluster time series based on \textit{similarity}
+
+\section{Evaluation Indices} 

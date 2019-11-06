@@ -1,0 +1,43 @@
+\newpage
+\chapter{Method}
+
+\section{Search terms}
+To find the relevant literature on the subjects of interest the search engine Oria was used to search the university library of the NTNU. Oria was preferred over other search engines such as Google Scholar because Oria allows one to combine multiple search terms in unison using ''AND'' or ''OR'', and because it allows the user to choose whether the search term should be in the title, subject, or other parts of the articles. The review will only consider articles published in peer-reviewed journals. Table \ref{tab:search_results} summarizes the search results. The \textit{Title} and \textit{General content} columns show which terms were used in the different searches; which terms where required to be in the title, and which terms could be in the ''general content'', meaning any part of the article. Let ''$\times$'' represent the AND operator between two search terms, and ''$\wedge$'' represent the OR operator. The ''*'' operator means that the search will include any word beginning with the word before the star, e.g \textit{detect*} includes \textit{detection}, \textit{detecting}, \textit{detected}, etc. The $N_f$ and $N_i$ columns show how many results each search yielded and how many articles from each search were included in the review, respectively. \bigskip 
+
+The last three rows in table \ref{tab:search_results} are somewhat disconnected from the rest of the table. The term ''forward snowballing'' refers to finding other articles by finding articles citing a specific source, and the term ''backward snowballing'' refers to finding articles by going through the references of a particular source.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ |c|c|c|c|c| } 
+    \hline
+    Nr. & Title terms & General terms & $N_r$ & $N_i$ \\
+    \hline
+    \hline
+    1 & time $\times$ series $\times$ clustering &  & 219 & 121 \\ 
+    \hline
+    2 & wind $\times$ turbine $\times$ (monitor* $\wedge{}$ detect*) & machine $\times$ learning & 86 & 59 \\ 
+    \hline
+    3 & (monitor* $\wedge{}$ detect*) $\times$ clustering & time $\times$ series & 187 &  \\
+    \hline
+    \multicolumn{4}{|c|}{Articles included through backward snowballing} & 0 \\
+    \hline
+    \multicolumn{4}{|c|}{Articles included through forward snowballing} & 0 \\
+    \hline
+    \hline
+    \multicolumn{4}{|c|}{Total number of articles included} & 35 \\
+    \hline
+    \end{tabular}
+    \caption{Search results}
+    \label{tab:search_results}
+\end{table}
+
+\section{Screening method}
+To make sure that the articles used were relevant, the review is limited to articles published 2014 or later. Some older articles are included through backward snowballing for their historical importance. There were three levels of screening, screening of the title, abstract, and full article. Title-screening was primarily for seeding out duplicate articles returned from the search-engine. The screening of the abstract and full-article were to identify the articles that were not relevant for the review and exclude them. \bigskip
+
+It has been a challenge to include enough literature to get a good overview of the different methods within time series clustering, but also not more literature the author alone could review in the time available. So although the objectives is to get an overview of the different time series clustering methods, and an overview of the current machine learning methods used for monitoring wind turbines, the author does not claim to have made a complete exhaustive summary of all the possible methods. \bigskip
+
+When screening articles from search 1, articles regarding time-series forecasting, articles only using clustering as a preprocessing step, articles working on regression or classification, and articles using image time series were not included. The scope is restricted to work focusing on data mining using time-series clustering techniques. \bigskip
+
+When screening articles from search number two, the procedure is slightly different. The objective here is to get a more superficial overview over the different machine-learning techniques applied. There has already been written a great literature review on exactly that topic by \textcite{ml_for_wt_cond_monit_rev}. So to complement this, the new articles included from search two have primarily been relevant articles not included in \cite{ml_for_wt_cond_monit_rev}, and work done after this review was published.
+
+For the third search there where a lot of articles that overlapped from the first search. Articles not using time-series data where discarded
