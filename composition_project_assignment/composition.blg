@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.13
+[0] Config.pm:307> INFO - Logfile is 'composition.blg'
+[27] biber:315> INFO - === sø. okt.  6, 2019, 17:09:40
+[43] Biber.pm:375> INFO - Reading 'composition.bcf'
+[116] Biber.pm:905> INFO - Found 0 citekeys in bib section 0
+[123] Utils.pm:289> WARN - The file 'composition.bcf' does not contain any citations!
+[134] bbl.pm:648> INFO - Writing 'composition.bbl' with encoding 'UTF-8'
+[134] bbl.pm:751> INFO - Output to composition.bbl
+[134] Biber.pm:110> INFO - WARNINGS: 1

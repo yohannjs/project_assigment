@@ -1,0 +1,134 @@
+\documentclass[12pt,english,a4paper,openright]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amsthm,bm} % Math packages
+\usepackage{graphicx} % To include figures
+\usepackage{fancyhdr} % Allows for headers
+\usepackage{lastpage} % Allows for page numbering in footer
+%\usepackage{minted} % To include code in project
+% Check out https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted for examples!
+\usepackage[citestyle=numeric, bibstyle=numeric, sorting=none]{biblatex} % For references
+\addbibresource{references.bib}
+
+\begin{document}
+
+\setlength\parindent{0pt} % Zero Indent in paragraphs
+
+\pagestyle{fancy}
+
+\begin{titlepage}
+    \centering
+    
+    {\LARGE A literary review of machine learning for automatic classification of windmill turbines} \\ [\baselineskip]
+    
+    {\Large Written by} \\ 
+    {\Large Yohann Jacob Sandvik } \\
+
+    \begin{abstract}
+        What happens if I make a change. Will it show up in the gitrepo?
+    \end{abstract}
+
+\end{titlepage}
+
+
+\pagenumbering{arabic} % Page numbering in the table of contents
+\fancyhf{}
+%\lhead{left header}
+%\rhead{right header}
+%\lfoot{left footer}
+\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+\tableofcontents
+\newpage
+
+
+\section{Introduction}
+This section will be a general introduction to the assignment. 
+Present the:
+\begin{itemize}
+    \item Motivation
+    \item Scope of the project assignment
+    \item ''Long term'' goals of the project
+\end{itemize}
+
+Long term goals meaning the ability to predict whether a turbine needs maintenance before failure. To save the costs of regular maintenance and reduce down-time of windmills. As of now I was thinking that the scope of the project assignment could be a literary review of:
+
+\begin{enumerate}
+    \item Clustering of time series data
+    \item Performance indicators of wind farms
+    \item Condition monitoring of wind turbines
+    \item Machine learning methods used for condition monitoring of wind turbines
+\end{enumerate}
+
+\section{Theory}
+
+\subsection{Time series}
+Give a rigorous definition of a time series model. Describe the different domains of time series analysis, and time series forecasting. Introduce the data that we have as a multivariate time series model. Then continue introducing the time series models that I will be testing in the model-based clustering techniques.
+
+\subsubsection{Auto-regressive moving average models (ARMA) models}
+
+\subsubsection{Hidden Markov Models (HMMs)}
+
+\subsection{Time series clustering}
+Brief introduction to clustering techniques. Go through all the different approaches that can be made, such as representation methods, similarity measures and evaluation metrics.
+
+\subsection{Neural networks}
+Present neural networks. Explain how they usually are used as classifiers, but can be used as encoders to extract features from the time series. 
+
+\section{Condition based monitoring}
+First give a short summary of the spectra of different condition monitoring schemes.
+
+\subsection{Predictive maintenance}
+Importance of predictive maintainance, and \textbf{short summary} of current implementations of predictive maintainance schemes. 
+
+\subsection{Windmill turbines}
+Give a slightly more in-depth summary of current implementations of condition monitoring on windmill turbines 
+
+\subsection{Treating sensor-data as a multivariate time series}
+Here I would introduce the magnitude of the amount of data produced by a single windmill turbine, and illustrate the necessity for tools that can handle this amount of data in real-time. Transition into the new section of clustering of time series.
+
+\section{Time series clustering - Shape-based approach}
+(Espens master)
+
+\subsection{Model performance}
+
+\subsection{Cluster interpretation}
+Interpretation includes physical meaning of the different clusters, in regards to 
+
+\begin{itemize}
+    \item Fault diagnosis
+    \item Performance measurement \footnote{Check the two papers talking about ML for measuring performance, and condition monitoring under performance based contract.}
+    \item What type of wind turbine it is (Siemens, Hydro?, etc.). Sounds simple, but even being able to detect this would make it much easier to detect which configurations they should ''flash'' each turbine with. Because now they have to check each turbine manually.
+    \item Cluster affiliation of different turbines over time. 
+\end{itemize}
+
+\subsection{Time, and memory complexity}
+
+\section{Time series clustering - Feature-based approach}
+Here I will expand upon the current implementations of time series clustering, that first perform some type of dimensionality reduction before clustering. Have found some examples of people using neural nets for feature extraction and then use clustering on medical time series.
+
+\subsection{Model performance}
+
+\subsection{Cluster interpretation}
+
+\subsection{Time, and memory complexity}
+
+\section{Time series clustering - Model-based approach}
+In this approach they usually fit an ARMA / ARIMA model first, and then cluster the time series based on their model parameters
+
+\subsection{Model performance}
+
+\subsection{Cluster interpretation}
+
+\subsection{Time, and memory complexity}
+
+\section{Sub-sequence time series clustering}
+Sub-sequence time series (STS) clustering has received a lot of negative publicity in the articles referenced in Espens master. But, I'm not sure how we are going to do without it, if the aim is to cluster time series in real time.
+
+\section{Discussion}
+
+\section{Conclusion}
+
+\printbibliography
+
+\end{document}
