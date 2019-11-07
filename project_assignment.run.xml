@@ -81,6 +81,7 @@
     <requires type="editable">
       <file>references_books.bib</file>
       <file>references_tsc.bib</file>
+      <file>references_wind_turbine_monitoring_review.bib</file>
       <file>references_ml_wind_turbine.bib</file>
     </requires>
   </external>

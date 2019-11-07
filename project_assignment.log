@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.5)  6 NOV 2019 15:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.5)  7 NOV 2019 20:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/project_assignment.tex
-(/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/project_assignment.tex
+**/home/yohannjs/Documents/project_assigment/project_assignment.tex
+(/home/yohannjs/Documents/project_assigment/project_assignment.tex
 LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2019/08/27 v1.4j Standard LaTeX document class
@@ -665,23 +665,23 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count320
 \@quotereset=\count321
-(/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/project_assignment.aux)
+(/home/yohannjs/Documents/project_assigment/project_assignment.aux)
 \openout1 = `project_assignment.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count322
@@ -709,9 +709,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 21.
+(lastpage)             ! on input line 22.
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 22.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -719,10 +719,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
- (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/project_assignment.out) (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/project_assignment.out)
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
+ (/home/yohannjs/Documents/project_assigment/project_assignment.out) (/home/yohannjs/Documents/project_assigment/project_assignment.out)
 \@outlinefile=\write7
 \openout7 = `project_assignment.out'.
 
@@ -734,16 +734,16 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'project_assignment.bbl' found.
- (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/project_assignment.bbl)
-Package biblatex Info: Reference section=0 on input line 21.
-Package biblatex Info: Reference segment=0 on input line 21.
+ (/home/yohannjs/Documents/project_assigment/project_assignment.bbl)
+Package biblatex Info: Reference section=0 on input line 22.
+Package biblatex Info: Reference segment=0 on input line 22.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37     \end{abstract}
-                        [1] (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/project_assignment.toc
+l.38     \end{abstract}
+                        [1] (/home/yohannjs/Documents/project_assigment/project_assignment.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -761,7 +761,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.50 \newpage
               [1
 
-] (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/intro/intro.tex
+] (/home/yohannjs/Documents/project_assigment/intro/intro.tex
 Chapter 1.
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
@@ -777,34 +777,39 @@ Overfull \hbox (22.97069pt too wide) in paragraph at lines 7--7
 
 [2
 
-]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 34.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
-) (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/intro/method.tex [3] [4]
+]) (/home/yohannjs/Documents/project_assigment/method/method.tex [3]
 Chapter 2.
 
-Overfull \hbox (32.27217pt too wide) in paragraph at lines 11--30
+Overfull \hbox (78.84015pt too wide) in paragraph at lines 11--32
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5
+[4
 
-]) (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/wind_turbine/wind_turbine.tex [6]
+]) (/home/yohannjs/Documents/project_assigment/wind_turbine/wind_turbine.tex [5]
 Chapter 3.
-) (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/theory/theory.tex [7
+<wind_turbine/wt_parts.png, id=185, 1529.715pt x 882.29625pt>
+File: wind_turbine/wt_parts.png Graphic file (type png)
+<use wind_turbine/wt_parts.png>
+Package pdftex.def Info: wind_turbine/wt_parts.png  used on input line 8.
+(pdftex.def)             Requested size: 288.0011pt x 166.10327pt.
+[6
 
-]
+ </home/yohannjs/Documents/project_assigment/wind_turbine/wt_parts.png>]) (/home/yohannjs/Documents/project_assigment/theory/theory.tex [7]
 Chapter 4.
 [8
 
 ]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 17.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+
 Overfull \hbox (0.27167pt too wide) in paragraph at lines 19--20
 []\OT1/cmr/bx/n/10.95 Model based\OT1/cmr/m/n/10.95 : These rep-re-sen-ta-tions at-tempt to fit a stochas-tic model
  []
@@ -814,7 +819,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-[9] [10]) (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/discussion_conclusion/discussion_conclusion.tex [11]
+[9] [10]) (/home/yohannjs/Documents/project_assigment/discussion_conclusion/discussion_conclusion.tex [11]
 Chapter 5.
 [12
 
@@ -843,29 +848,29 @@ AED: lastpage setting LastPage
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 67.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 67.
- (/home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/project_assignment.aux)
+ (/home/yohannjs/Documents/project_assigment/project_assignment.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 67.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 67.
 Package rerunfilecheck Info: File `project_assignment.out' has not changed.
-(rerunfilecheck)             Checksum: A42974F2E833A3FBE96FC5A19FACD339;1405.
+(rerunfilecheck)             Checksum: F28608B64A126807C602C94F4BB0B61C;1479.
 Package logreq Info: Writing requests to 'project_assignment.run.xml'.
 \openout1 = `project_assignment.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 67.
  ) 
 Here is how much of TeX's memory you used:
- 23413 strings out of 492167
- 440692 string characters out of 6127803
- 903220 words of memory out of 5000000
- 27327 multiletter control sequences out of 15000+600000
+ 23431 strings out of 492167
+ 440967 string characters out of 6127803
+ 904811 words of memory out of 5000000
+ 27339 multiletter control sequences out of 15000+600000
  21359 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,15n,75p,1421b,1717s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,15n,75p,1396b,1717s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on /home/yohannjs/Documents/clustering_windmill_monitoring/latex_report/project_assignment.pdf (17 pages, 213973 bytes).
+Output written on /home/yohannjs/Documents/project_assigment/project_assignment.pdf (17 pages, 1596422 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 189 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 337 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 

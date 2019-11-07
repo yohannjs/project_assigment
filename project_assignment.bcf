@@ -2128,30 +2128,30 @@
   <bcf:bibdata section="0">
     <bcf:datasource type="file" datatype="bibtex">references_books.bib</bcf:datasource>
     <bcf:datasource type="file" datatype="bibtex">references_tsc.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">references_wind_turbine_monitoring_review.bib</bcf:datasource>
     <bcf:datasource type="file" datatype="bibtex">references_ml_wind_turbine.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">espen</bcf:citekey>
-    <bcf:citekey order="2">ml_for_wt_cond_monit_rev</bcf:citekey>
-    <bcf:citekey order="3">ml_for_wt_cond_monit_rev</bcf:citekey>
-    <bcf:citekey order="4">ml_for_wt_cond_monit_rev</bcf:citekey>
-    <bcf:citekey order="5">brockwell_davis_advanced</bcf:citekey>
+    <bcf:citekey order="2">adv_meth_for_wt_cond_monit_rev</bcf:citekey>
+    <bcf:citekey order="3">adv_meth_for_wt_cond_monit_rev</bcf:citekey>
+    <bcf:citekey order="4">brockwell_davis_advanced</bcf:citekey>
+    <bcf:citekey order="5">tsc_rev</bcf:citekey>
     <bcf:citekey order="6">tsc_rev</bcf:citekey>
     <bcf:citekey order="7">tsc_rev</bcf:citekey>
+    <bcf:citekey order="7">ts_data_mining</bcf:citekey>
     <bcf:citekey order="8">tsc_rev</bcf:citekey>
     <bcf:citekey order="8">ts_data_mining</bcf:citekey>
-    <bcf:citekey order="9">tsc_rev</bcf:citekey>
     <bcf:citekey order="9">ts_data_mining</bcf:citekey>
     <bcf:citekey order="10">ts_data_mining</bcf:citekey>
-    <bcf:citekey order="11">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="11">tsc_rev</bcf:citekey>
     <bcf:citekey order="12">tsc_rev</bcf:citekey>
     <bcf:citekey order="13">tsc_rev</bcf:citekey>
     <bcf:citekey order="14">tsc_rev</bcf:citekey>
-    <bcf:citekey order="15">tsc_rev</bcf:citekey>
-    <bcf:citekey order="16">ts_data_mining</bcf:citekey>
-    <bcf:citekey order="17">brockwell_davis_advanced</bcf:citekey>
-    <bcf:citekey order="18">brockwell_davis</bcf:citekey>
-    <bcf:citekey order="19">stoch_pros</bcf:citekey>
+    <bcf:citekey order="15">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="16">brockwell_davis_advanced</bcf:citekey>
+    <bcf:citekey order="17">brockwell_davis</bcf:citekey>
+    <bcf:citekey order="18">stoch_pros</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -8,12 +8,13 @@
 \usepackage{hyperref} % To include hyperlinks in the text and footnotes
 \usepackage{tcolorbox} % To make colourful boxes (objectives)
 \usepackage[Lenny]{fncychap} % To get fance chapter headings. Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
-%\usepackage{minted} % To include code in project
-% Check out https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted for examples!
+%\usepackage{minted} % To include code in project. Check out https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted for examples!
 \usepackage[citestyle=numeric, bibstyle=numeric, sorting=none]{biblatex} % For references
 \addbibresource{references_books.bib}
 \addbibresource{references_tsc.bib}
+\addbibresource{references_wind_turbine_monitoring_review.bib}
 \addbibresource{references_ml_wind_turbine.bib}
+% \addbibresource{references_other.bib}
 
 
 \newtheorem{theorem}{Definition} % To allow labelled definitions
@@ -27,17 +28,16 @@
 \begin{titlepage}
     \centering
     
-    {\LARGE A Literature Review of Unsupervised Machine Learning Techniques Used for Condition Monitoring of Wind Turbines} \\ [\baselineskip]
+    {\LARGE A Literature Review of Time-Series Clustering Techniques and Machine Learning Techniques Used for Monitoring of Wind Turbines} \\ [\baselineskip]
     
     {\Large Written by} \\ 
-    {\Large Yohann Jacob Sandvik } \\
+    {\Large Yohann  Jacob Sandvik } \\
 
     \begin{abstract}
         Here the abstract will be.
     \end{abstract}
 
 \end{titlepage}
-
 
 \pagenumbering{arabic} % Page numbering in the table of contents
 \fancyhf{}
@@ -52,7 +52,7 @@
 
 \input{intro/intro.tex}
 
-\input{intro/method.tex}
+\input{method/method.tex}
 
 \input{wind_turbine/wind_turbine.tex}
 
@@ -60,7 +60,7 @@
 
 \input{discussion_conclusion/discussion_conclusion.tex}
 
-% \input{9_appendix/}
+% \input{appendix/}
 
 \printbibliography
 

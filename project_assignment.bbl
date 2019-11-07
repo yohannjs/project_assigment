@@ -44,74 +44,47 @@
       \field{type}{Master thesis}
       \field{year}{2019}
     \endentry
-    \entry{ml_for_wt_cond_monit_rev}{article}{}
-      \name{author}{8}{}{%
-        {{hash=046c3df9d9a3c554e5dc27e5450a00ff}{%
-           family={Stetco},
-           familyi={S\bibinitperiod},
-           given={Adrian},
-           giveni={A\bibinitperiod}}}%
-        {{hash=6710e600c2fe33788cba45dd965d469f}{%
-           family={Dinmohammadi},
-           familyi={D\bibinitperiod},
-           given={Fateme},
-           giveni={F\bibinitperiod}}}%
-        {{hash=ce8bdf26512fc6ba6077c11af09691a8}{%
-           family={Zhao},
-           familyi={Z\bibinitperiod},
-           given={Xingyu},
-           giveni={X\bibinitperiod}}}%
-        {{hash=17eae82bf918cce6367751ff51cd57a6}{%
-           family={Robu},
-           familyi={R\bibinitperiod},
-           given={Valentin},
-           giveni={V\bibinitperiod}}}%
-        {{hash=8203c46986abcdec01a47dbe2854f9f6}{%
-           family={Flynn},
-           familyi={F\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=6911d88cbaeffd808267e734673654b4}{%
-           family={Barnes},
-           familyi={B\bibinitperiod},
-           given={Mike},
+    \entry{adv_meth_for_wt_cond_monit_rev}{article}{}
+      \name{author}{3}{}{%
+        {{hash=163f5fb15487584e876dffb99d4b54a0}{%
+           family={Hossain},
+           familyi={H\bibinitperiod},
+           given={Ml},
            giveni={M\bibinitperiod}}}%
-        {{hash=8812a00b5f17adf9c30f204aec0ff809}{%
-           family={Keane},
-           familyi={K\bibinitperiod},
-           given={John},
-           giveni={J\bibinitperiod}}}%
-        {{hash=7eb52cf7fdd8fd69f1fbce8f1c390582}{%
-           family={Nenadic},
-           familyi={N\bibinitperiod},
-           given={Goran},
-           giveni={G\bibinitperiod}}}%
+        {{hash=fcafa21b72e58af2e29d655e85177b76}{%
+           family={Abu-Siada},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d572470251a2a63d1344be58bcf72ea9}{%
+           family={Muyeen},
+           familyi={M\bibinitperiod},
+           given={SM},
+           giveni={S\bibinitperiod}}}%
       }
       \list{language}{1}{%
-        {eng}%
+        {English}%
       }
       \list{publisher}{1}{%
-        {Elsevier Ltd}%
+        {MDPI}%
       }
-      \strng{namehash}{adf3691951c2275186c961257e8e8121}
-      \strng{fullhash}{d6e90d88516a10d971f632b942873fd0}
-      \strng{bibnamehash}{adf3691951c2275186c961257e8e8121}
-      \strng{authorbibnamehash}{adf3691951c2275186c961257e8e8121}
-      \strng{authornamehash}{adf3691951c2275186c961257e8e8121}
-      \strng{authorfullhash}{d6e90d88516a10d971f632b942873fd0}
+      \strng{namehash}{c1954c2863451c7f138fa84830847fa9}
+      \strng{fullhash}{c1954c2863451c7f138fa84830847fa9}
+      \strng{bibnamehash}{c1954c2863451c7f138fa84830847fa9}
+      \strng{authorbibnamehash}{c1954c2863451c7f138fa84830847fa9}
+      \strng{authornamehash}{c1954c2863451c7f138fa84830847fa9}
+      \strng{authorfullhash}{c1954c2863451c7f138fa84830847fa9}
       \field{sortinit}{2}
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{<p>This paper reviews the recent literature on machine learning (ML) models that have been used for condition monitoring in wind turbines (e.g. blade fault detection or generator temperature monitoring). We classify these models by typical ML steps, including data sources, feature selection and extraction, model selection (classification, regression), validation and decision-making. Our findings show that most models use SCADA or simulated data, with almost two-thirds of methods using classification and the rest relying on regression. Neural networks, support vector machines and decision trees are most commonly used. We conclude with a discussion of the main areas for future work in this domain.</p>}
-      \field{issn}{0960-1481}
-      \field{journaltitle}{Renewable Energy}
-      \field{title}{Machine learning methods for wind turbine condition monitoring: A review}
-      \field{volume}{133}
-      \field{year}{2019}
-      \field{pages}{620\bibrangedash 635}
-      \range{pages}{16}
-      \keyw{Renewable Energy ; Wind Farms ; Condition Monitoring ; Machine Learning ; Prognostic Maintenance ; Engineering}
+      \field{issn}{1996-1073}
+      \field{journaltitle}{Energies}
+      \field{number}{5}
+      \field{title}{Methods for Advanced Wind Turbine Condition Monitoring and Early Diagnosis: A Literature Review}
+      \field{volume}{11}
+      \field{year}{2018}
+      \keyw{Energy Conversion ; System Reliability ; Maintenance ; Maintenance Management ; Fault Detection ; Wind Energy ; Diagnosis ; Catastrophic Failure Analysis ; Wind Energy ; Literature Reviews ; Condition Monitoring ; Turbines ; Data Processing ; Reliability Aspects ; Literature Reviews ; Signal Processing ; Fault Diagnosis ; Wind Power ; Wind Power ; Agricultural Economics ; Fault Diagnosis ; Turbines ; Literature Reviews ; Wind Turbines ; Agricultural Production ; Information Processing ; Wind Energy ; Downtime ; Energy Conversion ; Costs ; Wind Turbine ; Condition Monitoring ; Fault Diagnosis ; Signals ; Signal Processing Methods;}
     \endentry
     \entry{brockwell_davis_advanced}{book}{}
       \name{author}{2}{}{%
@@ -136,8 +109,8 @@
       \strng{authornamehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
       \strng{authorfullhash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Time Series: Theory and Methods Second Edition}
@@ -173,8 +146,8 @@
       \strng{authorbibnamehash}{58dc156424df8694530c6f9733b36f18}
       \strng{authornamehash}{58dc156424df8694530c6f9733b36f18}
       \strng{authorfullhash}{58dc156424df8694530c6f9733b36f18}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0306-4379}
@@ -200,8 +173,8 @@
       \strng{authorbibnamehash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
       \strng{authornamehash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
       \strng{authorfullhash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ACM Cumputing Surveys}

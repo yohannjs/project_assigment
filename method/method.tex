@@ -15,9 +15,11 @@ The last three rows in table \ref{tab:search_results} are somewhat disconnected 
     \hline
     1 & time $\times$ series $\times$ clustering &  & 219 & 121 \\ 
     \hline
-    2 & wind $\times$ turbine $\times$ (monitor* $\wedge{}$ detect*) & machine $\times$ learning & 86 & 59 \\ 
+    2 & wind $\times$ turbine $\times$ (monitor* $\wedge{}$ detect*) $\times$ review &  & 21 & 6 \\
     \hline
-    3 & (monitor* $\wedge{}$ detect*) $\times$ clustering & time $\times$ series & 187 &  \\
+    3 & wind $\times$ turbine $\times$ (monitor* $\wedge{}$ detect*) & machine $\times$ learning & 86 & 59 \\ 
+    \hline
+    4 & (monitor* $\wedge{}$ detect*) $\times$ clustering & time $\times$ series & 187 & 21 \\
     \hline
     \multicolumn{4}{|c|}{Articles included through backward snowballing} & 0 \\
     \hline
@@ -36,8 +38,8 @@ To make sure that the articles used were relevant, the review is limited to arti
 
 It has been a challenge to include enough literature to get a good overview of the different methods within time series clustering, but also not more literature the author alone could review in the time available. So although the objectives is to get an overview of the different time series clustering methods, and an overview of the current machine learning methods used for monitoring wind turbines, the author does not claim to have made a complete exhaustive summary of all the possible methods. \bigskip
 
-When screening articles from search 1, articles regarding time-series forecasting, articles only using clustering as a preprocessing step, articles working on regression or classification, and articles using image time series were not included. The scope is restricted to work focusing on data mining using time-series clustering techniques. \bigskip
+When screening articles from search one, articles regarding time-series forecasting, articles only using clustering as a preprocessing step, articles working on regression or classification, and articles using image time series were not included. The scope is restricted to work focusing on data mining using time-series clustering techniques. \bigskip
 
-When screening articles from search number two, the procedure is slightly different. The objective here is to get a more superficial overview over the different machine-learning techniques applied. There has already been written a great literature review on exactly that topic by \textcite{ml_for_wt_cond_monit_rev}. So to complement this, the new articles included from search two have primarily been relevant articles not included in \cite{ml_for_wt_cond_monit_rev}, and work done after this review was published.
+Search number two was used to find existing literature reviews on methods used for monitoring of wind turbines. Six good reviews on the subject where found, so when screening articles from search number three the objective was to get a superficial overview over the different machine-learning techniques applied, find relevant articles not included in the reviews returned in search two, and find work done after the reviews were published. \bigskip
 
-For the third search there where a lot of articles that overlapped from the first search. Articles not using time-series data where discarded
+For the fourth search some of the results overlapped with the results from the first search. Articles not using time-series data where discarded which is the main reason that so many of the results have not been used.
