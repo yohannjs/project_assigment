@@ -286,15 +286,16 @@ INPUT /home/yohannjs/Documents/project_assigment/wind_turbine/wind_turbine.tex
 INPUT /home/yohannjs/Documents/project_assigment/wind_turbine/wt_parts.png
 INPUT /home/yohannjs/Documents/project_assigment/wind_turbine/wt_parts.png
 INPUT /home/yohannjs/Documents/project_assigment/wind_turbine/wt_parts.png
-INPUT /home/yohannjs/Documents/project_assigment/theory/theory.tex
-INPUT /home/yohannjs/Documents/project_assigment/theory/theory.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /home/yohannjs/Documents/project_assigment/theory/theory.tex
+INPUT /home/yohannjs/Documents/project_assigment/theory/theory.tex
 INPUT /home/yohannjs/Documents/project_assigment/discussion_conclusion/discussion_conclusion.tex
 INPUT /home/yohannjs/Documents/project_assigment/discussion_conclusion/discussion_conclusion.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /home/yohannjs/Documents/project_assigment/project_assignment.aux
 INPUT /home/yohannjs/Documents/project_assigment/project_assignment.out
 INPUT /home/yohannjs/Documents/project_assigment/project_assignment.out
@@ -314,6 +315,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb

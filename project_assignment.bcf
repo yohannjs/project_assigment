@@ -2130,28 +2130,42 @@
     <bcf:datasource type="file" datatype="bibtex">references_tsc.bib</bcf:datasource>
     <bcf:datasource type="file" datatype="bibtex">references_wind_turbine_monitoring_review.bib</bcf:datasource>
     <bcf:datasource type="file" datatype="bibtex">references_ml_wind_turbine.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">references_other.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">espen</bcf:citekey>
     <bcf:citekey order="2">adv_meth_for_wt_cond_monit_rev</bcf:citekey>
     <bcf:citekey order="3">adv_meth_for_wt_cond_monit_rev</bcf:citekey>
-    <bcf:citekey order="4">brockwell_davis_advanced</bcf:citekey>
-    <bcf:citekey order="5">tsc_rev</bcf:citekey>
-    <bcf:citekey order="6">tsc_rev</bcf:citekey>
-    <bcf:citekey order="7">tsc_rev</bcf:citekey>
-    <bcf:citekey order="7">ts_data_mining</bcf:citekey>
-    <bcf:citekey order="8">tsc_rev</bcf:citekey>
-    <bcf:citekey order="8">ts_data_mining</bcf:citekey>
-    <bcf:citekey order="9">ts_data_mining</bcf:citekey>
-    <bcf:citekey order="10">ts_data_mining</bcf:citekey>
-    <bcf:citekey order="11">tsc_rev</bcf:citekey>
-    <bcf:citekey order="12">tsc_rev</bcf:citekey>
+    <bcf:citekey order="4">wt_bearing_cm_review</bcf:citekey>
+    <bcf:citekey order="5">DBN_chicken_swarm_optim</bcf:citekey>
+    <bcf:citekey order="6">cm_rnn_lstm</bcf:citekey>
+    <bcf:citekey order="7">lin_and_non_lin_feat_for_ice_detection_on_blades</bcf:citekey>
+    <bcf:citekey order="7">image_based_surface_damage_detection_DL_drone_inspection</bcf:citekey>
+    <bcf:citekey order="7">image_based_YOLO_YSODA</bcf:citekey>
+    <bcf:citekey order="7">dirt_n_mud_detection_using_guided_waves</bcf:citekey>
+    <bcf:citekey order="7">blade_defect_detection_imaging_array</bcf:citekey>
+    <bcf:citekey order="7">unsupervised_AD_blade_damage_deep_features_images</bcf:citekey>
+    <bcf:citekey order="8">wt_cm_rev_new_trends_chal_2014</bcf:citekey>
+    <bcf:citekey order="9">ml_for_wt_cond_monit_rev</bcf:citekey>
+    <bcf:citekey order="10">ml_for_wt_cond_monit_rev</bcf:citekey>
+    <bcf:citekey order="11">ml_for_wt_cond_monit_rev</bcf:citekey>
+    <bcf:citekey order="12">brockwell_davis_advanced</bcf:citekey>
     <bcf:citekey order="13">tsc_rev</bcf:citekey>
     <bcf:citekey order="14">tsc_rev</bcf:citekey>
+    <bcf:citekey order="15">tsc_rev</bcf:citekey>
     <bcf:citekey order="15">ts_data_mining</bcf:citekey>
-    <bcf:citekey order="16">brockwell_davis_advanced</bcf:citekey>
-    <bcf:citekey order="17">brockwell_davis</bcf:citekey>
-    <bcf:citekey order="18">stoch_pros</bcf:citekey>
+    <bcf:citekey order="16">tsc_rev</bcf:citekey>
+    <bcf:citekey order="16">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="17">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="18">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="19">tsc_rev</bcf:citekey>
+    <bcf:citekey order="20">tsc_rev</bcf:citekey>
+    <bcf:citekey order="21">tsc_rev</bcf:citekey>
+    <bcf:citekey order="22">tsc_rev</bcf:citekey>
+    <bcf:citekey order="23">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="24">brockwell_davis_advanced</bcf:citekey>
+    <bcf:citekey order="25">brockwell_davis</bcf:citekey>
+    <bcf:citekey order="26">stoch_pros</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

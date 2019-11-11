@@ -1,48 +1,54 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}% 
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Motivation}{2}{section.1.1}% 
+\contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Objective}{3}{section.1.2}% 
+\contentsline {section}{\numberline {1.2}Objective}{4}{section.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Structure of Review}{3}{section.1.3}% 
+\contentsline {section}{\numberline {1.3}Structure of Review}{4}{section.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Method}{4}{chapter.2}% 
+\contentsline {chapter}{\numberline {2}Method}{5}{chapter.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Search terms}{4}{section.2.1}% 
+\contentsline {section}{\numberline {2.1}Search terms}{5}{section.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Screening method}{4}{section.2.2}% 
+\contentsline {section}{\numberline {2.2}Screening method}{5}{section.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Wind Turbine Monitoring}{6}{chapter.3}% 
+\contentsline {chapter}{\numberline {3}Wind Turbine Monitoring}{7}{chapter.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Wind turbine Components}{6}{section.3.1}% 
+\contentsline {section}{\numberline {3.1}Wind turbine Components}{7}{section.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Machine learning techniques}{7}{section.3.2}% 
+\contentsline {section}{\numberline {3.2}Sensors and Data Acquisition}{8}{section.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Treating Sensor-data As a Multivariate Time Series}{7}{section.3.3}% 
+\contentsline {section}{\numberline {3.3}Machine learning techniques}{8}{section.3.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Time Series Clustering}{8}{chapter.4}% 
+\contentsline {subsection}{\numberline {3.3.1}Supervised learning models}{9}{subsection.3.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Types of Times-Series Clustering}{8}{section.4.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Semi-supervised learning models}{9}{subsection.3.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Representation Methods}{9}{section.4.2}% 
+\contentsline {subsection}{\numberline {3.3.3}Unsupervised learning models}{9}{subsection.3.3.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Time Series Models}{10}{section.4.3}% 
+\contentsline {chapter}{\numberline {4}Time Series Clustering}{10}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Autoregressive Moving Average Models}{10}{subsection.4.3.1}% 
+\contentsline {section}{\numberline {4.1}Types of Times-Series Clustering}{10}{section.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Hidden Markov Models}{11}{subsection.4.3.2}% 
+\contentsline {section}{\numberline {4.2}Representation Methods}{11}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Similarity Metrics}{11}{section.4.4}% 
+\contentsline {section}{\numberline {4.3}Time Series Models}{12}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Clustering Algorithms}{11}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.3.1}Autoregressive Moving Average Models}{12}{subsection.4.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Evaluation Indices}{11}{section.4.6}% 
+\contentsline {subsection}{\numberline {4.3.2}Hidden Markov Models}{13}{subsection.4.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{12}{chapter.5}% 
+\contentsline {section}{\numberline {4.4}Similarity Metrics}{13}{section.4.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{13}{chapter.6}% 
+\contentsline {section}{\numberline {4.5}Clustering Algorithms}{13}{section.4.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Questions for Pierluigi and Gerthory}{14}{chapter.7}% 
+\contentsline {section}{\numberline {4.6}Evaluation Indices}{13}{section.4.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Discussion}{14}{chapter.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion}{15}{chapter.6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Questions for Pierluigi and Gerthory}{16}{chapter.7}% 

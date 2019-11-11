@@ -86,6 +86,632 @@
       \field{year}{2018}
       \keyw{Energy Conversion ; System Reliability ; Maintenance ; Maintenance Management ; Fault Detection ; Wind Energy ; Diagnosis ; Catastrophic Failure Analysis ; Wind Energy ; Literature Reviews ; Condition Monitoring ; Turbines ; Data Processing ; Reliability Aspects ; Literature Reviews ; Signal Processing ; Fault Diagnosis ; Wind Power ; Wind Power ; Agricultural Economics ; Fault Diagnosis ; Turbines ; Literature Reviews ; Wind Turbines ; Agricultural Production ; Information Processing ; Wind Energy ; Downtime ; Energy Conversion ; Costs ; Wind Turbine ; Condition Monitoring ; Fault Diagnosis ; Signals ; Signal Processing Methods;}
     \endentry
+    \entry{wt_bearing_cm_review}{article}{}
+      \name{author}{3}{}{%
+        {{hash=877df815e7a57daf84c0dd94b8d1f1e7}{%
+           family={Azevedo},
+           familyi={A\bibinitperiod},
+           given={Henrique\bibnamedelimb Dias\bibnamedelima Machado},
+           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=fd7bea7e6ac5e135adad0cca761b9395}{%
+           family={Araújo},
+           familyi={A\bibinitperiod},
+           given={Alex\bibnamedelima Maurício},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=287963306878d6be065e5ea353dce0b8}{%
+           family={Bouchonneau},
+           familyi={B\bibinitperiod},
+           given={Nadège},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Ltd}%
+      }
+      \strng{namehash}{c88ca067f740924d2395b3d71e363c81}
+      \strng{fullhash}{c88ca067f740924d2395b3d71e363c81}
+      \strng{bibnamehash}{c88ca067f740924d2395b3d71e363c81}
+      \strng{authorbibnamehash}{c88ca067f740924d2395b3d71e363c81}
+      \strng{authornamehash}{c88ca067f740924d2395b3d71e363c81}
+      \strng{authorfullhash}{c88ca067f740924d2395b3d71e363c81}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{<p>Since the early 1980s, wind power technology has experienced an immense growth with respect to both the turbine size and market share. As the demand for large-scale wind turbines and lor operation & maintenance cost continues to raise, the interest on condition monitoring system has increased rapidly. The main components of wind turbines are the focus of all CMS since they frequently cause high repair costs and equipment downtime. However, vast quantities of their failures are caused due to a bearing failure. Therefore, bearing condition monitoring becomes crucial. This paper aims at providing a state-of-the-art review on wind turbine bearing condition monitoring techniques such as acoustic measurement, electrical effects monitoring, power quality, temperature monitoring, wear debris analysis and vibration analysis. Furthermore, this paper will present a literature review and discuss several technical, financial and operational challenges from the purchase of the CMS to the wind farm monitoring stage.</p>}
+      \field{issn}{1364-0321}
+      \field{journaltitle}{Renewable and Sustainable Energy Reviews}
+      \field{title}{A review of wind turbine bearing condition monitoring: State of the art and challenges}
+      \field{volume}{56}
+      \field{year}{2016}
+      \field{pages}{368\bibrangedash 379}
+      \range{pages}{12}
+      \keyw{Wind Turbines ; State-of-the-Art ; Condition Monitoring ; Fault Detection ; Rolling Element Bearing ; Future Challenges ; Engineering}
+    \endentry
+    \entry{DBN_chicken_swarm_optim}{article}{}
+      \name{author}{4}{}{%
+        {{hash=39856f0439f35f79a8eed8b12d26166c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ffd9d1c4582575b42debf847307078ff}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ef065b28c31984323fd6d3483d29aafd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=61ad10c626e1d641e0b1d7b5f48d3233}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{dccaa1dcfd3e42125e7248467021e0d9}
+      \strng{fullhash}{b9cb5ff084b7a3fa9daaa1356aa10e09}
+      \strng{bibnamehash}{dccaa1dcfd3e42125e7248467021e0d9}
+      \strng{authorbibnamehash}{dccaa1dcfd3e42125e7248467021e0d9}
+      \strng{authornamehash}{dccaa1dcfd3e42125e7248467021e0d9}
+      \strng{authorfullhash}{b9cb5ff084b7a3fa9daaa1356aa10e09}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Health monitoring and early fault detection of wind turbines have attracted considerable attention due to the benefits of improving reliability and reducing the operation and maintenance costs of the turbine. However, dynamic and constantly changing operating conditions of wind turbines still pose great challenges to effective and reliable fault detection. Most existing health monitoring approaches mainly focus on one single operating condition, so these methods cannot assess the health status of turbines accurately, leading to unsatisfactory detection performance. To this end, this paper proposes a novel general health monitoring framework for wind turbines based on supervisory control and data acquisition (SCADA) data. A key feature of the proposed framework is that it first partitions the turbine operation into multiple sub-operation conditions by the clustering approach and then builds a normal turbine behavior model for each sub-operation condition. For normal behavior modeling, an optimized deep belief network is proposed. This optimized modeling method can capture the sophisticated nonlinear correlations among different monitoring variables, which is helpful to enhance the prediction performance. A case study of main bearing fault detection using real SCADA data is used to validate the proposed approach, which demonstrates its effectiveness and advantages.}
+      \field{issn}{19961073}
+      \field{journaltitle}{Energies}
+      \field{number}{6}
+      \field{title}{Early fault detection of wind turbines based on operational condition clustering and optimized deep belief network modeling}
+      \field{volume}{12}
+      \field{year}{2019}
+      \keyw{Fault Detection ; Health Monitoring ; Multioperation Condition ; Optimized Deep Belief Networks ; Supervisory Control and Data Acquisition System ; Wind Turbines}
+    \endentry
+    \entry{cm_rnn_lstm}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d78cc363bebea03f7679fcbe80a54a6a}{%
+           family={Qian},
+           familyi={Q\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2a2452bd0cc9c48a0178ef0c091f9456}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=fc5c7ff6f60d7a476008050df45f27f0}{%
+           family={Kanfoud},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ec109448c7c8dd97a76c96e24b123bc5}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={J.L.Y.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=98d7225bd511be7defcf037f0a198c0a}{%
+           family={Gan},
+           familyi={G\bibinitperiod},
+           given={T.-H.},
+           giveni={T\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{ecfeac303df72330f4eb527af1b49e3d}
+      \strng{fullhash}{538fca4e43955f01e95d3f9e9a6e8c51}
+      \strng{bibnamehash}{ecfeac303df72330f4eb527af1b49e3d}
+      \strng{authorbibnamehash}{ecfeac303df72330f4eb527af1b49e3d}
+      \strng{authornamehash}{ecfeac303df72330f4eb527af1b49e3d}
+      \strng{authorfullhash}{538fca4e43955f01e95d3f9e9a6e8c51}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Effective intelligent condition monitoring, as an effective technique to enhance the reliability of wind turbines and implement cost-effective maintenance, has been the object of extensive research and development to improve defect detection from supervisory control and data acquisition (SCADA) data, relying on perspective signal processing and statistical algorithms. The development of sophisticated machine learning now allows improvements in defect detection from historic data. This paper proposes a novel condition monitoring method for wind turbines based on Long Short-Term Memory (LSTM) algorithms. LSTM algorithms have the capability of capturing long-term dependencies hidden within a sequence of measurements, which can be exploited to increase the prediction accuracy. LSTM algorithms are therefore suitable for application in many diverse fields. The residual signal obtained by comparing the predicted values from a prediction model and the actual measurements from SCADA data can be used for condition monitoring. The effectiveness of the proposed method is validated in the case study. The proposed method can increase the economic benefits and reliability of wind farms.}
+      \field{issn}{19961073}
+      \field{journaltitle}{Energies}
+      \field{number}{18}
+      \field{title}{A novel condition monitoring method of wind turbines based on long short-term memory neural network}
+      \field{volume}{12}
+      \field{year}{2019}
+      \keyw{Condition Monitoring ; Long Short-Term Memory ; Machine Learning ; Scada ; Wind Turbine}
+    \endentry
+    \entry{lin_and_non_lin_feat_for_ice_detection_on_blades}{article}{}
+      \name{author}{4}{}{%
+        {{hash=50b77737d9776bb715317c88b9b43326}{%
+           family={Jiménez},
+           familyi={J\bibinitperiod},
+           given={Alfredo\bibnamedelima Arcos},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1e57fd3507477264cde470e35ba7c4cd}{%
+           family={García\bibnamedelima Márquez},
+           familyi={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Fausto\bibnamedelima Pedro},
+           giveni={F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=7f72acee05d10522592286bcda4de40d}{%
+           family={Moraleda},
+           familyi={M\bibinitperiod},
+           given={Victoria\bibnamedelima Borja},
+           giveni={V\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=6edd237ba116a717617a1dc083febaa8}{%
+           family={Gómez\bibnamedelima Muñoz},
+           familyi={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Carlos\bibnamedelima Quiterio},
+           giveni={C\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Ltd}%
+      }
+      \strng{namehash}{c42e00424d2a74912f3c885daed3fd4b}
+      \strng{fullhash}{f269fd09bbcd973fbca7e414606045ad}
+      \strng{bibnamehash}{c42e00424d2a74912f3c885daed3fd4b}
+      \strng{authorbibnamehash}{c42e00424d2a74912f3c885daed3fd4b}
+      \strng{authornamehash}{c42e00424d2a74912f3c885daed3fd4b}
+      \strng{authorfullhash}{f269fd09bbcd973fbca7e414606045ad}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The mass of ice on wind turbines blades is one of the main problems that energy companies have in cold climates. This paper presents a novel approach to detect and classify ice thickness based on pattern recognition through guided ultrasonic waves and Machine Learning. To successfully achieve a supervised classification, it is necessary to employ a method that allows the correct extraction and selection of features of the ultrasonic signal. The main novelty in this work is that the approach considers four feature extraction methods to validate the results, grouped by linear (AutoRegressive (AR) and Principal Component Analysis) and nonlinear (nonlinear-AR eXogenous and Hierarchical Non-Linear Principal Component Analysis), and feature selection is done by Neighbourhood Component Analysis. A supervised classification was performed through Machine Learning with twenty classifiers such as Decision tree, Discriminant Analysis, Support Vector Machines, K-Nearest Neighbours, and Ensemble Classifiers. Finally, an evaluation of the classifiers was done in single frequency and multi-frequency modes, obtaining accurate results.}
+      \field{issn}{0960-1481}
+      \field{journaltitle}{Renewable Energy}
+      \field{title}{Linear and nonlinear features and machine learning for wind turbine blade ice detection and diagnosis}
+      \field{volume}{132}
+      \field{year}{2019}
+      \field{pages}{1034\bibrangedash 1048}
+      \range{pages}{15}
+      \keyw{Feature Extraction ; Narx ; Nlpca ; NCA ; Machine Learning ; Guided Waves ; Ice ; Wind Turbine Blade ; Classifiers ; Engineering}
+    \endentry
+    \entry{image_based_surface_damage_detection_DL_drone_inspection}{article}{}
+      \name{author}{8}{}{%
+        {{hash=245f86d9067cfcf900eea66781f20e47}{%
+           family={Shihavuddin},
+           familyi={S\bibinitperiod},
+           given={ASM},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e7b7a2010a7d5e2313bee7c60145b7ec}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xiao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=21dbf2c7ab84cf8cef8a8231a7a3de5e}{%
+           family={Fedorov},
+           familyi={F\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+        {{hash=5f37d12a4de998f845b7b30eb94bc085}{%
+           family={Christensen},
+           familyi={C\bibinitperiod},
+           given={Anders\bibnamedelima Nymark},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=73aefcdb0bb4c95115d8153b9f19d41b}{%
+           family={Riis},
+           familyi={R\bibinitperiod},
+           given={Nicolai\bibnamedelimb Andre\bibnamedelima Brogaard},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=1e69510544da6040ec899a0ee7c6056f}{%
+           family={Branner},
+           familyi={B\bibinitperiod},
+           given={Kim},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5b4891ee0a47146af52bc4172c3c3e73}{%
+           family={Dahl},
+           familyi={D\bibinitperiod},
+           given={Anders\bibnamedelima Bjorholm},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=4fcc3a1c6857e1670e5efb485664504e}{%
+           family={Paulsen},
+           familyi={P\bibinitperiod},
+           given={Rasmus\bibnamedelima Reinhold},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{929e37ee76dd3a0d3c1b9c5e4dd55926}
+      \strng{fullhash}{c7b03e4684e06f5c9835b25c143ed7a3}
+      \strng{bibnamehash}{929e37ee76dd3a0d3c1b9c5e4dd55926}
+      \strng{authorbibnamehash}{929e37ee76dd3a0d3c1b9c5e4dd55926}
+      \strng{authornamehash}{929e37ee76dd3a0d3c1b9c5e4dd55926}
+      \strng{authorfullhash}{c7b03e4684e06f5c9835b25c143ed7a3}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Timely detection of surface damages on wind turbine blades is imperative for minimizing downtime and avoiding possible catastrophic structural failures. With recent advances in drone technology, a large number of high-resolution images of wind turbines are routinely acquired and subsequently analyzed by experts to identify imminent damages. Automated analysis of these inspection images with the help of machine learning algorithms can reduce the inspection cost. In this work, we develop a deep learning-based automated damage suggestion system for subsequent analysis of drone inspection images. Experimental results demonstrate that the proposed approach can achieve almost human-level precision in terms of suggested damage location and types on wind turbine blades. We further demonstrate that for relatively small training sets, advanced data augmentation during deep learning training can better generalize the trained model, providing a significant gain in precision.}
+      \field{issn}{1996-1073}
+      \field{journaltitle}{Energies}
+      \field{number}{4}
+      \field{title}{Wind Turbine Surface Damage Detection by Deep Learning Aided Drone Inspection Analysis}
+      \field{volume}{12}
+      \field{year}{2019}
+      \field{pages}{676}
+      \range{pages}{1}
+      \keyw{Wind Energy ; Rotor Blade ; Wind Turbine ; Drone Inspection ; Damage Detection ; Deep Learning ; Convolutional Neural Network (CNN) ; Engineering}
+    \endentry
+    \entry{image_based_YOLO_YSODA}{article}{}
+      \name{author}{4}{}{%
+        {{hash=be90ee7ed4febb45f5a394d533008240}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Zifeng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=d473e7d11e94e93a8c7b2ae9bec89b10}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shuangxin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1f033ca77c3d273a714f03467ab7939b}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Zhaoxi},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=145b386d4b07f0686b5a79467863bf18}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Dingli},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Society of Photo-Optical Instrumentation Engineers}%
+      }
+      \strng{namehash}{3ba6367ea625c862bd84838c3111836d}
+      \strng{fullhash}{47df4bbf64cf7b94ed6736cde5251440}
+      \strng{bibnamehash}{3ba6367ea625c862bd84838c3111836d}
+      \strng{authorbibnamehash}{3ba6367ea625c862bd84838c3111836d}
+      \strng{authornamehash}{3ba6367ea625c862bd84838c3111836d}
+      \strng{authorfullhash}{47df4bbf64cf7b94ed6736cde5251440}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Regular inspection of wind turbine blades (WTBs), especially the detection of tiny defects, is necessary to maintain safe operation of wind turbine systems. However, current detections are inefficient and subjective because they are conducted merely by human inspectors. An autonomous visual inspection system is proposed in this paper for WTBs, in which a deep learning framework is developed by combining the convolutional neural network (CNN) and the you only look once (YOLO) model. To achieve practically acceptable detection accuracy for small-sized defects on the WTBs, a YOLO-based small object detection approach (YSODA) using a multiscale feature pyramid is proposed by amalgamating features of more layers. To evaluate the proposed YSODA, a database including 23,807 images labeled for three types of defect—crack, oil pollution, and sand inclusion, is developed. Then, the YSODA is with its architecture modified, and is trained, validated, and tested using the images from the database to provide autonomous and accurate visual inspection. After training and testing, resulting detection accuracy reaches 92.7, 90.7, and 90.3 for the three types of defect with the average accuracy being 91.3. The robustness of the trained YSODA is demonstrated and verified in detecting small-sized defects. It is also compared with that of the traditional CNN-based and machine learning methods by applying to a real WTB system, which proved that the proposed YSODA is superior to existing approaches in terms of detection accuracy and reliability.}
+      \field{issn}{1017-9909}
+      \field{journaltitle}{Journal of Electronic Imaging}
+      \field{number}{4}
+      \field{title}{Automatic visual defects inspection of wind turbine blades via YOLO-based small object detection approach}
+      \field{volume}{28}
+      \field{year}{2019}
+      \field{pages}{043023\bibrangedash 043023}
+      \range{pages}{1}
+      \keyw{Wind Turbine Blades ; Small Object ; Automatic Visual Detection ; Convolutional Neural Network ; You Only Look Once ; Engineering ; Applied Sciences ; Visual Arts}
+    \endentry
+    \entry{dirt_n_mud_detection_using_guided_waves}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3bf8d57f4cf574cce05d182e7d31152a}{%
+           family={Arcos\bibnamedelima Jiménez},
+           familyi={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6edd237ba116a717617a1dc083febaa8}{%
+           family={Gómez\bibnamedelima Muñoz},
+           familyi={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Carlos\bibnamedelima Quiterio},
+           giveni={C\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=1e57fd3507477264cde470e35ba7c4cd}{%
+           family={García\bibnamedelima Márquez},
+           familyi={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Fausto\bibnamedelima Pedro},
+           giveni={F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Ltd}%
+      }
+      \strng{namehash}{f2ddead956efd0418be8f08bd24b4de0}
+      \strng{fullhash}{f2ddead956efd0418be8f08bd24b4de0}
+      \strng{bibnamehash}{f2ddead956efd0418be8f08bd24b4de0}
+      \strng{authorbibnamehash}{f2ddead956efd0418be8f08bd24b4de0}
+      \strng{authornamehash}{f2ddead956efd0418be8f08bd24b4de0}
+      \strng{authorfullhash}{f2ddead956efd0418be8f08bd24b4de0}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Dirt and mud on wind turbine blades (WTB) reduce productivity and can generate stops and downtimes. A condition monitoring system based on non-destructive tests by ultrasonic waves was used to analyse it. This paper employs an approach that considers advanced signal processing and machine learning to determine the thickness of the dirt and mud in a WTB. Firstly, the signal is filtered by Wavelet transform. FE and Feature Selection(FS) are employed to remove non-useful data and redundant features. FS selects the number of the most significant terms of the model for fault detection and identification, reducing the dimension of the dataset. Pattern recognition is carried out by the following supervised learning classifiers based on statistical models to calculate and classify the signal depending on the fault: Ensemble Subspace Discriminant; k-Nearest Neighbours; Linear Support Vector Machine; Linear Discriminant Analysis; Decision Trees. Receiver Operating Characteristic analysis is used to evaluate the classifiers. Neighbourhood Component Analysis has been employed in feature selection. Several case studies of mud on the WTB surface have been considered to test and validate the approach. Autoregressive (AR) model and Principal Component Analysis (PCA) have been employed to FE. The results provided by PCA show an improvement on the AR results. The novelty of this work is focused on applying this approach to detect and diagnose mud and dirt in WTB.}
+      \field{issn}{0951-8320}
+      \field{journaltitle}{Reliability Engineering and System Safety}
+      \field{title}{Dirt and mud detection and diagnosis on a wind turbine blade employing guided waves and supervised learning classifiers}
+      \field{volume}{184}
+      \field{year}{2019}
+      \field{pages}{2\bibrangedash 12}
+      \range{pages}{11}
+      \keyw{Macro Fiber Composite ; Wavelet Transforms ; Machine Learning ; Guided Waves ; Wind Turbine Blade ; Mud Detection ; Engineering}
+    \endentry
+    \entry{blade_defect_detection_imaging_array}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7011f0ef2fc6a6e1afab62b6453428cc}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ningning},
+           giveni={N\bibinitperiod}}}%
+        {{hash=bec66647ab2dc72fc735fc1f652ebe85}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Chengzhi},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d447478cf9bee9b4da580220c411ebd8}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Anmin},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{location}{1}{%
+        {Les Ulis}%
+      }
+      \list{publisher}{1}{%
+        {EDP Sciences}%
+      }
+      \strng{namehash}{1564b891c08e2a60e667644fe8c3d08e}
+      \strng{fullhash}{1564b891c08e2a60e667644fe8c3d08e}
+      \strng{bibnamehash}{1564b891c08e2a60e667644fe8c3d08e}
+      \strng{authorbibnamehash}{1564b891c08e2a60e667644fe8c3d08e}
+      \strng{authornamehash}{1564b891c08e2a60e667644fe8c3d08e}
+      \strng{authorfullhash}{1564b891c08e2a60e667644fe8c3d08e}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Currently in the process of wind farm inspection, wind turbine blade appearance inspection mainly adopts the telescope or high-definition cameras, low detection efficiency, labor intensity and the precision is limited, in order to solve this problem, a kind of wind turbine blades defect recognition system based on image array is proposed. Through the joint of array camera and image processing server, the functions of the image acquisition, processing, and defect recognition and detection results output are implemented. The software of artificial intelligence deep learning based on neural network algorithm is used to identify the defects of blade image, and output quality analysis report, to realize automatic detection of wind turbine blade surface defect. The field measurement results show that the system greatly improves the efficiency and accuracy of wind turbine blade defect detection.}
+      \field{issn}{25550403}
+      \field{journaltitle}{E3S Web of Conferences}
+      \field{title}{Study on wind turbine blade defect detection system based on imaging array}
+      \field{volume}{118}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb http://search.proquest.com/docview/2301959230/
+      \endverb
+      \verb{url}
+      \verb http://search.proquest.com/docview/2301959230/
+      \endverb
+      \keyw{Artificial Intelligence ; Defects ; Inspection ; Image Detection ; Cameras ; Image Processing ; Machine Learning ; Surface Defects ; Image Processing ; Wind Energy ; Turbines ; Inspection ; Wind Power ; Neural Networks ; Turbines ; Artificial Intelligence ; Algorithms ; Arrays ; Wind Turbines ; Image Acquisition ; Turbine Blades ; Wind Energy ; Image Quality ; Artificial Intelligence ; Object Recognition ; Cameras ; Neural Networks ; Cameras ; High Definition}
+    \endentry
+    \entry{unsupervised_AD_blade_damage_deep_features_images}{article}{}
+      \name{author}{9}{}{%
+        {{hash=b99eabdb0c0e2504091a4a91c59749e8}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yinan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=337a68315fac5b393e1eacd2f9c6e9d0}{%
+           family={Yoshihashi},
+           familyi={Y\bibinitperiod},
+           given={Ryota},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6ef46d76948e0e12b5cf8bead720052f}{%
+           family={Kawakami},
+           familyi={K\bibinitperiod},
+           given={Rei},
+           giveni={R\bibinitperiod}}}%
+        {{hash=53f2692c35b128f68d0d770d0026516d}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Shaodi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=738de5ded35d040c0654ea9234711776}{%
+           family={Harano},
+           familyi={H\bibinitperiod},
+           given={Tohru},
+           giveni={T\bibinitperiod}}}%
+        {{hash=dd2e039e81eaacda3cc4e81fbab205a0}{%
+           family={Ito},
+           familyi={I\bibinitperiod},
+           given={Masahiko},
+           giveni={M\bibinitperiod}}}%
+        {{hash=799f31ca374dc0fd02c0e2b68d29a2ae}{%
+           family={Komagome},
+           familyi={K\bibinitperiod},
+           given={Katsura},
+           giveni={K\bibinitperiod}}}%
+        {{hash=af3ccaec8e67a6d7bdef10f9f39c7cfd}{%
+           family={Iida},
+           familyi={I\bibinitperiod},
+           given={Makoto},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bb5d85ecc9acb2d4a7aea66dd0402158}{%
+           family={Naemura},
+           familyi={N\bibinitperiod},
+           given={Takeshi},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{location}{1}{%
+        {Berlin/Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{713ec829aaff24ad4ee4b614a22226fc}
+      \strng{fullhash}{9bb79f95c68bf04c785ad576d2555e09}
+      \strng{bibnamehash}{713ec829aaff24ad4ee4b614a22226fc}
+      \strng{authorbibnamehash}{713ec829aaff24ad4ee4b614a22226fc}
+      \strng{authornamehash}{713ec829aaff24ad4ee4b614a22226fc}
+      \strng{authorfullhash}{9bb79f95c68bf04c785ad576d2555e09}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Detecting anomalies in wind turbine blades from aerial images taken by drones can reduce the costs of periodic inspections. Deep learning is useful for image recognition, but it requires large amounts of data to be collected on rare abnormalities. In this paper, we propose a method to distinguish normal and abnormal parts of a blade by combining one-class support vector machine, an unsupervised learning method, with deep features learned from a generic image dataset. The images taken by a drone are subsampled, projected to the feature space, and compressed by using principle component analysis (PCA) to make them learnable. Experiments show that features in the lower layers of deep nets are useful for detecting anomalies in blade images.}
+      \field{issn}{1882-6695}
+      \field{journaltitle}{IPSJ Transactions on Computer Vision and Applications}
+      \field{number}{1}
+      \field{title}{Unsupervised anomaly detection with compact deep features for wind turbine blade images taken by a drone}
+      \field{volume}{11}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \keyw{Wind turbine blade ; Drone ; Anomaly detection ; Unsupervised learning}
+    \endentry
+    \entry{wt_cm_rev_new_trends_chal_2014}{article}{}
+      \name{author}{6}{}{%
+        {{hash=5590cfbd808de41cbddb92264bea781e}{%
+           family={Tchakoua},
+           familyi={T\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b09be0bf39fa6d6358b25178b259d800}{%
+           family={Wamkeue},
+           familyi={W\bibinitperiod},
+           given={Rene},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5f7586e130514089fca2152adfe44762}{%
+           family={Ouhrouche},
+           familyi={O\bibinitperiod},
+           given={Mohand},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1a83e05a6d2b782f09dc0abfa8108e4c}{%
+           family={Slaoui-Hasnaoui},
+           familyi={S\bibinithyphendelim H\bibinitperiod},
+           given={Fouad},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1b1bc1b4c7370d26d8684c403d8621ab}{%
+           family={Tameghe},
+           familyi={T\bibinitperiod},
+           given={Tommy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=daaa32369fc0f221ec82cb710ae6d36a}{%
+           family={Ekemb},
+           familyi={E\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{location}{1}{%
+        {Basel}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{5bf168c8cc019987ea6583d382421a9f}
+      \strng{fullhash}{333747ad93895a87e5ae3fa1d9a8346c}
+      \strng{bibnamehash}{5bf168c8cc019987ea6583d382421a9f}
+      \strng{authorbibnamehash}{5bf168c8cc019987ea6583d382421a9f}
+      \strng{authornamehash}{5bf168c8cc019987ea6583d382421a9f}
+      \strng{authorfullhash}{333747ad93895a87e5ae3fa1d9a8346c}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As the demand for wind energy continues to grow at exponential rates, reducing operation and maintenance (OM) costs and improving reliability have become top priorities in wind turbine (WT) maintenance strategies. In addition to the development of more highly evolved WT designs intended to improve availability, the application of reliable and cost-effective condition-monitoring (CM) techniques offers an efficient approach to achieve this goal. This paper provides a general review and classification of wind turbine condition monitoring (WTCM) methods and techniques with a focus on trends and future challenges. After highlighting the relevant CM, diagnosis, and maintenance analysis, this work outlines the relationship between these concepts and related theories, and examines new trends and future challenges in the WTCM industry. Interesting insights from this research are used to point out strengths and weaknesses in today's WTCM industry and define research priorities needed for the industry to meet the challenges in wind industry technological evolution and market growth.}
+      \field{issn}{19961073}
+      \field{journaltitle}{Energies}
+      \field{number}{4}
+      \field{title}{Wind Turbine Condition Monitoring: State-of-the-Art Review, New Trends, and Future Challenges}
+      \field{volume}{7}
+      \field{year}{2014}
+      \field{pages}{2595\bibrangedash 2630}
+      \range{pages}{36}
+      \verb{urlraw}
+      \verb http://search.proquest.com/docview/1537086932/
+      \endverb
+      \verb{url}
+      \verb http://search.proquest.com/docview/1537086932/
+      \endverb
+      \keyw{Wind Turbines (Wts) ; Condition Monitoring ; Fault Detection ; Destructive Tests ; Non-Destructive Tests ; Subsystem Monitoring Techniques ; Overall System Monitoring Techniques ; State of the Art ; New Trends ; Future Challenges}
+    \endentry
+    \entry{ml_for_wt_cond_monit_rev}{article}{}
+      \name{author}{8}{}{%
+        {{hash=046c3df9d9a3c554e5dc27e5450a00ff}{%
+           family={Stetco},
+           familyi={S\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6710e600c2fe33788cba45dd965d469f}{%
+           family={Dinmohammadi},
+           familyi={D\bibinitperiod},
+           given={Fateme},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ce8bdf26512fc6ba6077c11af09691a8}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Xingyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=17eae82bf918cce6367751ff51cd57a6}{%
+           family={Robu},
+           familyi={R\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=8203c46986abcdec01a47dbe2854f9f6}{%
+           family={Flynn},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6911d88cbaeffd808267e734673654b4}{%
+           family={Barnes},
+           familyi={B\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8812a00b5f17adf9c30f204aec0ff809}{%
+           family={Keane},
+           familyi={K\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7eb52cf7fdd8fd69f1fbce8f1c390582}{%
+           family={Nenadic},
+           familyi={N\bibinitperiod},
+           given={Goran},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Ltd}%
+      }
+      \strng{namehash}{adf3691951c2275186c961257e8e8121}
+      \strng{fullhash}{d6e90d88516a10d971f632b942873fd0}
+      \strng{bibnamehash}{adf3691951c2275186c961257e8e8121}
+      \strng{authorbibnamehash}{adf3691951c2275186c961257e8e8121}
+      \strng{authornamehash}{adf3691951c2275186c961257e8e8121}
+      \strng{authorfullhash}{d6e90d88516a10d971f632b942873fd0}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper reviews the recent literature on machine learning (ML) models that have been used for condition monitoring in wind turbines (e.g. blade fault detection or generator temperature monitoring). We classify these models by typical ML steps, including data sources, feature selection and extraction, model selection (classification, regression), validation and decision-making. Our findings show that most models use SCADA or simulated data, with almost two-thirds of methods using classification and the rest relying on regression. Neural networks, support vector machines and decision trees are most commonly used. We conclude with a discussion of the main areas for future work in this domain.}
+      \field{issn}{0960-1481}
+      \field{journaltitle}{Renewable Energy}
+      \field{title}{Machine learning methods for wind turbine condition monitoring: A review}
+      \field{volume}{133}
+      \field{year}{2019}
+      \field{pages}{620\bibrangedash 635}
+      \range{pages}{16}
+      \keyw{Renewable Energy ; Wind Farms ; Condition Monitoring ; Machine Learning ; Prognostic Maintenance ; Engineering}
+    \endentry
     \entry{brockwell_davis_advanced}{book}{}
       \name{author}{2}{}{%
         {{hash=c23a4ba530c4691d74464c64be44c297}{%
@@ -109,8 +735,8 @@
       \strng{authornamehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
       \strng{authorfullhash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Time Series: Theory and Methods Second Edition}
@@ -146,8 +772,8 @@
       \strng{authorbibnamehash}{58dc156424df8694530c6f9733b36f18}
       \strng{authornamehash}{58dc156424df8694530c6f9733b36f18}
       \strng{authorfullhash}{58dc156424df8694530c6f9733b36f18}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0306-4379}
@@ -173,8 +799,8 @@
       \strng{authorbibnamehash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
       \strng{authornamehash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
       \strng{authorfullhash}{7530d2777f6fd2e9eb6345cabc7cf6f9}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ACM Cumputing Surveys}
@@ -205,8 +831,8 @@
       \strng{authornamehash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
       \strng{authorfullhash}{fe0d0dfe83ec5a9e1b60190b6ef9bc2c}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Introduction to Time Series and Forecasting Third Edition}
@@ -229,8 +855,8 @@
       \strng{authorbibnamehash}{bf5f2440b50cd085a0515d2dd4c3cf92}
       \strng{authornamehash}{bf5f2440b50cd085a0515d2dd4c3cf92}
       \strng{authorfullhash}{bf5f2440b50cd085a0515d2dd4c3cf92}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Introduction to Probability Models 11th Edition}
