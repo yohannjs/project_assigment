@@ -794,6 +794,45 @@
       \endverb
       \keyw{Wind Turbines (Wts) ; Condition Monitoring ; Fault Detection ; Destructive Tests ; Non-Destructive Tests ; Subsystem Monitoring Techniques ; Overall System Monitoring Techniques ; State of the Art ; New Trends ; Future Challenges}
     \endentry
+    \entry{ml_cm_wt_blade_ARMA_2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3483f1b0901ebce4ca6414531696c062}{%
+           family={Sugumaran},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi Joshuva;\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Inderscience Publishers}%
+      }
+      \strng{namehash}{3483f1b0901ebce4ca6414531696c062}
+      \strng{fullhash}{3483f1b0901ebce4ca6414531696c062}
+      \strng{bibnamehash}{3483f1b0901ebce4ca6414531696c062}
+      \strng{authorbibnamehash}{3483f1b0901ebce4ca6414531696c062}
+      \strng{authornamehash}{3483f1b0901ebce4ca6414531696c062}
+      \strng{authorfullhash}{3483f1b0901ebce4ca6414531696c062}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In wind turbine, blades are the major component for capturing the wind, however, due to environmental conditions it prompts to get a fault. To overcome this problem, a machine learning based condition monitoring technique is incorporated into the wind turbine to identify the fault classification which occurred in the blade. In this study, a three-bladed horizontal axis wind turbine was chosen and the faults like blade bend, blade cracks, hub-blade loose connection, blade erosion and pitch angle twist were considered as these are the faults mostly affect the turbine blade. In this study, the autoregressive-moving-average (ARMA) features have been extracted from the raw signal and the dominating feature was selected through J48 decision tree algorithm followed by the fault classification using machine learning classifiers. The results were compared with respect to the classification accuracy and their computational time of the classifier.}
+      \field{issn}{1476-8917}
+      \field{journaltitle}{Progress in Industrial Ecology, An Int. J.}
+      \field{number}{1/2}
+      \field{title}{A machine learning approach for condition monitoring of wind turbine blade using autoregressive moving average (ARMA) features through vibration signals: a comparative study}
+      \field{volume}{12}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://www.inderscience.com/link.php?id=95867
+      \endverb
+      \verb{url}
+      \verb http://www.inderscience.com/link.php?id=95867
+      \endverb
+      \keyw{condition monitoring; wind turbine blade; ARMA features; machine learning; vibration signals.}
+    \endentry
     \entry{fault_detection_and_isolation_using_classifier_fusion}{article}{}
       \name{author}{3}{}{%
         {{hash=d8b5f304871208037635f4b585079e8d}{%
@@ -838,85 +877,6 @@
       \field{pages}{99\bibrangedash 106}
       \range{pages}{8}
       \keyw{Classification ; Fault Detection and Isolation ; Feature Extraction ; Wind Turbine ; Engineering}
-    \endentry
-    \entry{blade_damage_detection_sup_ml_alg}{article}{}
-      \name{author}{3}{}{%
-        {{hash=cceb2adf0856374ec6c5776df96a4ae3}{%
-           family={Regan},
-           familyi={R\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=452ed6d47f0c8fe26f49db32106265c1}{%
-           family={Beale},
-           familyi={B\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-        {{hash=8c74a3b61ea42c914861ae4090afeff3}{%
-           family={Inalpolat},
-           familyi={I\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Society of Mechanical Engineers (ASME)}%
-      }
-      \strng{namehash}{83067aa41ac9c8ee98436caadca6b1f7}
-      \strng{fullhash}{83067aa41ac9c8ee98436caadca6b1f7}
-      \strng{bibnamehash}{83067aa41ac9c8ee98436caadca6b1f7}
-      \strng{authorbibnamehash}{83067aa41ac9c8ee98436caadca6b1f7}
-      \strng{authornamehash}{83067aa41ac9c8ee98436caadca6b1f7}
-      \strng{authorfullhash}{83067aa41ac9c8ee98436caadca6b1f7}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Wind turbine blades undergo high operational loads, experience variable environmental conditions, and are susceptible to failure due to defects, fatigue, and weather-induced damage. These large-scale composite structures are fundamentally enclosed acoustic cavities and currently have limited, if any, structural health monitoring (SHM) in place. A novel acoustics-based structural sensing and health monitoring technique is developed, requiring efficient algorithms for operational damage detection of cavity structures. This paper describes the selection of a set of statistical features for acoustics-based damage detection of enclosed cavities, such as wind turbine blades, as well as a systematic approach used in the identification of competent machine learning algorithms. Logistic regression (LR) and support vector machine (SVM) methods are identified and used with optimal feature selection for decision-making via binary classification algorithms. A laboratory-scale wind turbine with hollow composite blades was built for damage detection studies. This test rig allows for testing of stationary or rotating blades, of which time and frequency domain information can be collected to establish baseline characteristics. The test rig can then be used to observe any deviations from the baseline characteristics. An external microphone attached to the tower will be utilized to monitor blade health while blades are internally ensonified by wireless speakers. An initial test campaign with healthy and damaged blade specimens is carried out to arrive at several conclusions on the detectability and feature extraction capabilities required for damage detection.}
-      \field{issn}{10489002}
-      \field{journaltitle}{Journal of Vibration and Acoustics, Transactions of the ASME}
-      \field{number}{6}
-      \field{title}{Wind Turbine Blade Damage Detection Using Supervised Machine Learning Algorithms}
-      \field{volume}{139}
-      \field{year}{2017}
-      \keyw{Health Monitoring ; Logistic Regression ; Machine Learning ; Support Vector Machine ; Wind Turbine Blades}
-    \endentry
-    \entry{ml_cm_wt_blade_ARMA_2018}{article}{}
-      \name{author}{1}{}{%
-        {{hash=3483f1b0901ebce4ca6414531696c062}{%
-           family={Sugumaran},
-           familyi={S\bibinitperiod},
-           given={A.\bibnamedelimi Joshuva;\bibnamedelima V.},
-           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {English}%
-      }
-      \list{publisher}{1}{%
-        {Inderscience Publishers}%
-      }
-      \strng{namehash}{3483f1b0901ebce4ca6414531696c062}
-      \strng{fullhash}{3483f1b0901ebce4ca6414531696c062}
-      \strng{bibnamehash}{3483f1b0901ebce4ca6414531696c062}
-      \strng{authorbibnamehash}{3483f1b0901ebce4ca6414531696c062}
-      \strng{authornamehash}{3483f1b0901ebce4ca6414531696c062}
-      \strng{authorfullhash}{3483f1b0901ebce4ca6414531696c062}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{In wind turbine, blades are the major component for capturing the wind, however, due to environmental conditions it prompts to get a fault. To overcome this problem, a machine learning based condition monitoring technique is incorporated into the wind turbine to identify the fault classification which occurred in the blade. In this study, a three-bladed horizontal axis wind turbine was chosen and the faults like blade bend, blade cracks, hub-blade loose connection, blade erosion and pitch angle twist were considered as these are the faults mostly affect the turbine blade. In this study, the autoregressive-moving-average (ARMA) features have been extracted from the raw signal and the dominating feature was selected through J48 decision tree algorithm followed by the fault classification using machine learning classifiers. The results were compared with respect to the classification accuracy and their computational time of the classifier.}
-      \field{issn}{1476-8917}
-      \field{journaltitle}{Progress in Industrial Ecology, An Int. J.}
-      \field{number}{1/2}
-      \field{title}{A machine learning approach for condition monitoring of wind turbine blade using autoregressive moving average (ARMA) features through vibration signals: a comparative study}
-      \field{volume}{12}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb http://www.inderscience.com/link.php?id=95867
-      \endverb
-      \verb{url}
-      \verb http://www.inderscience.com/link.php?id=95867
-      \endverb
-      \keyw{condition monitoring; wind turbine blade; ARMA features; machine learning; vibration signals.}
     \endentry
     \entry{vibration_ARMA_decision_tree_cm_wt}{article}{}
       \name{author}{2}{}{%
@@ -1271,6 +1231,46 @@
       \verb http://search.proquest.com/docview/1780819136/
       \endverb
       \keyw{Wind Turbines ; Supervisory Control and Data Acquisition (Scada) Data ; Parallel Factor Analysis (Parafac) ; K-Means Clustering ; Condition Monitoring ; Engineering;}
+    \endentry
+    \entry{blade_damage_detection_sup_ml_alg}{article}{}
+      \name{author}{3}{}{%
+        {{hash=cceb2adf0856374ec6c5776df96a4ae3}{%
+           family={Regan},
+           familyi={R\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=452ed6d47f0c8fe26f49db32106265c1}{%
+           family={Beale},
+           familyi={B\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8c74a3b61ea42c914861ae4090afeff3}{%
+           family={Inalpolat},
+           familyi={I\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Society of Mechanical Engineers (ASME)}%
+      }
+      \strng{namehash}{83067aa41ac9c8ee98436caadca6b1f7}
+      \strng{fullhash}{83067aa41ac9c8ee98436caadca6b1f7}
+      \strng{bibnamehash}{83067aa41ac9c8ee98436caadca6b1f7}
+      \strng{authorbibnamehash}{83067aa41ac9c8ee98436caadca6b1f7}
+      \strng{authornamehash}{83067aa41ac9c8ee98436caadca6b1f7}
+      \strng{authorfullhash}{83067aa41ac9c8ee98436caadca6b1f7}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Wind turbine blades undergo high operational loads, experience variable environmental conditions, and are susceptible to failure due to defects, fatigue, and weather-induced damage. These large-scale composite structures are fundamentally enclosed acoustic cavities and currently have limited, if any, structural health monitoring (SHM) in place. A novel acoustics-based structural sensing and health monitoring technique is developed, requiring efficient algorithms for operational damage detection of cavity structures. This paper describes the selection of a set of statistical features for acoustics-based damage detection of enclosed cavities, such as wind turbine blades, as well as a systematic approach used in the identification of competent machine learning algorithms. Logistic regression (LR) and support vector machine (SVM) methods are identified and used with optimal feature selection for decision-making via binary classification algorithms. A laboratory-scale wind turbine with hollow composite blades was built for damage detection studies. This test rig allows for testing of stationary or rotating blades, of which time and frequency domain information can be collected to establish baseline characteristics. The test rig can then be used to observe any deviations from the baseline characteristics. An external microphone attached to the tower will be utilized to monitor blade health while blades are internally ensonified by wireless speakers. An initial test campaign with healthy and damaged blade specimens is carried out to arrive at several conclusions on the detectability and feature extraction capabilities required for damage detection.}
+      \field{issn}{10489002}
+      \field{journaltitle}{Journal of Vibration and Acoustics, Transactions of the ASME}
+      \field{number}{6}
+      \field{title}{Wind Turbine Blade Damage Detection Using Supervised Machine Learning Algorithms}
+      \field{volume}{139}
+      \field{year}{2017}
+      \keyw{Health Monitoring ; Logistic Regression ; Machine Learning ; Support Vector Machine ; Wind Turbine Blades}
     \endentry
     \entry{roller_bearings_cm_fisher_score_and_permutation_entropy}{article}{}
       \name{author}{4}{}{%
