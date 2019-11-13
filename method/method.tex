@@ -6,32 +6,26 @@ To find the relevant literature on the subjects of interest the search engine Or
 
 The last three rows in table \ref{tab:search_results} are somewhat disconnected from the rest of the table. The term ''forward snowballing'' refers to finding other articles by finding articles citing a specific source, and the term ''backward snowballing'' refers to finding articles by going through the references of a particular source.
 
-\begin{table}[h]
+\begin{table*}[h]
     \centering
-    \begin{tabular}{ |c|c|c|c|c| } 
-    \hline
-    Nr. & Title terms & General terms & $N_r$ & $N_i$ \\
-    \hline
-    \hline
-    1 & time $\times$ series $\times$ clustering &  & 219 & 121 \\ 
-    \hline
-    2 & wind $\times$ turbine $\times$ (monitor* $\wedge{}$ detect*) $\times$ review &  & 21 & 3 \\
-    \hline
-    3 & wind $\times$ turbine $\times$ (monitor* $\wedge{}$ detect*) & machine $\times$ learning & 86 & 56 \\ 
-    \hline
-    4 & (monitor* $\wedge{}$ detect*) $\times$ clustering & time $\times$ series & 187 & 21 \\
-    \hline
-    \multicolumn{4}{|c|}{Articles included through backward snowballing} & 0 \\
-    \hline
-    \multicolumn{4}{|c|}{Articles included through forward snowballing} & 0 \\
-    \hline
-    \hline
-    \multicolumn{4}{|c|}{Total number of articles included} & 35 \\
-    \hline
+    \ra{1.3}
+    \begin{tabular}{ lllrr } 
+        \toprule
+        Nr. & Title terms & General terms & $N_r$ & $N_i$ \\
+        \midrule
+        1 & time $\times$ series $\times$ clustering & None & 219 & 121 \\ 
+        2 & wind $\times$ turbine* $\times$ (monitor* $\wedge{}$ detect*) $\times$ review & None & 32 & 3 \\
+        3 & wind $\times$ turbine* $\times$ (monitor* $\wedge{}$ detect*) & machine $\times$ learning & 100 & 48 \\ 
+        4 & (monitor* $\wedge{}$ detect*) $\times$ clustering & time $\times$ series & 187 & 21 \\
+        \midrule
+        \multicolumn{4}{r}{Articles included through backward snowballing} & 0 \\
+        \multicolumn{4}{r}{Articles included through forward snowballing} & 0 \\
+        \multicolumn{4}{r}{Total number of articles included} & 193 \\
+        \bottomrule
     \end{tabular}
     \caption{Search results}
     \label{tab:search_results}
-\end{table}
+\end{table*}
 
 \section{Screening method}
 To make sure that the articles used were relevant, the review is limited to articles published 2014 or later. Some older articles are included through backward snowballing for their historical importance. There were three levels of screening, screening of the title, abstract, and full article. Title-screening was primarily for seeding out duplicate articles returned from the search-engine. The screening of the abstract and full-article were to identify the articles that were not relevant for the review and exclude them. \bigskip

@@ -1,0 +1,96 @@
+\section{Machine learning methods for wind turbine condition monitoring}
+
+% \begin{table*}
+%     \centering
+%     \ra{1.3}
+%     \caption{Summary of machine learning methods for wind turbine condition monitoring}
+%     \begin{tabular}{lp{2.5cm}p{5cm}p{6cm}}
+%         \toprule
+%         Nr & Input & Feature extraction method & Machine learning model \\
+%         \midrule
+%         \cite{ml_cm_wt_blade_ARMA_2018} & Vibration signal. & ARMA model and J48 decision tree & Tests a set of (38) meta-, misc-, rule- and tree-based classifiers for FD in blades. \\ 
+%         \cite{AD_and_fault_analysis_wt_DAE} & SCADA data. & & Deep auto-encoder made of RBMs to model normal behaviour of SCADA variables. Uses reconstruction error for AD. \\
+%         \cite{unsup_graphical_modeling_wt_cm} & SCADA data. & Spatiotemporal pattern network & Unsupervised use of RBMs for AD. \\
+%         \cite{fault_detection_and_isolation_using_classifier_fusion} & SCADA data. & Time-frequency domain analysis, DWT and ARMA model & Uses fusion of MLP, RBF, decision tree, KNN, SVM for FD of wind turbine.  \\
+%         \cite{lin_and_non_lin_feat_for_ice_detection_on_blades} & Ultrasonic testing. & Tests linear and non-linear PCA and ARMA models & Neighbourhood component analysis for feature selection. Tests 20 different supervised classifiers for detecting ice on blades. \\
+%         \cite{perf_mon_of_wt_using_extreme_func_theory} & Wind-Power curve. &  & Uses Gaussian Process regression with extreme fucntion theory to determine whether a particular power curve is an outlier.\\
+%         \cite{blade_damage_detection_sup_ml_alg} & Acustic emission. & FFT. & Uses Distinguishability Measure for feature selection, and logistic regression and SVM for binary blade fault classification. \\
+%         \cite{wt_cm_using_cloud_computing_and_HELM} & Power signal, wind speed and ambient temperature signals. & & Hierarchical Extreme Learning Machine\\
+%         \cite{GP_operational_curve_monitoring} & SCADA data. & & Gaussian processes regression to estimate wind-power curve \\
+%         \cite{high_freq_scada_perf_monit_sensitivity} & SCADA data. & Tests KNN, random forest, and SVR to estimate power curve. Detects anomalies by reconstruction error.& \\
+%         \cite{dict_learning_monitor_wt_drivetrain_bearing} & Vibration signals. & & Uses unsupervised dictionary learning extracting features which are then used to determine fault in drivetrain bearings. \\
+%         \cite{ANN_damage_detection_gearbox_wt} & Oil temperature, wind speed and rotor speed. & & Trains ANN to estimate vibration signal, uses reconstruction error for AD. \\
+%         \cite{multiway_PCA_multivar_inference_cm_wt} & SCADA data. & PCA. & Sets up baseline model using multiway PCA, then finds outliers by hypothesis testing whether multivariate distribution is equal to baseline. \\
+%         \cite{image_texture_analysis_FD_wt} & FAST wind turbine simulator. & Image texture analysis tools. & KNN, Linear Discriminant Model, decision trees, bag-tree, linear SVM.\\
+%         \cite{auto_associative_nn_wt_fault_detection} & SCADA data. & K-means for outlier elimination. & Uses Auto-Associative Neural Networks as an auto-encoder, and the Hotel T2 statistic as a dynamic threshold for the reconstruction error.\\
+%         \cite{abnormal_detection_scada_data_mining} & SCADA data. & Grey correlation algorithm for eigencevtor extraction. & Use genetic algorithm for feature selection, and SVR for estimating performance curves. \\
+%         \cite{health_cond_model_nn_proportional_hazard_models} & Rotor speed, gearbox temperature and generator temperature. & & Uses three NN for normal behaviour modelling. Reconstruction error sendt to proportional hazard model which sets dynamic threshold. \\
+%         \cite{ice_detection_using_ITL} & SCADA data. & & Uses Inductive Transfer Learning and five differen ML classifiers for ice detection on blades. \\
+%         \cite{VMD_MPE_COVAL_fault_detection_gearbox} & Vibration signals. & Variational mode decomposition (VMD). & Uses multi-scale permutation entropy (MPE) used for feature selection, COVAL for domain normalization and an SVM for binary fault classification.\\
+%         \cite{SVR_blade_pitch_curve_cm} & SCADA data. & & Uses bins and SVR to estimate blade angle pitch curve. \\
+%         \cite{detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models} & SCADA data. &  & Tests different architectures of ANNs to for estimating temperature of non-drive end bearing. Uses reconstruction error for anomaly detection. \\
+%         \cite{image_based_surface_damage_detection_DL_drone_inspection} & Images taken by drones & & Recurrent Convolutional Neural Network to classify structural damage in blades.\\
+%         \cite{image_based_YOLO_YSODA} & Uses images taken from ground level & & Convolutional Neural Network, and YOLO-based small object detection approach (YSODA) for damage detection in blades and hub.\\
+%         \cite{vibration_acustic_decision_tree_SVM_gearbox} & Vibration signals, acustic signals and oil particle analysis & DWT. & Uses decision tree for feature selection, and SVC for assessing fault severity in gearbox\\
+%         \cite{AI_image_analytics_2_classify_blade_defects} & Uses images taken from ground level & & Convolutional Neural Network to detect cracks $\&$ damage in blades.\\
+%         \cite{dirt_n_mud_detection_using_guided_waves} & Ultrasonic testing & PCA and ARMA models. & Neighbourhood Component analysis for feature selection and an ensamble of KNN, linear SVM, decision trees, LDA and subspace discriminant to estimate amount of dirt and mud on blades. \\
+%         \cite{fault_classification_using_CSO_SVM} & & & \\
+%         % \cite{} & & & \\
+%         % \cite{} & & & \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table*}
+
+\begin{longtable}{p{0.03\textwidth}p{0.2\textwidth}p{0.3\textwidth}p{0.4\textwidth}}
+    \hline
+    Nr & Input & Feature extraction method & Machine learning model \\
+    \hline \hline
+    \cite{ml_cm_wt_blade_ARMA_2018} & Vibration signal. & ARMA model and J48 decision tree & Tests a set of (38) meta-, misc-, rule- and tree-based classifiers for FD in blades. \\  \hline
+    \cite{AD_and_fault_analysis_wt_DAE} & SCADA data. & & Deep auto-encoder made of RBMs to model normal behaviour of SCADA variables. Uses reconstruction error for AD. \\ \hline
+    \cite{unsup_graphical_modeling_wt_cm} & SCADA data. & Spatiotemporal pattern network & Unsupervised use of RBMs for AD. \\ \hline
+    \cite{fault_detection_and_isolation_using_classifier_fusion} & SCADA data. & Time-frequency domain analysis, DWT and ARMA model & Uses fusion of MLP, RBF, decision tree, KNN, SVM for FD of wind turbine.  \\ \hline
+    \cite{lin_and_non_lin_feat_for_ice_detection_on_blades} & Ultrasonic testing. & Tests linear and non-linear PCA and ARMA models & Neighbourhood component analysis for feature selection. Tests 20 different supervised classifiers for detecting ice on blades. \\ \hline
+    \cite{perf_mon_of_wt_using_extreme_func_theory} & Wind-Power curve. &  & Uses Gaussian Process regression with extreme fucntion theory to determine whether a particular power curve is an outlier.\\ \hline
+    \cite{blade_damage_detection_sup_ml_alg} & Acustic emission. & FFT. & Uses Distinguishability Measure for feature selection, and logistic regression and SVM for binary blade fault classification. \\ \hline
+    \cite{wt_cm_using_cloud_computing_and_HELM} & Power signal, wind speed and ambient temperature signals. & & Hierarchical Extreme Learning Machine\\ \hline
+    \cite{GP_operational_curve_monitoring} & SCADA data. & & Gaussian processes regression to estimate wind-power curve \\ \hline
+    \cite{high_freq_scada_perf_monit_sensitivity} & SCADA data. & Tests KNN, random forest, and SVR to estimate power curve. Detects anomalies by reconstruction error.& \\ \hline
+    \cite{dict_learning_monitor_wt_drivetrain_bearing} & Vibration signals. & & Uses unsupervised dictionary learning extracting features which are then used to determine fault in drivetrain bearings. \\ \hline
+    \cite{ANN_damage_detection_gearbox_wt} & Oil temperature, wind speed and rotor speed. & & Trains ANN to estimate vibration signal, uses reconstruction error for AD. \\ \hline
+    \cite{multiway_PCA_multivar_inference_cm_wt} & SCADA data. & PCA. & Sets up baseline model using multiway PCA, then finds outliers by hypothesis testing whether multivariate distribution is equal to baseline. \\ \hline
+    \cite{image_texture_analysis_FD_wt} & FAST wind turbine simulator. & Image texture analysis tools. & KNN, Linear Discriminant Model, decision trees, bag-tree, linear SVM.\\ \hline
+    \cite{auto_associative_nn_wt_fault_detection} & SCADA data. & K-means for outlier elimination. & Uses Auto-Associative Neural Networks as an auto-encoder, and the Hotel T2 statistic as a dynamic threshold for the reconstruction error.\\ \hline
+    \cite{abnormal_detection_scada_data_mining} & SCADA data. & Grey correlation algorithm for eigencevtor extraction. & Use genetic algorithm for feature selection, and SVR for estimating performance curves. \\ \hline
+    \cite{health_cond_model_nn_proportional_hazard_models} & Rotor speed, gearbox temperature and generator temperature. & & Uses three NN for normal behaviour modelling. Reconstruction error sendt to proportional hazard model which sets dynamic threshold. \\ \hline
+    \cite{ice_detection_using_ITL} & SCADA data. & & Uses Inductive Transfer Learning and five differen ML classifiers for ice detection on blades. \\ \hline
+    \cite{VMD_MPE_COVAL_fault_detection_gearbox} & Vibration signals. & Variational mode decomposition (VMD). & Uses multi-scale permutation entropy (MPE) used for feature selection, COVAL for domain normalization and an SVM for binary fault classification.\\ \hline
+    \cite{SVR_blade_pitch_curve_cm} & SCADA data. & & Uses bins and SVR to estimate blade angle pitch curve. \\ \hline
+    \cite{detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models} & SCADA data. &  & Tests different architectures of ANNs to for estimating temperature of non-drive end bearing. Uses reconstruction error for anomaly detection. \\ \hline
+    \cite{image_based_surface_damage_detection_DL_drone_inspection} & Images taken by drones & & Recurrent Convolutional Neural Network to classify structural damage in blades.\\ \hline
+    \cite{image_based_YOLO_YSODA} & Uses images taken from ground level & & Convolutional Neural Network, and YOLO-based small object detection approach (YSODA) for damage detection in blades and hub.\\ \hline
+    \cite{vibration_acustic_decision_tree_SVM_gearbox} & Vibration signals, acustic emission and oil particle analysis & DWT. & Uses decision tree for feature selection, and SVC for assessing fault severity in gearbox\\ \hline
+    \cite{AI_image_analytics_2_classify_blade_defects} & Uses images taken from ground level & & Convolutional Neural Network to detect cracks $\&$ damage in blades.\\ \hline
+    \cite{dirt_n_mud_detection_using_guided_waves} & Ultrasonic testing & PCA and ARMA models. & Neighbourhood Component analysis for feature selection and an ensamble of KNN, linear SVM, decision trees, LDA and subspace discriminant to estimate amount of dirt and mud on blades. \\ \hline
+    \cite{fault_classification_using_CSO_SVM} & Uses pitch position, rotor speed and generator speed. & & Detects faults with an SVC with parameters optimized by Cuckoo-swarm optimization. \\ \hline
+    \cite{vibration_ARMA_decision_tree_cm_wt} & Vibration signals & ARMA model. & Dominating features selected with J48 decision tree, fault classification done with Bayesian- and lazy classifiers. \\ \hline
+    \cite{integrated_cm_bearing_fault_wt_gearbox} & Vibration signals, acustic emission and oil particle analysis & DWT and PCA. & Dominating features selected with decision tree, fault detection done with SVC. \\ \hline
+    \cite{blade_defect_detection_imaging_array} & Images taken from imaging array & & Uses a deep neural network for binary classification of blade defects. \\ \hline
+    \cite{unsupervised_AD_blade_damage_deep_features_images} & Uses images taken by drone & Uses a CNN trained on an unrelated image dataset to extract general features. & Compress features with PCA, and pass them to a unsupervised one-class SVM. \\ \hline
+    \cite{vibration_fault_diagnosis_wt_planetary_gearbox} & & & This is a literary review of vibration based condition monitoring and fault diagnosis of planetary gearboxes in wind turbines. \\ \hline
+    \cite{RF_XGB_fault_detection} & Uses the FAST wind turbine simulator to get SCADA data. & Random forest. & Uses XGBoost to train an ensamble of classifiers for specific faults. \\ \hline
+    \cite{CBPM_ABPM_maintainance_model} & SCADA data. & & Uses several ANN to build a normal behaviour model, then uses reconstruction error together with the age of the age of the turbine to predict anomolous behaviour.\\ \hline
+    \cite{improved_power_curve_monitoring_of_wt} & SCADA data. & & Uses Pearson product-moment rank correlation to select features, and applies different ANN structures to predict the active power. \\ \hline
+    \cite{DBN_simulink_SCADA_FD} & SCADA data from a simulink model of a wind turbine. & & Uses Deep Belief Networks for detecting anomolous behaviour.\\ \hline
+    \cite{wt_gearbox_bearing_temp_KS_CNN} & SCADA data. &  & Uses kolmogorov-smirnov test to compare different turbines at same moment in time combined with the reconstruction error of the gearbox bearing temperature of an ANN to detect anomalies.\\ \hline
+    \cite{fault_monitoring_HMM} & Vibration signals. & Approximates vibration distributions at different rotor speeds with Weibull distribution. & Uses a HMM for statistical fault detection. \\ \hline
+    \cite{model_based_fuzzy_logic_cm_wt} & SCADA data. & & Compares linear models, ANNs and state-dependent parameter models for fault detection. \\ \hline
+    \cite{fault_detect_PARAFAC_k_means} & SCADA data. & parallel factor analysis (PARAFAC) as a decomposition method & uses K-means clustering after decomposition for fault detection. \\ \hline
+    \cite{online_fd_using_PCA_different_operating_zones} & Uses a wind turbine simulator for SCADA data. & & Multiple PCA models are as a statistical reference reflecting the data variability in local zones and used in parallel for online fault detection. \\ \hline
+    \cite{roller_bearings_cm_fisher_score_and_permutation_entropy} & Vibration signals. & Variational mode decomposition & Uses Fisher score and ReliefF algorithm for feature selection. Feeds selected signals into a multi-class SVC for bearing fault detection. \\ \hline
+    \cite{deep_learning_for_imbalanced_class_detection_bearing_cm} & SCADA data. & & Uses deep neural networks for detection of icing on the blades. \\ \hline
+    \cite{perform_monitoring_wt_using_ASI_methods} & Wind speed, ambient temperature and air density. & & Uses a series of ARMA models (ARIMA, GAS, GASX, NLGASX) to predict the potential for energy production at a geographical location. \\ \hline
+    \cite{reliability_analysis_detecting_FA_NN_wt} & SCADA data. & & Combines NN with alarms generated by SCADA system to reduce false alarm rate. \\ \hline
+    \hline
+    \caption{Summary of machine learning methods for wind turbine condition monitoring}
+    \label{tab:machine_learning_wt_cm_summary}
+\end{longtable}

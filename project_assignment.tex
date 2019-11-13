@@ -1,4 +1,4 @@
-\documentclass[11pt,english,a4paper,openright]{report}
+\documentclass[11pt,english,a4paper,openright]{report} % Use report because that gives us fancy tables.
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amsfonts,amsthm,bm} % Math packages
@@ -7,8 +7,12 @@
 \usepackage{lastpage} % Allows for page numbering in footer
 \usepackage{hyperref} % To include hyperlinks in the text and footnotes
 \usepackage{tcolorbox} % To make colourful boxes (objectives)
+\usepackage[margin=1.0in]{geometry} % To change page margins
 \usepackage[Lenny]{fncychap} % To get fance chapter headings. Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
-%\usepackage{minted} % To include code in project. Check out https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted for examples!
+\usepackage{booktabs} % For fancy tables
+\usepackage{longtable} % For tables spanning multiple pages
+% \usepackage{minted} % To include code in project. 
+% Check out https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted for examples!
 \usepackage[citestyle=numeric, bibstyle=numeric, sorting=none]{biblatex} % For references
 \addbibresource{references_books.bib}
 \addbibresource{references_tsc.bib}
@@ -16,7 +20,7 @@
 \addbibresource{references_ml_wind_turbine.bib}
 \addbibresource{references_other.bib}
 
-
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % Something about allowing more space between rows.
 \newtheorem{theorem}{Definition} % To allow labelled definitions
 
 \begin{document}
@@ -41,7 +45,7 @@
 
 \pagenumbering{arabic} % Page numbering in the table of contents
 \fancyhf{}
-%\lhead{left header}
+\lhead{left header}
 %\rhead{right header}
 %\lfoot{left footer}
 \rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
@@ -54,13 +58,14 @@
 
 \input{method/method.tex}
 
-\input{wind_turbine/wind_turbine.tex}
+\input{tsc/time_series_clust.tex}
 
-\input{theory/theory.tex}
+\input{wind_turbine/wind_turbine.tex}
 
 \input{discussion_conclusion/discussion_conclusion.tex}
 
-% \input{appendix/}
+\chapter{Appendices}
+\input{appendix/literetature_review_tables.tex}
 
 \printbibliography
 
