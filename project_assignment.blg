@@ -1,37 +1,34 @@
-[0] Config.pm:304> INFO - This is Biber 2.13
+[1] Config.pm:304> INFO - This is Biber 2.13
 [1] Config.pm:307> INFO - Logfile is 'project_assignment.blg'
-[28] biber:315> INFO - === on. nov. 13, 2019, 18:40:53
-[46] Biber.pm:375> INFO - Reading 'project_assignment.bcf'
-[129] Biber.pm:905> INFO - Found 56 citekeys in bib section 0
-[146] Biber.pm:4196> INFO - Processing section 0
-[147] Utils.pm:75> INFO - Globbing data source 'references_books.bib'
-[148] Utils.pm:91> INFO - Globbed data source 'references_books.bib' to references_books.bib
-[148] Utils.pm:75> INFO - Globbing data source 'references_tsc.bib'
-[148] Utils.pm:91> INFO - Globbed data source 'references_tsc.bib' to references_tsc.bib
-[148] Utils.pm:75> INFO - Globbing data source 'references_wind_turbine_monitoring_review.bib'
-[148] Utils.pm:91> INFO - Globbed data source 'references_wind_turbine_monitoring_review.bib' to references_wind_turbine_monitoring_review.bib
-[148] Utils.pm:75> INFO - Globbing data source 'references_ml_wind_turbine.bib'
-[148] Utils.pm:91> INFO - Globbed data source 'references_ml_wind_turbine.bib' to references_ml_wind_turbine.bib
-[148] Utils.pm:75> INFO - Globbing data source 'references_other.bib'
-[148] Utils.pm:91> INFO - Globbed data source 'references_other.bib' to references_other.bib
-[158] Biber.pm:4373> INFO - Looking for bibtex format file 'references_books.bib' for section 0
-[159] bibtex.pm:1462> INFO - LaTeX decoding ...
-[164] bibtex.pm:1281> INFO - Found BibTeX data source 'references_books.bib'
-[182] Biber.pm:4373> INFO - Looking for bibtex format file 'references_tsc.bib' for section 0
-[183] bibtex.pm:1462> INFO - LaTeX decoding ...
-[188] bibtex.pm:1281> INFO - Found BibTeX data source 'references_tsc.bib'
-[199] Biber.pm:4373> INFO - Looking for bibtex format file 'references_wind_turbine_monitoring_review.bib' for section 0
+[27] biber:315> INFO - === fr. nov. 15, 2019, 22:20:57
+[47] Biber.pm:375> INFO - Reading 'project_assignment.bcf'
+[146] Biber.pm:905> INFO - Found 51 citekeys in bib section 0
+[163] Biber.pm:4196> INFO - Processing section 0
+[166] Utils.pm:75> INFO - Globbing data source 'references_books.bib'
+[166] Utils.pm:91> INFO - Globbed data source 'references_books.bib' to references_books.bib
+[166] Utils.pm:75> INFO - Globbing data source 'references_tsc.bib'
+[167] Utils.pm:91> INFO - Globbed data source 'references_tsc.bib' to references_tsc.bib
+[167] Utils.pm:75> INFO - Globbing data source 'references_wind_turbine_monitoring_review.bib'
+[167] Utils.pm:91> INFO - Globbed data source 'references_wind_turbine_monitoring_review.bib' to references_wind_turbine_monitoring_review.bib
+[167] Utils.pm:75> INFO - Globbing data source 'references_ml_wind_turbine.bib'
+[168] Utils.pm:91> INFO - Globbed data source 'references_ml_wind_turbine.bib' to references_ml_wind_turbine.bib
+[168] Utils.pm:75> INFO - Globbing data source 'references_other.bib'
+[168] Utils.pm:91> INFO - Globbed data source 'references_other.bib' to references_other.bib
+[178] Biber.pm:4373> INFO - Looking for bibtex format file 'references_books.bib' for section 0
+[180] bibtex.pm:1462> INFO - LaTeX decoding ...
+[187] bibtex.pm:1281> INFO - Found BibTeX data source 'references_books.bib'
+[192] Biber.pm:4373> INFO - Looking for bibtex format file 'references_tsc.bib' for section 0
+[193] bibtex.pm:1462> INFO - LaTeX decoding ...
+[197] bibtex.pm:1281> INFO - Found BibTeX data source 'references_tsc.bib'
+[198] Biber.pm:4373> INFO - Looking for bibtex format file 'references_wind_turbine_monitoring_review.bib' for section 0
 [201] bibtex.pm:1462> INFO - LaTeX decoding ...
-[213] bibtex.pm:1281> INFO - Found BibTeX data source 'references_wind_turbine_monitoring_review.bib'
-[245] Biber.pm:4373> INFO - Looking for bibtex format file 'references_ml_wind_turbine.bib' for section 0
-[259] bibtex.pm:1462> INFO - LaTeX decoding ...
-[465] bibtex.pm:1281> INFO - Found BibTeX data source 'references_ml_wind_turbine.bib'
-[816] Biber.pm:4373> INFO - Looking for bibtex format file 'references_other.bib' for section 0
-[817] bibtex.pm:1462> INFO - LaTeX decoding ...
-[822] bibtex.pm:1281> INFO - Found BibTeX data source 'references_other.bib'
-[893] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[893] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[893] Biber.pm:4024> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[893] Biber.pm:4030> INFO - No sort tailoring available for locale 'en-US'
-[941] bbl.pm:648> INFO - Writing 'project_assignment.bbl' with encoding 'UTF-8'
-[1053] bbl.pm:751> INFO - Output to project_assignment.bbl
+[211] bibtex.pm:1281> INFO - Found BibTeX data source 'references_wind_turbine_monitoring_review.bib'
+[242] Biber.pm:4373> INFO - Looking for bibtex format file 'references_ml_wind_turbine.bib' for section 0
+[254] bibtex.pm:1462> INFO - LaTeX decoding ...
+[444] bibtex.pm:1281> INFO - Found BibTeX data source 'references_ml_wind_turbine.bib'
+[1583] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1584] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1584] Biber.pm:4024> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1584] Biber.pm:4030> INFO - No sort tailoring available for locale 'en-US'
+[1630] bbl.pm:648> INFO - Writing 'project_assignment.bbl' with encoding 'UTF-8'
+[1689] bbl.pm:751> INFO - Output to project_assignment.bbl

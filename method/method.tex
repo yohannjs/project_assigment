@@ -4,8 +4,6 @@
 \section{Search terms}
 To find the relevant literature on the subjects of interest the search engine Oria was used to search the university library of the NTNU. Oria was preferred over other search engines such as Google Scholar because Oria allows one to combine multiple search terms in unison using ''AND'' or ''OR'', and because it allows the user to choose whether the search term should be in the title, subject, or other parts of the articles. The review will only consider articles published in peer-reviewed journals. Table \ref{tab:search_results} summarizes the search results. The \textit{Title} and \textit{General content} columns show which terms were used in the different searches; which terms where required to be in the title, and which terms could be in the ''general content'', meaning any part of the article. Let ''$\times$'' represent the AND operator between two search terms, and ''$\wedge$'' represent the OR operator. The ''*'' operator means that the search will include any word beginning with the word before the star, e.g \textit{detect*} includes \textit{detection}, \textit{detecting}, \textit{detected}, etc. The $N_f$ and $N_i$ columns show how many results each search yielded and how many articles from each search were included in the review, respectively. \bigskip 
 
-The last three rows in table \ref{tab:search_results} are somewhat disconnected from the rest of the table. The term ''forward snowballing'' refers to finding other articles by finding articles citing a specific source, and the term ''backward snowballing'' refers to finding articles by going through the references of a particular source.
-
 \begin{table*}[h]
     \centering
     \ra{1.3}
@@ -15,11 +13,9 @@ The last three rows in table \ref{tab:search_results} are somewhat disconnected 
         \midrule
         1 & time $\times$ series $\times$ clustering & None & 219 & 121 \\ 
         2 & wind $\times$ turbine* $\times$ (monitor* $\wedge{}$ detect*) $\times$ review & None & 32 & 3 \\
-        3 & wind $\times$ turbine* $\times$ (monitor* $\wedge{}$ detect*) & machine $\times$ learning & 100 & 48 \\ 
+        3 & wind $\times$ turbine* $\times$ (monitor* $\wedge{}$ detect*) & machine $\times$ learning & 100 & 47 \\ 
         4 & (monitor* $\wedge{}$ detect*) $\times$ clustering & time $\times$ series & 187 & 21 \\
         \midrule
-        \multicolumn{4}{r}{Articles included through backward snowballing} & 0 \\
-        \multicolumn{4}{r}{Articles included through forward snowballing} & 0 \\
         \multicolumn{4}{r}{Total number of articles included} & 193 \\
         \bottomrule
     \end{tabular}
