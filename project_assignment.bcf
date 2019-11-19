@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.6" bltxversion="3.13a" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.4" bltxversion="3.10" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -98,10 +98,6 @@
       <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
-    </bcf:option>
-    <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
       <bcf:value>3</bcf:value>
     </bcf:option>
@@ -118,39 +114,11 @@
       <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>minsortnames</bcf:key>
-      <bcf:value>1</bcf:value>
-    </bcf:option>
-    <bcf:option type="singlevalued">
       <bcf:key>minitems</bcf:key>
       <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>nohashothers</bcf:key>
-      <bcf:value>0</bcf:value>
-    </bcf:option>
-    <bcf:option type="singlevalued">
-      <bcf:key>noroman</bcf:key>
-      <bcf:value>0</bcf:value>
-    </bcf:option>
-    <bcf:option type="singlevalued">
-      <bcf:key>nosortothers</bcf:key>
-      <bcf:value>0</bcf:value>
-    </bcf:option>
-    <bcf:option type="singlevalued">
       <bcf:key>singletitle</bcf:key>
-      <bcf:value>0</bcf:value>
-    </bcf:option>
-    <bcf:option type="singlevalued">
-      <bcf:key>skipbib</bcf:key>
-      <bcf:value>0</bcf:value>
-    </bcf:option>
-    <bcf:option type="singlevalued">
-      <bcf:key>skipbiblist</bcf:key>
-      <bcf:value>0</bcf:value>
-    </bcf:option>
-    <bcf:option type="singlevalued">
-      <bcf:key>skiplab</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -171,11 +139,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>false</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -294,17 +262,8 @@
     <bcf:option datatype="string">sortlocale</bcf:option>
     <bcf:option datatype="string">language</bcf:option>
     <bcf:option datatype="string">autolang</bcf:option>
-    <bcf:option datatype="string">indexing</bcf:option>
-    <bcf:option datatype="string">hyperref</bcf:option>
     <bcf:option datatype="string">backrefsetstyle</bcf:option>
     <bcf:option datatype="string">block</bcf:option>
-    <bcf:option datatype="string">pagetracker</bcf:option>
-    <bcf:option datatype="string">citecounter</bcf:option>
-    <bcf:option datatype="string">citetracker</bcf:option>
-    <bcf:option datatype="string">ibidtracker</bcf:option>
-    <bcf:option datatype="string">idemtracker</bcf:option>
-    <bcf:option datatype="string">opcittracker</bcf:option>
-    <bcf:option datatype="string">loccittracker</bcf:option>
     <bcf:option datatype="string">labeldate</bcf:option>
     <bcf:option datatype="string">labeltime</bcf:option>
     <bcf:option datatype="string">dateera</bcf:option>
@@ -322,8 +281,6 @@
     <bcf:option datatype="string">gregorianstart</bcf:option>
     <bcf:option datatype="string">autocite</bcf:option>
     <bcf:option datatype="string">notetype</bcf:option>
-    <bcf:option datatype="string">uniquelist</bcf:option>
-    <bcf:option datatype="string">uniquename</bcf:option>
     <bcf:option datatype="string">refsection</bcf:option>
     <bcf:option datatype="string">refsegment</bcf:option>
     <bcf:option datatype="string">citereset</bcf:option>
@@ -363,9 +320,18 @@
     <bcf:option datatype="boolean">abbreviate</bcf:option>
     <bcf:option datatype="boolean">dateabbrev</bcf:option>
     <bcf:option datatype="boolean">clearlang</bcf:option>
+    <bcf:option datatype="boolean">indexing</bcf:option>
     <bcf:option datatype="boolean">sortcites</bcf:option>
     <bcf:option datatype="boolean">sortsets</bcf:option>
+    <bcf:option datatype="boolean">hyperref</bcf:option>
     <bcf:option datatype="boolean">backref</bcf:option>
+    <bcf:option datatype="boolean">pagetracker</bcf:option>
+    <bcf:option datatype="boolean">citecounter</bcf:option>
+    <bcf:option datatype="boolean">citetracker</bcf:option>
+    <bcf:option datatype="boolean">ibidtracker</bcf:option>
+    <bcf:option datatype="boolean">idemtracker</bcf:option>
+    <bcf:option datatype="boolean">opcittracker</bcf:option>
+    <bcf:option datatype="boolean">loccittracker</bcf:option>
     <bcf:option datatype="boolean">parentracker</bcf:option>
     <bcf:option datatype="boolean">labeldateusetime</bcf:option>
     <bcf:option datatype="boolean">datecirca</bcf:option>
@@ -386,22 +352,16 @@
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
-    <bcf:option datatype="boolean">nohashothers</bcf:option>
-    <bcf:option datatype="boolean">nosortothers</bcf:option>
-    <bcf:option datatype="boolean">noroman</bcf:option>
+    <bcf:option datatype="boolean">uniquelist</bcf:option>
+    <bcf:option datatype="boolean">uniquename</bcf:option>
     <bcf:option datatype="boolean">singletitle</bcf:option>
     <bcf:option datatype="boolean">uniquetitle</bcf:option>
     <bcf:option datatype="boolean">uniquebaretitle</bcf:option>
     <bcf:option datatype="boolean">uniquework</bcf:option>
     <bcf:option datatype="boolean">uniqueprimaryauthor</bcf:option>
     <bcf:option datatype="boolean">defernumbers</bcf:option>
-    <bcf:option datatype="boolean">locallabelwidth</bcf:option>
     <bcf:option datatype="boolean">bibwarn</bcf:option>
     <bcf:option datatype="boolean">useprefix</bcf:option>
-    <bcf:option datatype="boolean">skipbib</bcf:option>
-    <bcf:option datatype="boolean">skipbiblist</bcf:option>
-    <bcf:option datatype="boolean">skiplab</bcf:option>
-    <bcf:option datatype="boolean">dataonly</bcf:option>
     <bcf:option datatype="boolean">defernums</bcf:option>
     <bcf:option datatype="boolean">firstinits</bcf:option>
     <bcf:option datatype="boolean">sortfirstinits</bcf:option>
@@ -421,8 +381,6 @@
     <bcf:option datatype="integer">minbibnames</bcf:option>
     <bcf:option datatype="integer">maxcitenames</bcf:option>
     <bcf:option datatype="integer">mincitenames</bcf:option>
-    <bcf:option datatype="integer">maxsortnames</bcf:option>
-    <bcf:option datatype="integer">minsortnames</bcf:option>
     <bcf:option datatype="integer">maxitems</bcf:option>
     <bcf:option datatype="integer">minitems</bcf:option>
     <bcf:option datatype="integer">maxalphanames</bcf:option>
@@ -434,18 +392,6 @@
     <bcf:option datatype="string">alphaothers</bcf:option>
     <bcf:option datatype="string">sortalphaothers</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
-    <bcf:option datatype="string">indexing</bcf:option>
-    <bcf:option datatype="string">citetracker</bcf:option>
-    <bcf:option datatype="string">ibidtracker</bcf:option>
-    <bcf:option datatype="string">idemtracker</bcf:option>
-    <bcf:option datatype="string">opcittracker</bcf:option>
-    <bcf:option datatype="string">loccittracker</bcf:option>
-    <bcf:option datatype="string">uniquelist</bcf:option>
-    <bcf:option datatype="string">uniquename</bcf:option>
-    <bcf:option datatype="boolean">familyinits</bcf:option>
-    <bcf:option datatype="boolean">giveninits</bcf:option>
-    <bcf:option datatype="boolean">prefixinits</bcf:option>
-    <bcf:option datatype="boolean">suffixinits</bcf:option>
     <bcf:option datatype="boolean">useafterword</bcf:option>
     <bcf:option datatype="boolean">useannotator</bcf:option>
     <bcf:option datatype="boolean">useauthor</bcf:option>
@@ -464,23 +410,18 @@
     <bcf:option datatype="boolean">usetranslator</bcf:option>
     <bcf:option datatype="boolean">useshortauthor</bcf:option>
     <bcf:option datatype="boolean">useshorteditor</bcf:option>
-    <bcf:option datatype="boolean">terseinits</bcf:option>
-    <bcf:option datatype="boolean">abbreviate</bcf:option>
-    <bcf:option datatype="boolean">dateabbrev</bcf:option>
-    <bcf:option datatype="boolean">clearlang</bcf:option>
+    <bcf:option datatype="boolean">indexing</bcf:option>
     <bcf:option datatype="boolean">labelnumber</bcf:option>
     <bcf:option datatype="boolean">labelalpha</bcf:option>
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
-    <bcf:option datatype="boolean">nohashothers</bcf:option>
-    <bcf:option datatype="boolean">nosortothers</bcf:option>
-    <bcf:option datatype="boolean">noroman</bcf:option>
+    <bcf:option datatype="boolean">uniquelist</bcf:option>
+    <bcf:option datatype="boolean">uniquename</bcf:option>
     <bcf:option datatype="boolean">singletitle</bcf:option>
     <bcf:option datatype="boolean">uniquetitle</bcf:option>
     <bcf:option datatype="boolean">uniquebaretitle</bcf:option>
     <bcf:option datatype="boolean">uniquework</bcf:option>
-    <bcf:option datatype="boolean">uniqueprimaryauthor</bcf:option>
     <bcf:option datatype="boolean">useprefix</bcf:option>
     <bcf:option datatype="boolean">skipbib</bcf:option>
     <bcf:option datatype="boolean">skipbiblist</bcf:option>
@@ -488,12 +429,6 @@
     <bcf:option datatype="boolean">dataonly</bcf:option>
     <bcf:option datatype="boolean">skiplos</bcf:option>
     <bcf:option datatype="boolean">labelyear</bcf:option>
-    <bcf:option datatype="boolean">isbn</bcf:option>
-    <bcf:option datatype="boolean">url</bcf:option>
-    <bcf:option datatype="boolean">doi</bcf:option>
-    <bcf:option datatype="boolean">eprint</bcf:option>
-    <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">subentry</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
@@ -507,8 +442,6 @@
     <bcf:option datatype="integer">minbibnames</bcf:option>
     <bcf:option datatype="integer">maxcitenames</bcf:option>
     <bcf:option datatype="integer">mincitenames</bcf:option>
-    <bcf:option datatype="integer">maxsortnames</bcf:option>
-    <bcf:option datatype="integer">minsortnames</bcf:option>
     <bcf:option datatype="integer">maxitems</bcf:option>
     <bcf:option datatype="integer">minitems</bcf:option>
     <bcf:option datatype="integer">maxalphanames</bcf:option>
@@ -516,111 +449,62 @@
   </bcf:optionscope>
   <bcf:optionscope type="ENTRY">
     <bcf:option datatype="string">noinherit</bcf:option>
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
-    <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
+    <bcf:option datatype="string">nametemplates</bcf:option>
+    <bcf:option datatype="string">labelalphanametemplatename</bcf:option>
+    <bcf:option datatype="string">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
-    <bcf:option datatype="string" backendout="1">indexing</bcf:option>
-    <bcf:option datatype="string" backendout="1">citetracker</bcf:option>
-    <bcf:option datatype="string" backendout="1">ibidtracker</bcf:option>
-    <bcf:option datatype="string" backendout="1">idemtracker</bcf:option>
-    <bcf:option datatype="string" backendout="1">opcittracker</bcf:option>
-    <bcf:option datatype="string" backendout="1">loccittracker</bcf:option>
-    <bcf:option datatype="string">uniquelist</bcf:option>
-    <bcf:option datatype="string">uniquename</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">giveninits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">prefixinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">suffixinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useafterword</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useannotator</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useauthor</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">usebookauthor</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">usecommentator</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useeditor</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useeditora</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useeditorb</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useeditorc</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useforeword</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useholder</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useintroduction</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">usenamea</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">usenameb</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">usenamec</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">usetranslator</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useshortauthor</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useshorteditor</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">terseinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">abbreviate</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">dateabbrev</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">clearlang</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">labelnumber</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">labelalpha</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">labeltitle</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">labeltitleyear</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">labeldateparts</bcf:option>
-    <bcf:option datatype="boolean">nohashothers</bcf:option>
-    <bcf:option datatype="boolean">nosortothers</bcf:option>
-    <bcf:option datatype="boolean">noroman</bcf:option>
-    <bcf:option datatype="boolean">singletitle</bcf:option>
-    <bcf:option datatype="boolean">uniquetitle</bcf:option>
-    <bcf:option datatype="boolean">uniquebaretitle</bcf:option>
-    <bcf:option datatype="boolean">uniquework</bcf:option>
-    <bcf:option datatype="boolean">uniqueprimaryauthor</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">skipbib</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">skipbiblist</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">skiplab</bcf:option>
-    <bcf:option datatype="boolean" backendin="uniquename=false,uniquelist=false,skipbib=true,skipbiblist=true,skiplab=true">dataonly</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">skiplos</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">isbn</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">url</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">doi</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">related</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">subentry</bcf:option>
-    <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
-    <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
-    <bcf:option datatype="integer" backendout="1">maxbibnames</bcf:option>
-    <bcf:option datatype="integer" backendout="1">minbibnames</bcf:option>
-    <bcf:option datatype="integer" backendout="1">maxcitenames</bcf:option>
-    <bcf:option datatype="integer" backendout="1">mincitenames</bcf:option>
-    <bcf:option datatype="integer" backendout="1">maxsortnames</bcf:option>
-    <bcf:option datatype="integer" backendout="1">minsortnames</bcf:option>
-    <bcf:option datatype="integer" backendout="1">maxitems</bcf:option>
-    <bcf:option datatype="integer" backendout="1">minitems</bcf:option>
-    <bcf:option datatype="integer" backendout="1">maxalphanames</bcf:option>
-    <bcf:option datatype="integer" backendout="1">minalphanames</bcf:option>
+    <bcf:option datatype="boolean">useafterword</bcf:option>
+    <bcf:option datatype="boolean">useannotator</bcf:option>
+    <bcf:option datatype="boolean">useauthor</bcf:option>
+    <bcf:option datatype="boolean">usebookauthor</bcf:option>
+    <bcf:option datatype="boolean">usecommentator</bcf:option>
+    <bcf:option datatype="boolean">useeditor</bcf:option>
+    <bcf:option datatype="boolean">useeditora</bcf:option>
+    <bcf:option datatype="boolean">useeditorb</bcf:option>
+    <bcf:option datatype="boolean">useeditorc</bcf:option>
+    <bcf:option datatype="boolean">useforeword</bcf:option>
+    <bcf:option datatype="boolean">useholder</bcf:option>
+    <bcf:option datatype="boolean">useintroduction</bcf:option>
+    <bcf:option datatype="boolean">usenamea</bcf:option>
+    <bcf:option datatype="boolean">usenameb</bcf:option>
+    <bcf:option datatype="boolean">usenamec</bcf:option>
+    <bcf:option datatype="boolean">usetranslator</bcf:option>
+    <bcf:option datatype="boolean">useshortauthor</bcf:option>
+    <bcf:option datatype="boolean">useshorteditor</bcf:option>
+    <bcf:option datatype="boolean">indexing</bcf:option>
+    <bcf:option datatype="boolean">uniquelist</bcf:option>
+    <bcf:option datatype="boolean">uniquename</bcf:option>
+    <bcf:option datatype="boolean">useprefix</bcf:option>
+    <bcf:option datatype="boolean">skipbib</bcf:option>
+    <bcf:option datatype="boolean">skipbiblist</bcf:option>
+    <bcf:option datatype="boolean">skiplab</bcf:option>
+    <bcf:option datatype="boolean">dataonly</bcf:option>
+    <bcf:option datatype="boolean">skiplos</bcf:option>
+    <bcf:option datatype="integer">maxnames</bcf:option>
+    <bcf:option datatype="integer">minnames</bcf:option>
+    <bcf:option datatype="integer">maxbibnames</bcf:option>
+    <bcf:option datatype="integer">minbibnames</bcf:option>
+    <bcf:option datatype="integer">maxcitenames</bcf:option>
+    <bcf:option datatype="integer">mincitenames</bcf:option>
+    <bcf:option datatype="integer">maxitems</bcf:option>
+    <bcf:option datatype="integer">minitems</bcf:option>
+    <bcf:option datatype="integer">maxalphanames</bcf:option>
+    <bcf:option datatype="integer">minalphanames</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAMELIST">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
-    <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
-    <bcf:option datatype="string">uniquelist</bcf:option>
-    <bcf:option datatype="string">uniquename</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">giveninits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">prefixinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">suffixinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">terseinits</bcf:option>
-    <bcf:option datatype="boolean">nohashothers</bcf:option>
-    <bcf:option datatype="boolean">nosortothers</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
+    <bcf:option datatype="string">nametemplates</bcf:option>
+    <bcf:option datatype="string">sortingnamekeytemplatename</bcf:option>
+    <bcf:option datatype="string">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string">labelalphanametemplatename</bcf:option>
+    <bcf:option datatype="boolean">useprefix</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAME">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
-    <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
-    <bcf:option datatype="string">uniquename</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">giveninits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">prefixinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">suffixinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">terseinits</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
+    <bcf:option datatype="string">nametemplates</bcf:option>
+    <bcf:option datatype="string">sortingnamekeytemplatename</bcf:option>
+    <bcf:option datatype="string">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string">labelalphanametemplatename</bcf:option>
+    <bcf:option datatype="boolean">useprefix</bcf:option>
   </bcf:optionscope>
   <!-- DATAFIELDSETS -->
   <bcf:datafieldset name="setnames">
@@ -867,7 +751,6 @@
       <bcf:entrytype>customd</bcf:entrytype>
       <bcf:entrytype>custome</bcf:entrytype>
       <bcf:entrytype>customf</bcf:entrytype>
-      <bcf:entrytype>dataset</bcf:entrytype>
       <bcf:entrytype>inbook</bcf:entrytype>
       <bcf:entrytype>incollection</bcf:entrytype>
       <bcf:entrytype>inproceedings</bcf:entrytype>
@@ -905,7 +788,7 @@
       <bcf:entrytype skip_output="true">xdata</bcf:entrytype>
     </bcf:entrytypes>
     <bcf:fields>
-      <bcf:field fieldtype="field" datatype="integer">sortyear</bcf:field>
+      <bcf:field fieldtype="field" datatype="integer">number</bcf:field>
       <bcf:field fieldtype="field" datatype="integer">volume</bcf:field>
       <bcf:field fieldtype="field" datatype="integer">volumes</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">abstract</bcf:field>
@@ -946,7 +829,6 @@
       <bcf:field fieldtype="field" datatype="literal">maintitleaddon</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">nameaddon</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">note</bcf:field>
-      <bcf:field fieldtype="field" datatype="literal">number</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">origtitle</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">pagetotal</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">part</bcf:field>
@@ -970,6 +852,7 @@
       <bcf:field fieldtype="field" datatype="literal" label="true">shortjournal</bcf:field>
       <bcf:field fieldtype="field" datatype="literal" label="true">shortseries</bcf:field>
       <bcf:field fieldtype="field" datatype="literal" label="true">shorttitle</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal" skip_output="true">sortyear</bcf:field>
       <bcf:field fieldtype="field" datatype="literal" skip_output="true">sorttitle</bcf:field>
       <bcf:field fieldtype="field" datatype="literal" skip_output="true">sortshorthand</bcf:field>
       <bcf:field fieldtype="field" datatype="literal" skip_output="true">sortkey</bcf:field>
@@ -1219,6 +1102,7 @@
     <bcf:entryfields>
       <bcf:entrytype>set</bcf:entrytype>
       <bcf:field>entryset</bcf:field>
+      <bcf:field>crossref</bcf:field>
     </bcf:entryfields>
     <bcf:entryfields>
       <bcf:entrytype>article</bcf:entrytype>
@@ -1553,31 +1437,6 @@
       <bcf:field>volumes</bcf:field>
     </bcf:entryfields>
     <bcf:entryfields>
-      <bcf:entrytype>dataset</bcf:entrytype>
-      <bcf:field>addendum</bcf:field>
-      <bcf:field>author</bcf:field>
-      <bcf:field>doi</bcf:field>
-      <bcf:field>edition</bcf:field>
-      <bcf:field>editor</bcf:field>
-      <bcf:field>editortype</bcf:field>
-      <bcf:field>eprint</bcf:field>
-      <bcf:field>eprintclass</bcf:field>
-      <bcf:field>eprinttype</bcf:field>
-      <bcf:field>language</bcf:field>
-      <bcf:field>location</bcf:field>
-      <bcf:field>note</bcf:field>
-      <bcf:field>number</bcf:field>
-      <bcf:field>organization</bcf:field>
-      <bcf:field>publisher</bcf:field>
-      <bcf:field>pubstate</bcf:field>
-      <bcf:field>series</bcf:field>
-      <bcf:field>subtitle</bcf:field>
-      <bcf:field>title</bcf:field>
-      <bcf:field>titleaddon</bcf:field>
-      <bcf:field>type</bcf:field>
-      <bcf:field>version</bcf:field>
-    </bcf:entryfields>
-    <bcf:entryfields>
       <bcf:entrytype>manual</bcf:entrytype>
       <bcf:field>addendum</bcf:field>
       <bcf:field>author</bcf:field>
@@ -1608,7 +1467,6 @@
     </bcf:entryfields>
     <bcf:entryfields>
       <bcf:entrytype>misc</bcf:entrytype>
-      <bcf:entrytype>software</bcf:entrytype>
       <bcf:field>addendum</bcf:field>
       <bcf:field>author</bcf:field>
       <bcf:field>doi</bcf:field>
@@ -1633,12 +1491,8 @@
       <bcf:entrytype>online</bcf:entrytype>
       <bcf:field>addendum</bcf:field>
       <bcf:field>author</bcf:field>
-      <bcf:field>doi</bcf:field>
       <bcf:field>editor</bcf:field>
       <bcf:field>editortype</bcf:field>
-      <bcf:field>eprint</bcf:field>
-      <bcf:field>eprintclass</bcf:field>
-      <bcf:field>eprinttype</bcf:field>
       <bcf:field>language</bcf:field>
       <bcf:field>note</bcf:field>
       <bcf:field>organization</bcf:field>
@@ -1707,19 +1561,9 @@
       <bcf:field>eprinttype</bcf:field>
       <bcf:field>eventday</bcf:field>
       <bcf:field>eventendday</bcf:field>
-      <bcf:field>eventendhour</bcf:field>
-      <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
-      <bcf:field>eventendsecond</bcf:field>
-      <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
-      <bcf:field>eventhour</bcf:field>
-      <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
-      <bcf:field>eventsecond</bcf:field>
-      <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
@@ -1751,19 +1595,9 @@
       <bcf:field>eprinttype</bcf:field>
       <bcf:field>eventday</bcf:field>
       <bcf:field>eventendday</bcf:field>
-      <bcf:field>eventendhour</bcf:field>
-      <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
-      <bcf:field>eventendsecond</bcf:field>
-      <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
-      <bcf:field>eventhour</bcf:field>
-      <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
-      <bcf:field>eventsecond</bcf:field>
-      <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
@@ -1805,19 +1639,9 @@
       <bcf:field>eprinttype</bcf:field>
       <bcf:field>eventday</bcf:field>
       <bcf:field>eventendday</bcf:field>
-      <bcf:field>eventendhour</bcf:field>
-      <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
-      <bcf:field>eventendsecond</bcf:field>
-      <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
-      <bcf:field>eventhour</bcf:field>
-      <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
-      <bcf:field>eventsecond</bcf:field>
-      <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
@@ -1891,24 +1715,6 @@
       <bcf:entrytype>unpublished</bcf:entrytype>
       <bcf:field>addendum</bcf:field>
       <bcf:field>author</bcf:field>
-      <bcf:field>eventday</bcf:field>
-      <bcf:field>eventendday</bcf:field>
-      <bcf:field>eventendhour</bcf:field>
-      <bcf:field>eventendminute</bcf:field>
-      <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
-      <bcf:field>eventendsecond</bcf:field>
-      <bcf:field>eventendtimezone</bcf:field>
-      <bcf:field>eventendyear</bcf:field>
-      <bcf:field>eventhour</bcf:field>
-      <bcf:field>eventminute</bcf:field>
-      <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
-      <bcf:field>eventsecond</bcf:field>
-      <bcf:field>eventtimezone</bcf:field>
-      <bcf:field>eventyear</bcf:field>
-      <bcf:field>eventtitle</bcf:field>
-      <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>howpublished</bcf:field>
       <bcf:field>language</bcf:field>
       <bcf:field>location</bcf:field>
@@ -1917,8 +1723,6 @@
       <bcf:field>subtitle</bcf:field>
       <bcf:field>title</bcf:field>
       <bcf:field>titleaddon</bcf:field>
-      <bcf:field>type</bcf:field>
-      <bcf:field>venue</bcf:field>
     </bcf:entryfields>
     <bcf:constraints>
       <bcf:entrytype>article</bcf:entrytype>
@@ -1957,6 +1761,7 @@
       <bcf:entrytype>set</bcf:entrytype>
       <bcf:constraint type="mandatory">
         <bcf:field>entryset</bcf:field>
+        <bcf:field>crossref</bcf:field>
       </bcf:constraint>
     </bcf:constraints>
     <bcf:constraints>
@@ -2017,12 +1822,6 @@
       </bcf:constraint>
     </bcf:constraints>
     <bcf:constraints>
-      <bcf:entrytype>dataset</bcf:entrytype>
-      <bcf:constraint type="mandatory">
-        <bcf:field>title</bcf:field>
-      </bcf:constraint>
-    </bcf:constraints>
-    <bcf:constraints>
       <bcf:entrytype>manual</bcf:entrytype>
       <bcf:constraint type="mandatory">
         <bcf:field>title</bcf:field>
@@ -2030,7 +1829,6 @@
     </bcf:constraints>
     <bcf:constraints>
       <bcf:entrytype>misc</bcf:entrytype>
-      <bcf:entrytype>software</bcf:entrytype>
       <bcf:constraint type="mandatory">
         <bcf:field>title</bcf:field>
       </bcf:constraint>
@@ -2039,11 +1837,7 @@
       <bcf:entrytype>online</bcf:entrytype>
       <bcf:constraint type="mandatory">
         <bcf:field>title</bcf:field>
-        <bcf:fieldor>
-          <bcf:field>url</bcf:field>
-          <bcf:field>doi</bcf:field>
-          <bcf:field>eprint</bcf:field>
-        </bcf:fieldor>
+        <bcf:field>url</bcf:field>
       </bcf:constraint>
     </bcf:constraints>
     <bcf:constraints>
@@ -2134,185 +1928,24 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">espen</bcf:citekey>
-    <bcf:citekey order="2">adv_meth_for_wt_cond_monit_rev</bcf:citekey>
-    <bcf:citekey order="3">wt_bearing_cm_review</bcf:citekey>
-    <bcf:citekey order="4">DBN_chicken_swarm_optim</bcf:citekey>
-    <bcf:citekey order="5">cm_rnn_lstm</bcf:citekey>
-    <bcf:citekey order="6">lin_and_non_lin_feat_for_ice_detection_on_blades</bcf:citekey>
-    <bcf:citekey order="6">image_based_surface_damage_detection_DL_drone_inspection</bcf:citekey>
-    <bcf:citekey order="6">image_based_YOLO_YSODA</bcf:citekey>
-    <bcf:citekey order="6">dirt_n_mud_detection_using_guided_waves</bcf:citekey>
-    <bcf:citekey order="6">blade_defect_detection_imaging_array</bcf:citekey>
-    <bcf:citekey order="6">unsupervised_AD_blade_damage_deep_features_images</bcf:citekey>
-    <bcf:citekey order="7">wt_cm_rev_new_trends_chal_2014</bcf:citekey>
-    <bcf:citekey order="8">ml_cm_wt_blade_ARMA_2018</bcf:citekey>
-    <bcf:citekey order="8">fault_detection_and_isolation_using_classifier_fusion</bcf:citekey>
-    <bcf:citekey order="8">lin_and_non_lin_feat_for_ice_detection_on_blades</bcf:citekey>
-    <bcf:citekey order="8">dirt_n_mud_detection_using_guided_waves</bcf:citekey>
-    <bcf:citekey order="8">vibration_ARMA_decision_tree_cm_wt</bcf:citekey>
-    <bcf:citekey order="9">fault_detection_and_isolation_using_classifier_fusion</bcf:citekey>
-    <bcf:citekey order="9">image_texture_analysis_FD_wt</bcf:citekey>
-    <bcf:citekey order="9">vibration_acustic_decision_tree_SVM_gearbox</bcf:citekey>
-    <bcf:citekey order="9">integrated_cm_bearing_fault_wt_gearbox</bcf:citekey>
-    <bcf:citekey order="10">lin_and_non_lin_feat_for_ice_detection_on_blades</bcf:citekey>
-    <bcf:citekey order="10">multiway_PCA_multivar_inference_cm_wt</bcf:citekey>
-    <bcf:citekey order="10">dirt_n_mud_detection_using_guided_waves</bcf:citekey>
-    <bcf:citekey order="10">integrated_cm_bearing_fault_wt_gearbox</bcf:citekey>
-    <bcf:citekey order="10">unsupervised_AD_blade_damage_deep_features_images</bcf:citekey>
-    <bcf:citekey order="10">online_fd_using_PCA_different_operating_zones</bcf:citekey>
-    <bcf:citekey order="10">fault_detect_PARAFAC_k_means</bcf:citekey>
-    <bcf:citekey order="11">blade_damage_detection_sup_ml_alg</bcf:citekey>
-    <bcf:citekey order="11">integrated_cm_bearing_fault_wt_gearbox</bcf:citekey>
-    <bcf:citekey order="11">roller_bearings_cm_fisher_score_and_permutation_entropy</bcf:citekey>
-    <bcf:citekey order="12">fault_detection_and_isolation_using_classifier_fusion</bcf:citekey>
-    <bcf:citekey order="12">blade_damage_detection_sup_ml_alg</bcf:citekey>
-    <bcf:citekey order="13">perf_mon_of_wt_using_extreme_func_theory</bcf:citekey>
-    <bcf:citekey order="13">GP_operational_curve_monitoring</bcf:citekey>
-    <bcf:citekey order="13">high_freq_scada_perf_monit_sensitivity</bcf:citekey>
-    <bcf:citekey order="13">abnormal_detection_scada_data_mining</bcf:citekey>
-    <bcf:citekey order="13">improved_power_curve_monitoring_of_wt</bcf:citekey>
-    <bcf:citekey order="13">SVR_blade_pitch_curve_cm</bcf:citekey>
-    <bcf:citekey order="13">health_cond_model_nn_proportional_hazard_models</bcf:citekey>
-    <bcf:citekey order="14">AD_and_fault_analysis_wt_DAE</bcf:citekey>
-    <bcf:citekey order="14">health_cond_model_nn_proportional_hazard_models</bcf:citekey>
-    <bcf:citekey order="14">detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models</bcf:citekey>
-    <bcf:citekey order="14">CBPM_ABPM_maintainance_model</bcf:citekey>
-    <bcf:citekey order="14">wt_gearbox_bearing_temp_KS_CNN</bcf:citekey>
-    <bcf:citekey order="14">DBN_chicken_swarm_optim</bcf:citekey>
-    <bcf:citekey order="15">wt_cm_rev_new_trends_chal_2014</bcf:citekey>
-    <bcf:citekey order="16">improved_power_curve_monitoring_of_wt</bcf:citekey>
-    <bcf:citekey order="16">ANN_damage_detection_gearbox_wt</bcf:citekey>
-    <bcf:citekey order="16">health_cond_model_nn_proportional_hazard_models</bcf:citekey>
-    <bcf:citekey order="16">detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models</bcf:citekey>
-    <bcf:citekey order="16">CBPM_ABPM_maintainance_model</bcf:citekey>
-    <bcf:citekey order="16">wt_gearbox_bearing_temp_KS_CNN</bcf:citekey>
-    <bcf:citekey order="16">auto_associative_nn_wt_fault_detection</bcf:citekey>
-    <bcf:citekey order="17">perf_mon_of_wt_using_extreme_func_theory</bcf:citekey>
-    <bcf:citekey order="17">GP_operational_curve_monitoring</bcf:citekey>
-    <bcf:citekey order="18">high_freq_scada_perf_monit_sensitivity</bcf:citekey>
-    <bcf:citekey order="18">abnormal_detection_scada_data_mining</bcf:citekey>
-    <bcf:citekey order="18">SVR_blade_pitch_curve_cm</bcf:citekey>
-    <bcf:citekey order="19">online_fd_using_PCA_different_operating_zones</bcf:citekey>
-    <bcf:citekey order="20">high_freq_scada_perf_monit_sensitivity</bcf:citekey>
-    <bcf:citekey order="21">high_freq_scada_perf_monit_sensitivity</bcf:citekey>
-    <bcf:citekey order="22">AD_and_fault_analysis_wt_DAE</bcf:citekey>
-    <bcf:citekey order="22">DBN_chicken_swarm_optim</bcf:citekey>
-    <bcf:citekey order="23">ANN_damage_detection_gearbox_wt</bcf:citekey>
-    <bcf:citekey order="24">ANN_damage_detection_gearbox_wt</bcf:citekey>
-    <bcf:citekey order="25">detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models</bcf:citekey>
-    <bcf:citekey order="26">detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models</bcf:citekey>
-    <bcf:citekey order="27">health_cond_model_nn_proportional_hazard_models</bcf:citekey>
-    <bcf:citekey order="28">health_cond_model_nn_proportional_hazard_models</bcf:citekey>
-    <bcf:citekey order="29">high_freq_scada_perf_monit_sensitivity</bcf:citekey>
-    <bcf:citekey order="30">high_freq_scada_perf_monit_sensitivity</bcf:citekey>
-    <bcf:citekey order="31">abnormal_detection_scada_data_mining</bcf:citekey>
-    <bcf:citekey order="32">abnormal_detection_scada_data_mining</bcf:citekey>
-    <bcf:citekey order="33">DBN_chicken_swarm_optim</bcf:citekey>
-    <bcf:citekey order="34">DBN_chicken_swarm_optim</bcf:citekey>
-    <bcf:citekey order="35">AD_and_fault_analysis_wt_DAE</bcf:citekey>
-    <bcf:citekey order="36">AD_and_fault_analysis_wt_DAE</bcf:citekey>
-    <bcf:citekey order="37">auto_associative_nn_wt_fault_detection</bcf:citekey>
-    <bcf:citekey order="38">auto_associative_nn_wt_fault_detection</bcf:citekey>
-    <bcf:citekey order="39">image_based_surface_damage_detection_DL_drone_inspection</bcf:citekey>
-    <bcf:citekey order="39">image_based_YOLO_YSODA</bcf:citekey>
-    <bcf:citekey order="39">AI_image_analytics_2_classify_blade_defects</bcf:citekey>
-    <bcf:citekey order="39">blade_defect_detection_imaging_array</bcf:citekey>
-    <bcf:citekey order="39">model_based_fuzzy_logic_cm_wt</bcf:citekey>
-    <bcf:citekey order="39">deep_learning_for_imbalanced_class_detection_bearing_cm</bcf:citekey>
-    <bcf:citekey order="40">ml_cm_wt_blade_ARMA_2018</bcf:citekey>
-    <bcf:citekey order="40">lin_and_non_lin_feat_for_ice_detection_on_blades</bcf:citekey>
-    <bcf:citekey order="40">image_texture_analysis_FD_wt</bcf:citekey>
-    <bcf:citekey order="40">ice_detection_using_ITL</bcf:citekey>
-    <bcf:citekey order="40">vibration_ARMA_decision_tree_cm_wt</bcf:citekey>
-    <bcf:citekey order="41">fault_detection_and_isolation_using_classifier_fusion</bcf:citekey>
-    <bcf:citekey order="41">dirt_n_mud_detection_using_guided_waves</bcf:citekey>
-    <bcf:citekey order="41">RF_XGB_fault_detection</bcf:citekey>
-    <bcf:citekey order="42">blade_damage_detection_sup_ml_alg</bcf:citekey>
-    <bcf:citekey order="42">VMD_MPE_COVAL_fault_detection_gearbox</bcf:citekey>
-    <bcf:citekey order="42">vibration_acustic_decision_tree_SVM_gearbox</bcf:citekey>
-    <bcf:citekey order="42">fault_classification_using_CSO_SVM</bcf:citekey>
-    <bcf:citekey order="42">integrated_cm_bearing_fault_wt_gearbox</bcf:citekey>
-    <bcf:citekey order="42">roller_bearings_cm_fisher_score_and_permutation_entropy</bcf:citekey>
-    <bcf:citekey order="43">wt_cm_using_cloud_computing_and_HELM</bcf:citekey>
-    <bcf:citekey order="44">multiway_PCA_multivar_inference_cm_wt</bcf:citekey>
-    <bcf:citekey order="45">DBN_simulink_SCADA_FD</bcf:citekey>
-    <bcf:citekey order="46">fault_monitoring_HMM</bcf:citekey>
-    <bcf:citekey order="47">image_based_surface_damage_detection_DL_drone_inspection</bcf:citekey>
-    <bcf:citekey order="47">image_based_YOLO_YSODA</bcf:citekey>
-    <bcf:citekey order="47">AI_image_analytics_2_classify_blade_defects</bcf:citekey>
-    <bcf:citekey order="47">blade_defect_detection_imaging_array</bcf:citekey>
-    <bcf:citekey order="48">image_based_surface_damage_detection_DL_drone_inspection</bcf:citekey>
-    <bcf:citekey order="48">image_based_YOLO_YSODA</bcf:citekey>
-    <bcf:citekey order="48">AI_image_analytics_2_classify_blade_defects</bcf:citekey>
-    <bcf:citekey order="48">blade_defect_detection_imaging_array</bcf:citekey>
-    <bcf:citekey order="49">deep_learning_for_imbalanced_class_detection_bearing_cm</bcf:citekey>
-    <bcf:citekey order="50">deep_learning_for_imbalanced_class_detection_bearing_cm</bcf:citekey>
-    <bcf:citekey order="51">blade_damage_detection_sup_ml_alg</bcf:citekey>
-    <bcf:citekey order="52">fault_classification_using_CSO_SVM</bcf:citekey>
-    <bcf:citekey order="53">VMD_MPE_COVAL_fault_detection_gearbox</bcf:citekey>
-    <bcf:citekey order="53">vibration_acustic_decision_tree_SVM_gearbox</bcf:citekey>
-    <bcf:citekey order="53">integrated_cm_bearing_fault_wt_gearbox</bcf:citekey>
-    <bcf:citekey order="53">roller_bearings_cm_fisher_score_and_permutation_entropy</bcf:citekey>
-    <bcf:citekey order="54">multiway_PCA_multivar_inference_cm_wt</bcf:citekey>
-    <bcf:citekey order="55">multiway_PCA_multivar_inference_cm_wt</bcf:citekey>
-    <bcf:citekey order="56">ml_for_wt_cond_monit_rev</bcf:citekey>
-    <bcf:citekey order="57">ml_for_wt_cond_monit_rev</bcf:citekey>
-    <bcf:citekey order="58">ml_for_wt_cond_monit_rev</bcf:citekey>
-    <bcf:citekey order="59">unsup_graphical_modeling_wt_cm</bcf:citekey>
-    <bcf:citekey order="60">fault_detect_PARAFAC_k_means</bcf:citekey>
-    <bcf:citekey order="61">unsupervised_AD_blade_damage_deep_features_images</bcf:citekey>
-    <bcf:citekey order="62">fault_detect_PARAFAC_k_means</bcf:citekey>
-    <bcf:citekey order="63">fault_detect_PARAFAC_k_means</bcf:citekey>
-    <bcf:citekey order="64">unsup_graphical_modeling_wt_cm</bcf:citekey>
-    <bcf:citekey order="65">unsup_graphical_modeling_wt_cm</bcf:citekey>
-    <bcf:citekey order="66">unsupervised_AD_blade_damage_deep_features_images</bcf:citekey>
-    <bcf:citekey order="67">unsupervised_AD_blade_damage_deep_features_images</bcf:citekey>
-    <bcf:citekey order="68">ml_cm_wt_blade_ARMA_2018</bcf:citekey>
-    <bcf:citekey order="69">AD_and_fault_analysis_wt_DAE</bcf:citekey>
-    <bcf:citekey order="70">unsup_graphical_modeling_wt_cm</bcf:citekey>
-    <bcf:citekey order="71">fault_detection_and_isolation_using_classifier_fusion</bcf:citekey>
-    <bcf:citekey order="72">lin_and_non_lin_feat_for_ice_detection_on_blades</bcf:citekey>
-    <bcf:citekey order="73">perf_mon_of_wt_using_extreme_func_theory</bcf:citekey>
-    <bcf:citekey order="74">blade_damage_detection_sup_ml_alg</bcf:citekey>
-    <bcf:citekey order="75">wt_cm_using_cloud_computing_and_HELM</bcf:citekey>
-    <bcf:citekey order="76">GP_operational_curve_monitoring</bcf:citekey>
-    <bcf:citekey order="77">high_freq_scada_perf_monit_sensitivity</bcf:citekey>
-    <bcf:citekey order="78">dict_learning_monitor_wt_drivetrain_bearing</bcf:citekey>
-    <bcf:citekey order="79">ANN_damage_detection_gearbox_wt</bcf:citekey>
-    <bcf:citekey order="80">multiway_PCA_multivar_inference_cm_wt</bcf:citekey>
-    <bcf:citekey order="81">image_texture_analysis_FD_wt</bcf:citekey>
-    <bcf:citekey order="82">auto_associative_nn_wt_fault_detection</bcf:citekey>
-    <bcf:citekey order="83">abnormal_detection_scada_data_mining</bcf:citekey>
-    <bcf:citekey order="84">health_cond_model_nn_proportional_hazard_models</bcf:citekey>
-    <bcf:citekey order="85">ice_detection_using_ITL</bcf:citekey>
-    <bcf:citekey order="86">VMD_MPE_COVAL_fault_detection_gearbox</bcf:citekey>
-    <bcf:citekey order="87">SVR_blade_pitch_curve_cm</bcf:citekey>
-    <bcf:citekey order="88">detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models</bcf:citekey>
-    <bcf:citekey order="89">image_based_surface_damage_detection_DL_drone_inspection</bcf:citekey>
-    <bcf:citekey order="90">image_based_YOLO_YSODA</bcf:citekey>
-    <bcf:citekey order="91">vibration_acustic_decision_tree_SVM_gearbox</bcf:citekey>
-    <bcf:citekey order="92">AI_image_analytics_2_classify_blade_defects</bcf:citekey>
-    <bcf:citekey order="93">dirt_n_mud_detection_using_guided_waves</bcf:citekey>
-    <bcf:citekey order="94">fault_classification_using_CSO_SVM</bcf:citekey>
-    <bcf:citekey order="95">vibration_ARMA_decision_tree_cm_wt</bcf:citekey>
-    <bcf:citekey order="96">integrated_cm_bearing_fault_wt_gearbox</bcf:citekey>
-    <bcf:citekey order="97">blade_defect_detection_imaging_array</bcf:citekey>
-    <bcf:citekey order="98">unsupervised_AD_blade_damage_deep_features_images</bcf:citekey>
-    <bcf:citekey order="99">RF_XGB_fault_detection</bcf:citekey>
-    <bcf:citekey order="100">CBPM_ABPM_maintainance_model</bcf:citekey>
-    <bcf:citekey order="101">improved_power_curve_monitoring_of_wt</bcf:citekey>
-    <bcf:citekey order="102">DBN_simulink_SCADA_FD</bcf:citekey>
-    <bcf:citekey order="103">wt_gearbox_bearing_temp_KS_CNN</bcf:citekey>
-    <bcf:citekey order="104">fault_monitoring_HMM</bcf:citekey>
-    <bcf:citekey order="105">model_based_fuzzy_logic_cm_wt</bcf:citekey>
-    <bcf:citekey order="106">fault_detect_PARAFAC_k_means</bcf:citekey>
-    <bcf:citekey order="107">online_fd_using_PCA_different_operating_zones</bcf:citekey>
-    <bcf:citekey order="108">roller_bearings_cm_fisher_score_and_permutation_entropy</bcf:citekey>
-    <bcf:citekey order="109">deep_learning_for_imbalanced_class_detection_bearing_cm</bcf:citekey>
-    <bcf:citekey order="110">reliability_analysis_detecting_FA_NN_wt</bcf:citekey>
-    <bcf:citekey order="111">DBN_chicken_swarm_optim</bcf:citekey>
-    <bcf:citekey order="112">vibration_fault_diagnosis_wt_planetary_gearbox</bcf:citekey>
-    <bcf:citekey order="113">ml_for_wt_cond_monit_rev</bcf:citekey>
+    <bcf:citekey order="2">brockwell_davis_advanced</bcf:citekey>
+    <bcf:citekey order="3">tsc_rev</bcf:citekey>
+    <bcf:citekey order="4">tsc_rev</bcf:citekey>
+    <bcf:citekey order="5">tsc_rev</bcf:citekey>
+    <bcf:citekey order="5">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="6">tsc_rev</bcf:citekey>
+    <bcf:citekey order="6">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="7">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="8">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="9">tsc_rev</bcf:citekey>
+    <bcf:citekey order="10">tsc_rev</bcf:citekey>
+    <bcf:citekey order="11">tsc_rev</bcf:citekey>
+    <bcf:citekey order="12">tsc_rev</bcf:citekey>
+    <bcf:citekey order="13">ts_data_mining</bcf:citekey>
+    <bcf:citekey order="14">brockwell_davis_advanced</bcf:citekey>
+    <bcf:citekey order="15">brockwell_davis</bcf:citekey>
+    <bcf:citekey order="16">stoch_pros</bcf:citekey>
+    <bcf:citekey order="17">ml_cm_wt_blade_ARMA_2018</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
