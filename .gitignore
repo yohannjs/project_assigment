@@ -1,4 +1,5 @@
 *.bbl
+*.out
 *.bcf
 *.aux
 *.blg
