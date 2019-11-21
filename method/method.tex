@@ -12,9 +12,9 @@ To find the relevant literature on the subjects of interest the search engine Or
         Nr. & Title terms & General terms & $N_r$ & $N_i$ \\
         \midrule
         1 & time $\times$ series $\times$ clustering & None & 219 & 121 \\ 
-        2 & wind $\times$ turbine* $\times$ (monitor* $\wedge{}$ detect*) $\times$ review & None & 32 & 3 \\
-        3 & wind $\times$ turbine* $\times$ (monitor* $\wedge{}$ detect*) & machine $\times$ learning & 100 & 47 \\ 
-        4 & (monitor* $\wedge{}$ detect*) $\times$ clustering & time $\times$ series & 187 & 21 \\
+        2 & (monitor* $\wedge{}$ detect*) $\times$ clustering & time $\times$ series & 187 & 21 \\
+        3 & wind $\times$ turbine* $\times$ (monitor* $\wedge{}$ detect*) $\times$ review & None & 32 & 3 \\
+        4 & wind $\times$ turbine* $\times$ (monitor* $\wedge{}$ detect*) & machine $\times$ learning & 100 & 47 \\ 
         \midrule
         \multicolumn{4}{r}{Total number of articles included} & 193 \\
         \bottomrule
@@ -28,8 +28,13 @@ To make sure that the articles used were relevant, the review is limited to arti
 
 It has been a challenge to include enough literature to get a good overview of the different methods within time series clustering, but also not more literature the author alone could handle in the time available. So although the objectives is to get an overview of the different time series clustering methods, and an overview of the current machine learning methods used for monitoring wind turbines, the author does not claim to have made a complete exhaustive summary of all the possible methods. \bigskip
 
-When screening articles from search one, articles regarding time-series forecasting, articles only using clustering as a preprocessing step, articles working on regression or classification, and articles using image time series were not included. The scope is restricted to work focusing on data mining using time-series clustering techniques. \bigskip
+When screening articles from search one and two, articles meeting one (or more) of the following criteria were discarded: 
+\begin{itemize}
+    \item Primary goal is time-series forecasting. It is outside the scope of this assignment.
+    \item Time-series clustering is used only as a preprocessing step. Not considered relevant enough to the objectives of this review.
+    \item Data used is not time series data. Not considered relevant enough to the objectives of this review.
+    \item The data used consists of image time series. Data to different from data to be used in master thesis.
+    \item The primary method is based on clustering raw time series wrt. similarity in time or shape. This topic has somewhat been covered in the literature review in Espen Waaga's master thesis.
+\end{itemize}
 
-Search number two was used to find existing literature reviews on methods used for monitoring of wind turbines. Three good literature reviews on the subject where found. One good literature review was on machine learning methods used for condition monitoring of wind turbines was found in search three as well, so when screening the remaining articles from search number three the objective was to get a superficial overview over the different machine-learning techniques applied, find relevant articles not included in the literature reviews, and find work done after the reviews were published. \bigskip
-
-For the fourth search some of the results overlapped with the results from the first search. Articles not using time-series data where discarded which is the main reason that so many of the results have not been used.
+Search number three was used to find existing literature reviews on condition monitoring of wind turbines. Three good literature reviews on the subject where found, and one good review on machine learning methods used for condition monitoring of wind turbines was found in search four. So, when screening the remaining articles from search number four the focus was to find articles not included in the aforementioned reviews, to complement them as well as possible. \bigskip
