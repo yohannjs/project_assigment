@@ -61,26 +61,6 @@ The DWT is a method used for decomposing time-dependent signals. It is a better 
 \subsection{Regression-based models}
 A frequent approach is to use a supervised learning model to capture the normal behaviour of a wind turbine (or wind turbine component) by predicting the value of one time dependent variable, and then using the deviation between the prediction and the actual value (Estimation error $E_e$) to detect anomalous behaviour. What varies in these approaches is what machine learning model they use to model the wind turbine. The input data used in this approach is most often SCADA data. The target variable is either a particular signal which is excluded from the input signals, or the target is to recreate the input signal as accurately as possible. The latter approach is called an \textit{auto-encoder}. Three curves in particular hold a lot of information about the performance of a wind turbine, namely the wind speed - active power curve, wind speed - rotor speed curve and wind speed - blade angle pitch curve. The majority of the regression based models, used a subset of these curves as target variables \cite{perf_mon_of_wt_using_extreme_func_theory, GP_operational_curve_monitoring, high_freq_scada_perf_monit_sensitivity, abnormal_detection_scada_data_mining, improved_power_curve_monitoring_of_wt, SVR_blade_pitch_curve_cm, health_cond_model_nn_proportional_hazard_models}. Another popular approach is to forecast the temperature in the gearbox, or generator windings \cite{AD_and_fault_analysis_wt_DAE, health_cond_model_nn_proportional_hazard_models, detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models, CBPM_ABPM_maintainance_model, wt_gearbox_bearing_temp_KS_CNN, DBN_chicken_swarm_optim}. As mentioned before temperature is closely correlated with the health of a component, but since temperature changes so slowly it is hard to use temperature monitoring alone for fault prediction \cite{wt_cm_rev_new_trends_chal_2014}. If one however can make a model capture the complex sources of temperature change, the deviation between predicted temperature, and actual temperature could be used for fault prediction. Table \ref{tab:regression_ml_models} shows the typical machine learning models used for regression. 
 
-% \begin{table*}[h]
-%     \centering
-%     \ra{1.3}
-%     \begin{tabular}{p{0.35\textwidth}p{0.3\textwidth}}
-%         \toprule
-%         Target variable               & Articles \\
-%         \midrule
-%         Power curve                   & \cite{perf_mon_of_wt_using_extreme_func_theory, GP_operational_curve_monitoring, high_freq_scada_perf_monit_sensitivity, abnormal_detection_scada_data_mining, improved_power_curve_monitoring_of_wt} \\
-%         Blade pitch curve             & \cite{GP_operational_curve_monitoring, abnormal_detection_scada_data_mining, SVR_blade_pitch_curve_cm} \\
-%         Vibration signal              & \cite{ANN_damage_detection_gearbox_wt} \\
-%         Rotor speed curve             & \cite{GP_operational_curve_monitoring, abnormal_detection_scada_data_mining, health_cond_model_nn_proportional_hazard_models} \\
-%         Gearbox/generator temperature & \cite{AD_and_fault_analysis_wt_DAE, health_cond_model_nn_proportional_hazard_models, detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models, CBPM_ABPM_maintainance_model, wt_gearbox_bearing_temp_KS_CNN} \\
-%         Reproduce input               & \cite{auto_associative_nn_wt_fault_detection, DBN_simulink_SCADA_FD} \\
-%         High speed shaft              & \cite{CBPM_ABPM_maintainance_model} \\
-%         \bottomrule
-%     \end{tabular}
-%     \caption{Target variables used for normal behaviour modelling}
-%     \label{tab:target_variables}
-% \end{table*}
-
 \begin{table*}[h]
     \centering
     \ra{1.3}
