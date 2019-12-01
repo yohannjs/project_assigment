@@ -54,9 +54,36 @@ There are two central problems in condition monitoring that can be solved by fea
     \label{tab:feat_ext_wt}
 \end{table*}
 
-The DWT is a method used for decomposing time-dependent signals. It is a better alternative than other time-frequency decomposition tools, such as the Fourier transform (FT), for non-stationary signals. However, the FT is also used \cite{fault_detection_and_isolation_using_classifier_fusion, blade_damage_detection_sup_ml_alg}. Basic signal statistics refers to values easy to calculate over a fixed window size such as the root-mean-square (RMS) value, min/max value, etc. PCA is an unsupervised machine learning form used in multivariate systems. It produces the linear combinations of variables that has the highest variance, also called the \textit{principal components}. \newpage
+The DWT is a method used for decomposing time-dependent signals. It is a better alternative than other time-frequency decomposition tools, such as the Fourier transform (FT), for non-stationary signals. However, the FT is also used \cite{fault_detection_and_isolation_using_classifier_fusion, blade_damage_detection_sup_ml_alg}. Basic signal statistics refers to values easy to calculate over a fixed window size such as the root-mean-square (RMS) value, min/max value, etc. PCA is an unsupervised machine learning form used in multivariate systems. It produces the linear combinations of variables that has the highest variance, also called the \textit{principal components}.
 
 % NN, especially convolutional neural networks (CNN) have been found useful for object detection in images, as done by \textcite{image_based_surface_damage_detection_DL_drone_inspection, unsupervised_AD_blade_damage_deep_features_images} for detecting defects in the wind turbine blades. \textcite{ice_detection_using_ITL} and \textcite{VMD_MPE_COVAL_fault_detection_gearbox} use NN for transfer learning. 
+
+\tikzstyle{init} = [pin edge={to-,thin,black}]
+\tikzstyle{circ} = [circle, minimum size=1cm, text centered, draw=black, fill=blue!20]
+\tikzstyle{arrow} = [thin,->,>=stealth]
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\node (x1) [init] {$x_1$};
+\node (x2) [init,below of=x1] {$x_2$};
+\node (vdots) [init,below of=x2] {$\vdots$};
+\node (xn) [init,below of=vdots] {$x_n$};
+\node (b) [init, below of=xn] {$b$};
+\node (sum) [circ, right of=x2, xshift=0.7cm, yshift=-0.5cm] {$\sum$};
+\node (obj) [circ, right of=sum, xshift=1cm] {$f(\cdot)$};
+\node (output) [init, right of=obj, xshift=1cm] {};
+
+\draw [arrow] (x1) --node[anchor=north] {$w_1$} (sum);
+\draw [arrow] (x2) --node[anchor=north] {$w_2$} (sum);
+\draw [arrow] (xn) --node[anchor=south] {$w_n$} (sum);
+\draw [arrow] (b) --node[anchor=west] {$w_b$} (sum);
+\draw [arrow] (sum) -- (obj);
+\draw [arrow] (obj) -- (output);
+\end{tikzpicture}
+\end{center}
+\caption{Perceptron} 
+\label{fig:perc}
+\end{figure}
 
 \subsection{Regression-based models}
 A frequent approach is to use a supervised learning model to capture the normal behaviour of a wind turbine (or wind turbine component) by predicting the value of one time dependent variable, and then using the deviation between the prediction and the actual value (Estimation error $E_e$) to detect anomalous behaviour. What varies in these approaches is what machine learning model they use to model the wind turbine. The input data used in this approach is most often SCADA data. The target variable is either a particular signal which is excluded from the input signals, or the target is to recreate the input signal as accurately as possible. The latter approach is called an \textit{auto-encoder}. Three curves in particular hold a lot of information about the performance of a wind turbine, namely the wind speed - active power curve, wind speed - rotor speed curve and wind speed - blade angle pitch curve. The majority of the regression based models, used a subset of these curves as target variables \cite{perf_mon_of_wt_using_extreme_func_theory, GP_operational_curve_monitoring, high_freq_scada_perf_monit_sensitivity, abnormal_detection_scada_data_mining, improved_power_curve_monitoring_of_wt, SVR_blade_pitch_curve_cm, health_cond_model_nn_proportional_hazard_models}. Another popular approach is to forecast the temperature in the gearbox, or generator windings \cite{AD_and_fault_analysis_wt_DAE, health_cond_model_nn_proportional_hazard_models, detecting_malfunctions_wt_generator_bearings_generic_vs_specific_models, CBPM_ABPM_maintainance_model, wt_gearbox_bearing_temp_KS_CNN, DBN_chicken_swarm_optim}. As mentioned before temperature is closely correlated with the health of a component, but since temperature changes so slowly it is hard to use temperature monitoring alone for fault prediction \cite{wt_cm_rev_new_trends_chal_2014}. If one however can make a model capture the complex sources of temperature change, the deviation between predicted temperature, and actual temperature could be used for fault prediction. Table \ref{tab:regression_ml_models} shows the typical machine learning models used for regression. 
@@ -113,6 +140,13 @@ A frequent approach is to use a supervised learning model to capture the normal 
 
 \textcite{image_based_surface_damage_detection_DL_drone_inspection, image_based_YOLO_YSODA, AI_image_analytics_2_classify_blade_defects, blade_defect_detection_imaging_array} use images as input, and different types of NN for classifying structural damage in the blades. \textcite{deep_learning_for_imbalanced_class_detection_bearing_cm} uses SCADA data as input, and deep NN for detecting ice on the blades. The testing, and comparing of several individual classifiers is also quite popular, however the most popular classifier by far is the SVC. The SVC has also been used for detecting damage in the blades \cite{blade_damage_detection_sup_ml_alg}, general fault detection in the turbine \cite{fault_classification_using_CSO_SVM}, but most for gearbox faults \cite{VMD_MPE_COVAL_fault_detection_gearbox,vibration_acustic_decision_tree_SVM_gearbox, integrated_cm_bearing_fault_wt_gearbox, roller_bearings_cm_fisher_score_and_permutation_entropy}. \textcite{fault_monitoring_HMM} use a statistical model based on HMMs. They combine multiple vibration signals measured by a condition monitoring system with thresholds, and set different alarm levels. These alarm levels act as the observations for the HMM. The states of the model are \textit{Normal} and \textit{Fault}. The model is trained with sequences of observations, which it uses to determine which state is most probable of producing said sequence of observations. 
 
+\begin{itemize}
+    \item Explain why so many articles are bunched together in ''several individual classifiers''
+    \item Explain why H-ELM won't be explained here. 
+    \item Explain fusion of classifiers.
+    \item State that an explanation of HMMs will be given later.
+\end{itemize}
+
 \newpage
 \subsection{Unsupervised classification-based models}
 The classification models have been split into supervised and unsupervised classifiers because, the unsupervised methods are of greater interest for this review. The use of unsupervised learning methods are not as widespread as the use of supervised learning methods. \textcite{ml_for_wt_cond_monit_rev} only included one article in their review that compared a regression model based on feed forward neural networks to two unsupervised models using gaussian mixture models and self organizing maps. It should be noted that the articles using an unsupervised learning approach that are included in this review, generally were published after \cite{ml_for_wt_cond_monit_rev}.
@@ -134,7 +168,7 @@ The classification models have been split into supervised and unsupervised class
     \label{tab:sup_classification_ml_models}
 \end{table*}
 
-\textcite{fault_detect_PARAFAC_k_means} is the first implementation I have seen of time-series clustering used for condition monitoring of wind turbines. They first use paralell factor analysis (PARAFAC) for dimensionality reduction, which is a generalisation of bilinear PCA, and then use K-means clustering on the reduced feature space. In their approach they are able to identify distinct operation modes of the wind turbines, and reduce data redundancy by PARAFAC. However they mention that there is still further work that can be done, especially in testing their model with data from turbines operating at different wind speeds. \textcite{unsup_graphical_modeling_wt_cm} use a spatiotemporal pattern network for feature extraction, and then use unsupervised stacked RBMs for anomaly detection. \textcite{unsupervised_AD_blade_damage_deep_features_images} uses images as input, and the hidden layers of a convolutional NN trained on an unrelated dataset to extract features, and then compresses the features using PCA. The compressed features are then fed into an OCSVM which classifies faults. \textcite{multiway_PCA_multivar_inference_cm_wt} uses multiway PCA to set up a baseline, and then uses hypethis testing to determine whether the power curve of a wind turbine is an anomaly or not. A summary of the articles related to machine learning methods for condition monitoring of wind turbines can be found in \ref{tab:machine_learning_wt_cm_summary}.
+\textcite{fault_detect_PARAFAC_k_means} is the first implementation only implementation found using time-series clustering used for condition monitoring of wind turbines. They first use paralell factor analysis (PARAFAC) for dimensionality reduction, which is a generalisation of bilinear PCA, and then use K-means clustering on the reduced feature space. In their approach they are able to identify distinct operation modes of the wind turbines, and reduce data redundancy by PARAFAC. However they mention that there is still further work that can be done, especially in testing their model with data from turbines operating at different wind speeds. \textcite{unsup_graphical_modeling_wt_cm} use a spatiotemporal pattern network for feature extraction, and then use unsupervised stacked RBMs for anomaly detection. \textcite{unsupervised_AD_blade_damage_deep_features_images} uses images as input, and the hidden layers of a convolutional NN trained on an unrelated dataset to extract features, and then compresses the features using PCA. The compressed features are then fed into an OCSVM which classifies faults. \textcite{multiway_PCA_multivar_inference_cm_wt} uses multiway PCA to set up a baseline, and then uses hypethis testing to determine whether the power curve of a wind turbine is an anomaly or not. A summary of the articles related to machine learning methods for condition monitoring of wind turbines can be found in \ref{tab:machine_learning_wt_cm_summary}.
 
 \section{Discussion}
 The supervised classification models seem to be the most popular ones, however regression based models are a close second. The supervised classification models show great promise in terms of accuracy, but are not of that much interest for this review, since the wind turbine data that will be used in the spring is not labelled with faults occurance, or anomalous behaviour. The regression based models don't require explicit labeling to model normal behaviour, so they could be used to detect some anomalous behaviour. What is problematic with using a complex regression based model such as a NN or DBN, is that without labelled data it might be hard to validate the performance of said model, because it often hard to determine \textbf{why} a particular observation is regarded as an anomaly. However, what can be transferred from these papers are the different methods for feature extraction, and selection. ARMA models, and HMMs are frequently used for time signal analysis, and will be expanded upon in section \ref{sec:ts_models}. PCA, and generalizations of PCA is also a valuable tool for dimensionality reduction, and will also be expanded upon, in section SECTION. What is preferable with ARMA models, HMMs, and PCA compared to NNs and DBNs is that they are easier to interpret, which is valuable when using unlabelled data. \bigskip
