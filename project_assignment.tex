@@ -11,9 +11,11 @@
 \usepackage{booktabs} % For fancy tables
 \usepackage{minted} % To include code in project.
 \usepackage{longtable} % For tables spanning multiple pages
-% Check out https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted for examples!
-\usepackage[citestyle=numeric, bibstyle=numeric, sorting=none]{biblatex} % For references
 \usepackage{hyperref} % To include hyperlinks in the text and footnotes
+\usepackage{tikz} % To make cool diagrams
+\usetikzlibrary{shapes.geometric, arrows}
+
+\usepackage[citestyle=numeric, bibstyle=numeric, sorting=none]{biblatex} % For references
 \addbibresource{references_books.bib}
 \addbibresource{references_tsc.bib}
 \addbibresource{references_wind_turbine_monitoring_review.bib}
@@ -54,19 +56,15 @@
 \newpage
 
 
-\input{intro/intro.tex}
-
-\input{method/method.tex}
-
-% \input{wind_turbine/wind_turbine.tex}
-
-\input{tsc/time_series_clust.tex}
-
-% \input{discussion_conclusion/discussion_conclusion.tex}
+\include{intro/intro}
+\include{method/method}
+\include{wind_turbine/wind_turbine}
+\include{tsc/time_series_clust}
+\include{discussion_conclusion/discussion_conclusion}
 
 \chapter{Appendices}
-% \input{appendix/review_table_ml_wt_cm.tex}
-\input{appendix/review_table_tsc.tex}
+\include{appendix/review_table_ml_wt_cm}
+\include{appendix/review_table_tsc}
 
 \printbibliography
 

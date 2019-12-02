@@ -4,7 +4,7 @@ Time-series clustering (TSC) can be divided into three components. How the time 
 In this report we will deal with \textit{discrete time series}. A time series is defined as a set of observations $\{x_t\}$ recorded at a specific time $t$. A discrete time series is a time series where the set of times when observations are made ($T_0$) is discrete \cite{brockwell_davis_advanced}. A multivariate time series can be viewed as a set of vectors $\{\mathbf{x}_t\}$ where each set of vector elements $\{x^i_t\}$ is an individual time series. This means that the elements of the same vector $[x^1_t, x^2_t,...,x^N_t]$ are separate observations made at the same time instance $t$. In a wind turbine, measurements of the temperature in the gear box made every 10 seconds can be considered a univariate time series. While the set of measurements made every 10 seconds of the temperature in the gear box, the power produced by the turbine, and the wind speed ahead of the blades can be considered a multivariate time series.
 
 \section{Types of Times-Series Clustering}
-There are three types of TSC, \textit{whole-series TSC}, \textit{subsequence TSC} and \textit{time-point TSC}. Whole-series TSC is when multiple ''whole'' time series are clustered with respect to each other. Subsequence TSC comprises the clustering of subsequences of the same time series with respect to each other. The defining difference between whole-series and subsequence TSC is that whole-series TSC clusters multiple time series while subsequence TSC clusters clusters different subsequences of the same time series. In this review we will only consider work using whole-series TSC, so when the phrase \textit{time-series clustering} is used, one can assume that whole-series TSC is what is being refered to.
+There are three types of TSC, \textit{whole-series TSC}, \textit{subsequence TSC} and \textit{time-point TSC}. Whole-series TSC is when multiple ''whole'' time series are clustered with respect to each other. Subsequence TSC comprises the clustering of subsequences of the same time series with respect to each other. The defining difference between whole-series and subsequence TSC is that whole-series TSC clusters multiple time series while subsequence TSC clusters clusters different subsequences of the same time series. When performing time-point TSC the goal is to cluster individual observations of a time series wrt. to each other. In this review we will only consider work using whole-series TSC, so when the phrase \textit{time-series clustering} is used, one can assume that whole-series TSC is what is being refered to.
 
 \section{Representation Methods}
 % Present the different ways that times series can be represented, time-domain, DFT, Wavelet transform, etc. Transition into time series models by ending section with the fact that time series can be modeled by making assumptions about how data was generated creating \textbf{models}.
@@ -52,7 +52,7 @@ Putting equations \eqref{eq:AR_p} and \eqref{eq:MA_q} together, an $\mathrm{ARMA
 Given that the polynomials $1 + \theta_1 z + \theta_2 z^2 + ... + \theta_q z^q$ and $1 - \phi_1 z - \phi_2 z^2 - ... - \phi_p z^p$ have no common factors \cite{brockwell_davis}.
 
 \subsection{Hidden Markov Models} \label{s:hmm}
-Let $\{X_n\}$ be a stochastic process where the random variables contained in $\{X_n\}$ only can take on a finite number of values which we will call states. Let $X_n$ denote the state at time period $n$. The probability of $X_n$ transitioning from state $i$ to state $j$ at the next time period $n+1$ is denoted $p_{ij}$. It might seem natural that $p_{ij}$ is conditional on what the state was in the last time period. $\{X_t\}$ is said to be a \textit{Markov chain} if $p_{ij}$ only is conditional on the last past state, as shown in equation \eqref{eq:markov_property}
+Let $\{X_n\}$ be a stochastic process where the random variables contained in $\{X_n\}$ only can take on a finite number of values which we will call states. Let $X_n$ denote the state at time period $n$. The probability of $X_n$ transitioning from state $i$ to state $j$ at the next time period $n+1$ is denoted $p_{ij}$. It might seem natural that $p_{ij}$ is conditional on what the state was in the last time period. $\{X_t\}$ is said to be a \textit{Markov chain} if $p_{ij}$ only is conditional on the last past state, as shown in equation \eqref{eq:markov_property}.
 
 \begin{equation}
     \begin{split}
@@ -70,6 +70,7 @@ Suppose now that the states that the process is in are hidden from the observer.
 
 \section{Similarity Metrics}
 One similarity metric is euclidean distance.
+Another similarity metric is dynamic time warping.
 
 \section{Clustering Algorithms}
 As mentioned before clustering is a form of unsupervised machine learning. The goal is to divide the dataset into clusters, by maximizing some similarity metric for members of the same cluster, and minimizing the same metric for members of different clusters.
