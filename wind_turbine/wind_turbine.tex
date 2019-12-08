@@ -61,8 +61,10 @@ The DWT is a method used for decomposing time-dependent signals. It is a better 
 \tikzstyle{init} = [pin edge={to-,thin,black}]
 \tikzstyle{circ} = [circle, minimum size=1cm, text centered, draw=black, fill=blue!20]
 \tikzstyle{arrow} = [thin,->,>=stealth]
+
 \begin{figure}
 \begin{center}
+
 \begin{tikzpicture}
 \node (x1) [init] {$x_1$};
 \node (x2) [init,below of=x1] {$x_2$};
@@ -80,6 +82,7 @@ The DWT is a method used for decomposing time-dependent signals. It is a better 
 \draw [arrow] (sum) -- (obj);
 \draw [arrow] (obj) -- (output);
 \end{tikzpicture}
+
 \end{center}
 \caption{Perceptron} 
 \label{fig:perc}
