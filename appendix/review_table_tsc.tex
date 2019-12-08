@@ -1,35 +1,58 @@
 % \newpage
-\section{Time-series clustering}
+\section{Time-Series Clustering}
 
 \begin{longtable}{p{0.03\textwidth}p{0.17\textwidth}p{0.25\textwidth}p{0.25\textwidth}p{0.2\textwidth}}
     \hline
     Ref. & Representation & Similarity measure & Clustering Algorithms & Evaluation \\
     \hline 
     \hline
-    \cite{ml_cm_wt_blade_ARMA_2018} & Vibration signal. & ARMA and J48 & Tests. & Evaluation \\ \hline
-    \cite{cm_rnn_lstm} & & & & \\ \hline
+    \cite{mixture_gaussian_hmm} 		& & & Mixture Gaussian hidden Markov model (MGHMM). & Bayesian information criterion (BIC).\\ \hline
+    \cite{financial_tsc_variance_ratio}	& Variance ratio statistics.& Euclidean distance.& Hierarchical clustering mainly, and K-means.& Duda-Hart $Je(2)/Je(1)$ indices.\\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
+    \cite{} & & & & \\ \hline
     \hline
     \caption{Summary of model based time-series clustering methods}
     \label{tab:machine_learning_wt_cm_summary}
 \end{longtable}
 
-\begin{listing}
-    \begin{minted}
-    [
-    frame=lines,
-    framesep=2mm,
-    baselinestretch=1.2,
-    fontsize=\footnotesize,
-    linenos
-    ]
-    {Python}
-    import pandas as pd
-    import numpy as np
-    import matplotlib as mpl
-    import matplotlib.pyplot as plt
-    import seaborn as sns
-    import statsmodels.api as sm
-    \end{minted}
-    \label{lst:clean}
-    \caption{Module fetching and data cleaning}
-    \end{listing}

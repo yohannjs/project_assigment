@@ -24,6 +24,22 @@
     number  = {45}
 }
 
+@article{mixture_gaussian_hmm,
+    issn        = {03772217},
+    abstract    = {In recent years, large amounts of financial data have become available for analysis. We propose exploring returns from 21 European stock markets by model-based clustering of regime switching models. These econometric models identify clusters of time series with similar dynamic patterns and moreover allow relaxing assumptions of existing approaches, such as the assumption of conditional Gaussian returns. The proposed model handles simultaneously the heterogeneity across stock markets and over time, i.e., time- constant and time-varying discrete latent variables capture unobserved heterogeneity between and within stock markets, respectively. The results show a clear distinction between two groups of stock markets, each one characterized by different regime switching dynamics that correspond to different expected return-risk patterns. We identify three regimes: the so-called bull and bear regimes, as well as a stable regime with returns close to 0, which turns out to be the most frequently occurring regime. This is consistent with stylized facts in financial econometrics.},
+    journal     = {European Journal of Operational Research},
+    pages       = {852},
+    publisher   = {Elsevier Sequoia S.A.},
+    year        = {2015},
+    title       = {Clustering financial time series: New insights from an extended hidden Markov model},
+    language    = {eng},
+    address     = {Amsterdam},
+    author      = {Dias, Jose and Vermunt, Jeroen and Ramos, Sofia},
+    url         = {http://search.proquest.com/docview/1664477966/},
+}
+
+
+
 @article{financial_tsc_variance_ratio,
     issn        = {1469-7688},
     abstract    = {This study introduces a new distance measure for clustering financial time series based on variance ratio test statistics. The proposed metric attempts to assess the level of interdependence of time series from the point of view of return predictability. Simulation results show that this metric aggregates time series according to their serial dependence structure better than a metric based on the sample autocorrelations. An empirical application of this approach to international stock market returns is presented. The results suggest that this metric discriminates stock markets reasonably well according to size and the level of development. Furthermore, despite the substantial evolution of individual variance ratio statistics, the clustering pattern remains fairly stable across different time periods.},
@@ -617,4 +633,33 @@
     author      = {Otranto, Edoardo and Mucciardi, Massimo},
     keywords    = {Clustering ; Forecasting ; Space–time models ; Spatial weight matrix},
 }
+
+@article{multivariate_tsc_common_pca,
+    issn        = {0925-2312},
+    abstract    = {Time series clustering is often applied to pattern recognition and also as the basis of the tasks in the field of time series data mining including dimensionality reduction, feature extraction, classification and visualization. Due to the high dimensionality of multivariate time series and most of the previous work concentrating on univariate time series clustering, a novel method which is based on common principal component analysis, is proposed to achieve multivariate time series clustering more fast and accurately. It is inspired by the traditional clustering method K-Means and can construct a common projection axes as prototype of each cluster. Moreover, the reconstruction error of each multivariate time series projected on the corresponding common projection axes are used to reassign the member of the cluster. The detailed algorithm of the proposed method Mc2PCA is given and the time complexity is analyzed, which shows that the proposed method is very fast and its time complexity is linear to the number of multivariate time series objects. Unlike the traditional methods, the proposed method considers the relationship among variables and the distribution of the original data values of multivariate time series. The experimental results in the various datasets demonstrate that Mc2PCA is superior to the traditional methods for multivariate time series clustering.},
+    journal     = {Neurocomputing},
+    pages       = {239--247},
+    volume      = {349},
+    publisher   = {Elsevier B.V},
+    year        = {2019},
+    title       = {Multivariate time series clustering based on common principal component analysis},
+    language    = {eng},
+    author      = {Li, Hailin},
+    keywords    = {Multivariate Time Series ; Clustering Analysis ; Common Principal Component Analysis ; Data Mining ; Dimensionality Reduction ; Computer Science},
+}
+
+@article{tensor_multi_elastic_kernel_tsc,
+    issn        = {1041-4347},
+    abstract    = {Time series clustering has attracted growing attention due to the abundant data accessible and extensive value in various applications. The unique characteristics of time series, including high-dimension, warping, unequal length, and the choice of elastic measure, pose challenges for the present clustering algorithms, most of which take into account only part of these difficulties. In this paper, we make an effort to simultaneously address all aforementioned issues in time series clustering under a unified multiple kernels clustering (MKC) framework. Specifically, we first implicitly map the raw time series space into multiple kernel spaces via elastic distance measure functions. In such high-dimensional spaces, we resort to the tensor constraint based self-representation subspace clustering approach, involving in the self-paced learning paradigm, to explore the essential low-dimensional structure of the data, as well as the high-order complementary information from different elastic kernels. The proposed approach can be extended to more challenging multivariate time series clustering scenario in a direct but elegant way. Extensive experiments on 41 univariate and 10 multivariate time series datasets, which are widely used and publicly available, demonstrate the significant superiority of the proposed approach beyond the baseline and several state-of-the-art MKC methods.},
+    journal     = {IEEE Transactions on Knowledge and Data Engineering},
+    pages       = {1--1},
+    publisher   = {IEEE},
+    year        = {2019},
+    title       = {Tensor Multi-Elastic Kernel Self-Paced Learning for Time Series Clustering},
+    language    = {eng},
+    author      = {Tang, Yongqiang and Xie, Yuan and Yang, Xuebing and Niu, Jinghao and Zhang, Wensheng},
+    keywords    = {Kernel ; Time Series Analysis ; Time Measurement ; Clustering Algorithms ; Optimization ; Task Analysis ; Time Series Clustering ; Multiple Kernels Clustering ; Self-Paced Learning ; Tensor Optimization ; Engineering ; Computer Science},
+}
+
+
 
