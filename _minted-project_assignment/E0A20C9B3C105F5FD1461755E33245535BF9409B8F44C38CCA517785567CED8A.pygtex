@@ -1,8 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-    \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k+kn}{as} \PYG{n+nn}{pd}
-    \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k+kn}{as} \PYG{n+nn}{np}
-    \PYG{k+kn}{import} \PYG{n+nn}{matplotlib} \PYG{k+kn}{as} \PYG{n+nn}{mpl}
-    \PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k+kn}{as} \PYG{n+nn}{plt}
-    \PYG{k+kn}{import} \PYG{n+nn}{seaborn} \PYG{k+kn}{as} \PYG{n+nn}{sns}
-    \PYG{k+kn}{import} \PYG{n+nn}{statsmodels.api} \PYG{k+kn}{as} \PYG{n+nn}{sm}
-\end{Verbatim}
