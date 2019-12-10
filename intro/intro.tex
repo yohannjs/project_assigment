@@ -1,19 +1,32 @@
 \chapter{Introduction}
 
-Clustering is a method used to categorize big amounts of data into groups known as \textit{clusters}, when there is little, or no information available about the underlying groups. It is a popular choice for extracting patterns from large datasets, because clustering falls within the category of \textit{unsupervised machine learning}, meaning that it does not require the dataset to be labelled. Clustering is also a common step in data mining algorithms, where the goal is to learn rules relating the different variables in a dataset. In the last decade clustering has started to become more common to use on time-series datasets as they are abundunt, and labeling is often costly and time-consuming. Time-series clustering has been applied on financial time series, medical time series and time series from a variety of other industries. \bigskip
+Clustering is a method used to categorize big amounts of data into groups known as \textit{clusters}, when there is little, or no information available about the underlying groups. 
+It is a popular choice for extracting patterns from large datasets, because clustering falls within the category of \textit{unsupervised machine learning}, meaning that it does not require the dataset to be labelled. 
+Clustering is also a common step in data mining algorithms, where the goal is to learn rules relating the different variables in a dataset. 
+In the last decade clustering has started to become more common to use on time-series datasets as they are abundant, and labeling is often costly and time-consuming. 
+Time-series clustering has been applied on financial time series, medical time series and time series from a variety of other industries. \bigskip
 
 \section{Motivation}
 
-As of 2018 wind power, together with solar power made up $7\%$ of the worlds electricity production,\footnote{\url{https://www.iea.org/geco/electricity/}} and has been referred to as ''the fastest growing source of energy'' by the Norwegian company Statkraft\footnote{\url{https://www.statkraft.com/globalassets/old-contains-the-old-folder-structure/documents/wind-power-aug-2010-eng_tcm9-11473.pdf}}. As the effects of climate change steadily are becoming a reality shifting to renewable energy sources is imperative, and wind power will certainly play a bigger part in meeting the worlds energy demand in the future. \bigskip
+As of 2018 wind power, together with solar power made up $7\%$ of the world's electricity production,\footnote{\url{https://www.iea.org/geco/electricity/}} and has been referred to as ''the fastest growing source of energy'' by the Norwegian company Statkraft\footnote{\url{https://www.statkraft.com/globalassets/old-contains-the-old-folder-structure/documents/wind-power-aug-2010-eng_tcm9-11473.pdf}}. 
+As the effects of climate change steadily are becoming a reality, shifting to renewable energy sources is imperative, and wind power will play a bigger part in meeting the worlds energy demand in the future. \bigskip
 
 To make wind power as a whole more lucrative, a good start would be to reduce the downtime, and improve the performance of turbines. The argument that time-series clustering may be a good approach for this is two-fold. 
 
 \begin{enumerate}
-    \item A single wind turbine can have several houndred sensors sampling up to every second, meaning that a wind farm can produce colossal amounts of time-series data. An unsupervised approach is usefull simply because labelling of all this data is cumbersome.
-    \item When wind farms become big enough it will become to costly to manually inspect every turbine to construct an effective model for condition monitoring, further automation is required \cite{espen}. Time-series clustering is then a good alternative for condition monitoring.
+    \item A single wind turbine can have several sensors sampling very often, meaning that a wind farm can produce colossal amounts of time-series data. An unsupervised approach is usefull because labelling of all this data is requires a lot of time and resources.
+    \item When wind farms become big enough it will become too costly to manually inspect every turbine to construct an effective model for condition monitoring, further automation is required \cite{espen}. Time-series clustering is therefore a good alternative for condition monitoring.
 \end{enumerate}
 
 \section{Objective} \label{sec:objective}
+
+The literature review is meant to be a preliminary work for a master thesis where select techniques will be evaluated on actual time series data produced by a wind farm in Norway. 
+To get a better understanding of wind turbines, and the challenges with using machine learning techniques for conddition monitoring of wind turbines, literature on this topic should be reviewed.  
+The project assigment is also a continuation of the master thesis written in the spring of 2019 by Espen Waaga. 
+In his thesis he explored the effectiveness of clustering raw time series in regards to similarity in time, and shape. 
+In his ''Future work'' section Espen Waaga suggests that a natural next step would be to look at clustering with regards to similarity in change, by implementing a model-based approach. 
+In addition, due to the quadratic time complexity of the dynamic time warping (DTW) algorithm it is inappropriate to use as a similarity measure for large datasets. 
+Therefore, it could be interesting to see if a feature-based approach could be used to cluster time series with regard to similarity in shape with a lower time complexity than the DTW algorithm. 
 This literature review has three objectives in the form of questions. \bigskip
 
 \begin{tcolorbox}
@@ -21,12 +34,9 @@ This literature review has three objectives in the form of questions. \bigskip
 
     \begin{enumerate}
         \item What machine learning methods are currently being used to monitor the condition, and performance of wind turbines?
-        \item What are the different methods of model based time-series clustering currently used?
+        \item What are the different methods of feature-, and model-based time-series clustering currently used?
         \item What time-series clustering methods (if any) are appropriate to test on time-series data produced by wind turbines? 
     \end{enumerate}
 \end{tcolorbox}
-\bigskip
-
-The literature review is meant to be a preliminary work for a master thesis where select techniques will be evaluated on actual time series data produced by a wind farm in Norway. The project assigment is also a continuation of the master thesis written in the spring of 2019 by Espen Waaga. In his thesis he explored the effectiveness of clustering raw time series in regards to similarity in time, and shape. In his ''Future work'' section Espen Waaga suggests that a natural next step would be to look at clustering with regards to similarity in change, which is done by implementing a model-based approach.
 
 \section{Structure of Review}
