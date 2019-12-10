@@ -1,0 +1,10 @@
+rm project_assignment.fdb_latexmk
+rm project_assignment.synctex
+rm project_assignment.fls
+rm project_assignment.log
+rm project_assignment.toc
+rm project_assignment.aux
+rm project_assignment.out
+rm project_assignment.bcf
+rm project_assignment.blg   
+rm project_assignment.run.xml
