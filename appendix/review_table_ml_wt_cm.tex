@@ -5,7 +5,7 @@
     Ref. & Input & Feature extraction method & Machine learning model \\
     \hline \hline
     \cite{ml_cm_wt_blade_ARMA_2018} & Vibration signal. & ARMA model and J48 decision tree & Tests a set of (38) meta-, misc-, rule- and tree-based classifiers for fault detection in blades. \\  \hline
-    \cite{AD_and_fault_analysis_wt_DAE} & SCADA data. & & Deep auto-encoder made of Restricted Boltzman Machines (RBMs) to model normal behaviour of SCADA variables (gearbox and generator temperature). Uses $E_e$ for anomaly detection, with adaptive threshold set using extreme function theory (EFT). \\ \hline
+    \cite{AD_and_fault_analysis_wt_DAE} & SCADA data. & & Deep autoencoder made of Restricted Boltzman Machines (RBMs) to model normal behaviour of SCADA variables (gearbox and generator temperature). Uses $E_e$ for anomaly detection, with adaptive threshold set using extreme function theory (EFT). \\ \hline
     \cite{unsup_graphical_modeling_wt_cm} & SCADA data. & Spatiotemporal pattern network & Unsupervised use of RBMs for anomaly detection. \\ \hline
     \cite{fault_detection_and_isolation_using_classifier_fusion} & SCADA data. & Time-frequency domain analysis, DWT and ARMA model & Uses fusion of several classifiers for fault detection in a wind turbine.  \\ \hline
     \cite{lin_and_non_lin_feat_for_ice_detection_on_blades} & Ultrasonic testing. & Tests linear and non-linear PCA and ARMA models & Neighbourhood component analysis for feature selection. Tests 20 different supervised classifiers for detecting ice on blades. \\ \hline
@@ -18,7 +18,7 @@
     \cite{ANN_damage_detection_gearbox_wt} & Oil temperature, wind speed, rotor speed and active power. & & Trains ANN to estimate vibration signal, uses $E_e$ for anomaly detection. \\ \hline
     \cite{multiway_PCA_multivar_inference_cm_wt} & SCADA data. & PCA. & Sets up baseline model using multiway PCA, then finds outliers by hypothesis testing whether multivariate distribution is equal to baseline. \\ \hline
     \cite{image_texture_analysis_FD_wt} & FAST wind turbine simulator. & Image texture analysis tools. & KNN, Linear Discriminant Model, decision trees, bag-tree, linear SVC.\\ \hline
-    \cite{auto_associative_nn_wt_fault_detection} & SCADA data. & K-means for outlier elimination. & Uses Auto-Associative Neural Networks as an auto-encoder, and the Hotel T2 statistic as a dynamic threshold for the $R_e$.\\ \hline
+    \cite{auto_associative_nn_wt_fault_detection} & SCADA data. & K-means for outlier elimination. & Uses Auto-Associative Neural Networks as an autoencoder, and the Hotel T2 statistic as a dynamic threshold for the $R_e$.\\ \hline
     \cite{abnormal_detection_scada_data_mining} & SCADA data. & Grey correlation algorithm for eigenvector extraction. & Use genetic algorithm for feature selection, and SVR for estimating performance curves (active power, rotor speed and blade pitch angle). \\ \hline
     \cite{health_cond_model_nn_proportional_hazard_models} & SCADA data. & & Uses three NN for normal behaviour modelling of rotor speed, gearbox temperature and generator temperature. $E_e$ sendt to proportional hazard model which sets dynamic threshold. \\ \hline
     \cite{ice_detection_using_ITL} & SCADA data. & & Uses Inductive Transfer Learning and five differen ML classifiers for ice detection on blades. \\ \hline
