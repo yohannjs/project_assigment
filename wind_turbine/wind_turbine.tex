@@ -231,7 +231,6 @@ The states of the model are \textit{Normal} and \textit{Fault}.
 The model is trained with sequences of observations, which it uses to determine which state is most probable of producing said sequence of observations. \bigskip 
 The theory behind an HMM will be expanded upon in section \ref{sec:ts_models}.
 
-\newpage
 \subsection{Unsupervised Classification-based Models}
 The classification models have been split into supervised and unsupervised classifiers because the unsupervised methods are of greater interest for this review. 
 The use of unsupervised learning methods are not as widespread as the use of supervised learning methods. 
@@ -262,10 +261,33 @@ However, they mention that there is still further work that can be done, especia
 \textcite{unsup_graphical_modeling_wt_cm} use a spatiotemporal pattern network for feature extraction, and then use unsupervised stacked RBMs for anomaly detection. 
 \textcite{unsupervised_AD_blade_damage_deep_features_images} uses images as input, and the hidden layers of a CNN trained on an unrelated dataset to extract features, and then compresses the features using PCA. 
 The compressed features are then fed into an OCSVM which classifies faults. 
-\textcite{multiway_PCA_multivar_inference_cm_wt} uses multiway PCA to set up a baseline, and then uses hypethis testing to determine whether the power curve of a wind turbine is an anomaly or not. 
+\textcite{multiway_PCA_multivar_inference_cm_wt} uses multiway PCA to set up a baseline model, and then uses hypothesis testing to determine whether the power curve of a wind turbine is an anomaly or not. 
 A summary of the articles related to machine learning methods for condition monitoring of wind turbines can be found in \ref{tab:machine_learning_wt_cm_summary}.
 
 \section{Discussion}
+\begin{table*}[h]
+    \centering
+    \ra{1.3}
+    \begin{tabular}{p{0.08\textwidth}p{0.2\textwidth}p{0.12\textwidth}p{0.165\textwidth}p{0.25\textwidth}}
+        \toprule
+        Model   & Potential accuracy & Complexity & Interpretability & Training data required \\
+        \midrule
+        ANN     & High               & High       & Low              & High \\
+        SVM     & Medium - high      & Medium     & Medium           & Medium \\
+        RBMs    & High               & High       & Low              & High \\
+        DBN     & High               & High       & Low              & High \\
+        PCA     & Medium             & Low        & High             & Low \\
+        HMM     & Medium             & Medium     & Medium           & Medium \\
+        KNN     & Low                & Low        & High             & Low \\
+        RF      & Medium - high      & Medium     & Low              & Low \\
+        \bottomrule
+    \end{tabular}
+    \caption{Summary of advantages of different machine learning methods}
+    \label{tab:ml_wt_sum}
+\end{table*}
+
+Table \ref{tab:ml_wt_sum} summarizes the advantages and disadvantages of the different machine learning models in terms of accuracy, complexity, interpretability and amount of training data required.
+As can be expected to acheive high accuracy the complexity of the model increases, and there is a trade-off between complexity and interpretability. 
 The supervised classification models seem to be the most popular ones, however regression based models are a close second. 
 The supervised classification models show great promise in terms of accuracy, but are not of that much interest for this review, since the wind turbine data that will be used in the spring is not labelled with faults occurance, or anomalous behaviour. 
 The regression based models do not require explicit labeling to model normal behaviour, so they could be used to detect some anomalous behaviour. 
@@ -277,3 +299,5 @@ It is promising to see that K-means clustering paired with PARAFAC showed such g
 Since the model developed by \textcite{fault_detect_PARAFAC_k_means} still needs to be tested on wind turbines in more variable conditions (in terms of wind speed), there is still room for exploration on this topic. 
 The use of RBMs and OCSVM for unsupervised anomaly detection is very interesting, but suffers the same problem as regression based models: without labelled data it is hard to validate the models, and interprate the anomalies they detect. 
 The work done by \textcite{multiway_PCA_multivar_inference_cm_wt} strengthens the argument for exploring PCA, and generalizations of PCA for feature extraction, and selection.
+
+
