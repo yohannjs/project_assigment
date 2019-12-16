@@ -1,6 +1,7 @@
 \tikzstyle{init} = [pin edge={to-,thin,black}]
 \tikzstyle{circ} = [circle, minimum size=1cm, text centered, draw=black, fill=blue!20]
 \tikzstyle{arrow} = [thin,->,>=stealth]
+\tikzstyle{arrow_t} = [very thin,->,>=stealth]
 
 \tikzstyle{perc_in} = [circle, minimum size=1mm, text centered, draw=black, fill=blue!20]
 \tikzstyle{perc_ou} = [circle, minimum size=1mm, text centered, draw=black, fill=red!20]
@@ -42,37 +43,37 @@
 
 \node (ou0) [perc_ou, right of=hi2] {};
 
-\draw [arrow] (i1) -- (in0);
-\draw [arrow] (i1) -- (in1);
-\draw [arrow] (i1) -- (in2);
-\draw [arrow] (i2) -- (in0);
-\draw [arrow] (i2) -- (in1);
-\draw [arrow] (i2) -- (in2);
-\draw [arrow] (i3) -- (in0);
-\draw [arrow] (i3) -- (in1);
-\draw [arrow] (i3) -- (in2);
+\draw [arrow_t] (i1) -- (in0);
+\draw [arrow_t] (i1) -- (in1);
+\draw [arrow_t] (i1) -- (in2);
+\draw [arrow_t] (i2) -- (in0);
+\draw [arrow_t] (i2) -- (in1);
+\draw [arrow_t] (i2) -- (in2);
+\draw [arrow_t] (i3) -- (in0);
+\draw [arrow_t] (i3) -- (in1);
+\draw [arrow_t] (i3) -- (in2);
 
-\draw [arrow] (in0) -- (hi0);
-\draw [arrow] (in0) -- (hi1);
-\draw [arrow] (in0) -- (hi2);
-\draw [arrow] (in0) -- (hi3);
-\draw [arrow] (in0) -- (hi4);
-\draw [arrow] (in1) -- (hi0);
-\draw [arrow] (in1) -- (hi1);
-\draw [arrow] (in1) -- (hi2);
-\draw [arrow] (in1) -- (hi3);
-\draw [arrow] (in1) -- (hi4);
-\draw [arrow] (in2) -- (hi0);
-\draw [arrow] (in2) -- (hi1);
-\draw [arrow] (in2) -- (hi2);
-\draw [arrow] (in2) -- (hi3);
-\draw [arrow] (in2) -- (hi4);
+\draw [arrow_t] (in0) -- (hi0);
+\draw [arrow_t] (in0) -- (hi1);
+\draw [arrow_t] (in0) -- (hi2);
+\draw [arrow_t] (in0) -- (hi3);
+\draw [arrow_t] (in0) -- (hi4);
+\draw [arrow_t] (in1) -- (hi0);
+\draw [arrow_t] (in1) -- (hi1);
+\draw [arrow_t] (in1) -- (hi2);
+\draw [arrow_t] (in1) -- (hi3);
+\draw [arrow_t] (in1) -- (hi4);
+\draw [arrow_t] (in2) -- (hi0);
+\draw [arrow_t] (in2) -- (hi1);
+\draw [arrow_t] (in2) -- (hi2);
+\draw [arrow_t] (in2) -- (hi3);
+\draw [arrow_t] (in2) -- (hi4);
 
-\draw [arrow] (hi0) -- (ou0);
-\draw [arrow] (hi1) -- (ou0);
-\draw [arrow] (hi2) -- (ou0);
-\draw [arrow] (hi3) -- (ou0);
-\draw [arrow] (hi4) -- (ou0);
+\draw [arrow_t] (hi0) -- (ou0);
+\draw [arrow_t] (hi1) -- (ou0);
+\draw [arrow_t] (hi2) -- (ou0);
+\draw [arrow_t] (hi3) -- (ou0);
+\draw [arrow_t] (hi4) -- (ou0);
 
 \node (label_a) [init, below of=b] {$(a)$};
 \node (label_a) [init, right of=label_a, xshift=5cm] {$(b)$};

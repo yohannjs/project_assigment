@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k+kn}{as} \PYG{n+nn}{pd}
+\PYG{k+kn}{from} \PYG{n+nn}{sklearn.decomposition} \PYG{k+kn}{import} \PYG{n}{PCA}
+\PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}
+\PYG{k+kn}{import} \PYG{n+nn}{time}
+\PYG{k+kn}{import} \PYG{n+nn}{timeit}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k+kn}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k+kn}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{import} \PYG{n+nn}{copy}
+
+\PYG{n}{work\PYGZus{}directory} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Not relevant\PYGZsq{}}
+\PYG{n}{data\PYGZus{}sets\PYGZus{}path} \PYG{o}{=} \PYGZbs{}
+\PYG{l+s+s1}{\PYGZsq{}data\PYGZus{}sets/big\PYGZus{}turbine\PYGZus{}data/\PYGZsq{}}
+\PYG{n}{filename} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}big\PYGZus{}turbine\PYGZus{}data\PYGZsq{}}
+\PYG{n}{path\PYGZus{}pictures} \PYG{o}{=} \PYG{n}{work\PYGZus{}directory} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}pictures/\PYGZsq{}}
+
+\PYG{n}{completeDF} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{n}{work\PYGZus{}directory}\PYG{o}{+}\PYG{n}{data\PYGZus{}sets\PYGZus{}path}\PYG{o}{+}\PYG{n}{filename}\PYG{o}{+}\PYG{l+s+s1}{\PYGZsq{}.csv\PYGZsq{}}\PYG{p}{,}
+                         \PYG{n}{delimiter}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{},\PYGZsq{}}\PYG{p}{,}
+                         \PYG{n}{skiprows}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{n}{completeDF}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Time\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{to\PYGZus{}datetime}\PYG{p}{(}\PYG{n}{completeDF}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Time\PYGZsq{}}\PYG{p}{],} \PYG{n}{format}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}\PYGZpc{}Y\PYGZhy{}\PYGZpc{}m\PYGZhy{}}\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s1}{T\PYGZpc{}H:\PYGZpc{}M:\PYGZpc{}S.}\PYG{l+s+si}{\PYGZpc{}f}\PYG{l+s+s1}{Z\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{completeDF}\PYG{o}{.}\PYG{n}{set\PYGZus{}index}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Time\PYGZsq{}}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{)}
+\end{Verbatim}

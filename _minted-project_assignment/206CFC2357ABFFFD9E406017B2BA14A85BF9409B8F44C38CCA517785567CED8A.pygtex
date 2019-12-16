@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{12}\PYG{p}{,}\PYG{l+m+mi}{8}\PYG{p}{))}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{mse}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}WTUR12\PYGZsq{}}\PYG{p}{],} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Original reconstruction error\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{mse\PYGZus{}pert}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}WTUR12\PYGZsq{}}\PYG{p}{],} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Perturbed reconstruction error\PYGZsq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} plt.title(\PYGZsq{}Reconstruction Error when using two principal components\PYGZsq{}, fontsize=20)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Time\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Mean square reconstruction error\PYGZsq{}}\PYG{p}{,}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{);}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{n}{name} \PYG{o}{=} \PYG{n}{path\PYGZus{}pictures} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}pert\PYGZus{}vs\PYGZus{}unpert\PYGZus{}reconstruction\PYGZus{}error.png\PYGZsq{}}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{n}{fname}\PYG{o}{=}\PYG{n}{name}\PYG{p}{)}
+\end{Verbatim}

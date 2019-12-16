@@ -15,14 +15,14 @@
 \usepackage{tikz} % To make cool diagrams
 \usetikzlibrary{shapes.geometric, arrows}
 
-\usepackage[citestyle=numeric, bibstyle=numeric, sorting=none]{biblatex} % For references
+\usepackage[style=numeric-comp, sorting=none]{biblatex} % For references, style is to get compressed references [4-12]
 \addbibresource{references_books.bib}
 \addbibresource{references_tsc.bib}
 \addbibresource{references_wind_turbine_monitoring_review.bib}
 \addbibresource{references_ml_wind_turbine.bib}
 \addbibresource{references_other.bib}
 
-\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % Something about allowing more space between rows.
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % Something about allowing more space between rows in fancy tables.
 \newtheorem{theorem}{Definition} % To allow labelled definitions
 
 \begin{document}

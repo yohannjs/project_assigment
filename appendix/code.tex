@@ -1,22 +1,305 @@
 \section{Code}
+To produce all the relevant plots all the listings can be posted and run in the same file, to produce all the relevant plots used in this report.
+They are split up into separate listings such that it is easier to link each listing to each plot.
 
 \begin{listing}[h]
-    \begin{minted}
-    	[
-    	frame=lines,
-    	framesep=2mm,
-    	baselinestretch=1.2,
-    	fontsize=\footnotesize,
-    	linenos
-    	]
-    	{Python}
-    	import pandas as pd
-    	import numpy as np
-    	import matplotlib as mpl
-    	import matplotlib.pyplot as plt
-    	import seaborn as sns
-    	import statsmodels.api as sm
-    \end{minted}
-    \label{lst:clean}
-    \caption{Module fetching and data cleaning}
+\begin{minted}
+[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{Python}
+import pandas as pd
+from sklearn.decomposition import PCA
+from datetime import datetime
+import time
+import timeit
+import numpy as np
+import matplotlib.pyplot as plt
+import copy
+
+work_directory = 'Not relevant'
+data_sets_path = \
+'data_sets/big_turbine_data/'
+filename = 'big_turbine_data'
+path_pictures = work_directory + 'pictures/'
+
+completeDF = pd.read_csv(work_directory+data_sets_path+filename+'.csv', 
+                         delimiter=',', 
+                         skiprows=1)
+
+completeDF['Time'] = pd.to_datetime(completeDF['Time'], format='%Y-%m-%dT%H:%M:%S.%fZ')
+completeDF.set_index('Time', inplace=True)
+\end{minted}
+\label{lst:load_modules_and_data}
+\caption{Module fetching and loading data}
+\end{listing}
+
+\begin{listing}
+\begin{minted}
+[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{Python}
+# Dropping max/min cols
+column_names = completeDF.columns
+for name in column_names:
+    if ('Max' in name) or ('Min' in name):
+        completeDF.drop(name, axis=1, inplace=True)
+        
+# Renaming columns
+column_names = completeDF.columns
+new_col_names = []
+for name in column_names:
+    split_name = name.split('/')
+    turbine_num = split_name[2]
+    if split_name[-1] == 's)':
+        value_meas = split_name[-3]
+    else:
+        value_meas = split_name[-1]
+    new_name = turbine_num + '/' + value_meas
+    split_new = new_name.split('(Avg)')
+    new_col_names += [split_new[0] + split_new[1]]   
+completeDF.columns = new_col_names
+
+# Create a dictionary of windturbine dataframes
+column_names = completeDF.columns
+dict_of_turbine_dfs = {}
+for i in range(1,14):
+    turbine_num = 'WTUR' + str(i) + '/'
+    tempDF = pd.DataFrame()
+    for name in column_names:
+        if turbine_num in name:
+            tempDF[name] = completeDF[name]    
+	dict_of_turbine_dfs[turbine_num[:-1]] = tempDF
+
+# Normalize values from each dataframe
+dict_norm_dfs = {}
+for turb_name in list(dict_of_turbine_dfs.keys()):
+	df = dict_of_turbine_dfs[turb_name]
+	dict_norm_dfs[turb_name] = (df - np.min(df.values, axis=0)) / (np.max(df.values, axis=0) - np.min(df.values, axis=0))
+\end{minted}
+\label{lst:form_norm}
+\caption{Data formatting and normalization}
+\end{listing}
+
+\begin{listing}
+\begin{minted}
+[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{Python}
+dict_of_turbine_dfs['WTUR4'].plot(figsize=(12,8),subplots=True, layout=(2,2))
+plt.legend(fontsize=10)
+name = path_pictures + 'one_turbine_all_vals.png'
+plt.savefig(fname=name)
+\end{minted}
+\label{lst:data_one_wt}
+\caption{Code used to produce plot in figure \ref{fig:data_one_wt}}
+\end{listing}
+
+\begin{listing}
+\begin{minted}
+[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{Python}
+# PCA Finding portions of explained variance
+cumulative_explained_variance = {}
+for turb in list(dict_norm_dfs.keys()):
+    X = dict_norm_dfs[turb].values
+    pca = PCA().fit(X)  # project from 64 to 2 dimensions
+    cumulative_explained_variance[turb] = np.cumsum(pca.explained_variance_ratio_)
+
+# Figure XX Plot explained variance for a given number of principal components
+plt.figure(figsize=(10,8))
+for turb in list(cumulative_explained_variance.keys()):
+    plt.plot(cumulative_explained_variance[turb], label=turb)
+    
+# plt.title('Explained variance vs. Number of PCA components', fontsize=18)
+plt.xlabel('Number of components', fontsize=14)
+plt.ylabel('Cumulative explained variance',fontsize=14);
+plt.legend(fontsize=10)
+
+name = path_pictures + 'cumulative_explained_variance.png'
+plt.savefig(fname=name)
+\end{minted}
+\label{lst:cum_exp_var}
+\caption{Code used to calculate cumulative explained variance, and produce plot in figure \ref{fig:cum_exp_var}}
+\end{listing}
+
+\begin{listing}
+\begin{minted}
+[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{Python}
+mse = {}
+for turb in list(dict_norm_dfs.keys()):
+    Xstd = dict_norm_dfs[turb].values
+    pca = PCA(n_components=2)
+    pca.fit(Xstd)
+    P=pca.components_
+    T = Xstd.dot(P.T)
+    Xhat = np.dot(T[:,0].reshape(-1,1),P[0,:].reshape(-1,1).T)
+    mse[turb] = (np.square(Xstd - Xhat)).sum(axis=1)
+
+# Figure XX Plot of reconstruction error using principal components
+plt.figure(figsize=(12,8))
+for turb in list(mse.keys()):
+    plt.plot(mse[turb], label=turb)
+    
+# plt.title('Reconstruction Error when using two principal components', fontsize=18)
+plt.xlabel('Time', fontsize=14)
+plt.ylabel('Mean square reconstruction error',fontsize=14);
+plt.legend(fontsize=10)
+name = path_pictures + 'reconstruction_error.png'
+plt.savefig(fname=name)
+\end{minted}
+\label{lst:recon_error}
+\caption{Code used to calculate reconstruction error, and produce plot in figure \ref{fig:recon_error}}
+\end{listing}
+
+\begin{listing}
+\begin{minted}
+[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{Python}
+# Figure XX Plot of values from perturbed WT versus non-perturbed
+dict_perturbed_norm_dfs = copy.deepcopy(dict_norm_dfs)
+dict_perturbed_norm_dfs['WTUR12'].columns
+for idx in range(9000,11000):
+    dict_perturbed_norm_dfs['WTUR12'].iat[idx,0] = 1
+    dict_perturbed_norm_dfs['WTUR12'].iat[idx,2] = 0
+    
+df_to_plot = pd.DataFrame()    
+df_to_plot['Power perturbed'] = dict_perturbed_norm_dfs['WTUR12']['WTUR12/ActivePower (kW)']
+df_to_plot['Speed perturbed'] = dict_perturbed_norm_dfs['WTUR12']['WTUR12/WindSpeed1']
+df_to_plot['Power'] = dict_norm_dfs['WTUR12']['WTUR12/ActivePower (kW)']
+df_to_plot['Speed'] = dict_norm_dfs['WTUR12']['WTUR12/WindSpeed1']
+df_to_plot.plot(figsize=(12,8))
+plt.xlabel('Time', fontsize=14)
+plt.ylabel('Amplitude',fontsize=14);
+plt.legend(fontsize=10)
+name = path_pictures + 'perturbed_vs_unperturbed.png'
+plt.savefig(fname=name)
+\end{minted}
+\label{lst:illu_perturbed_data}
+\caption{Code used to produce plot in figure \ref{fig:illu_perturbed_data}}
+\end{listing}
+
+\begin{listing}
+\begin{minted}
+[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{Python}
+cumulative_explained_variance = {}
+for turb in list(dict_perturbed_norm_dfs.keys()):
+    X = dict_perturbed_norm_dfs[turb].values
+    pca = PCA().fit(X)  # project from 64 to 2 dimensions
+    cumulative_explained_variance[turb] = np.cumsum(pca.explained_variance_ratio_)
+
+#fig, ax = plt.subplots(7,2)
+plt.figure(figsize=(12,8))
+for turb in list(cumulative_explained_variance.keys()):
+    plt.plot(cumulative_explained_variance[turb], label=turb)
+    
+# plt.title('Explained variance vs. Number of PCA components', fontsize=20)
+plt.xlabel('Number of components', fontsize=14)
+plt.ylabel('Cumulative explained variance',fontsize=14);
+plt.legend(fontsize=10)
+name = path_pictures + 'explained_variance_perturbed.png'
+plt.savefig(fname=name)
+\end{minted}
+\label{lst:cum_exp_var_pert}
+\caption{Code used to calculate cumulative explained variance of perturbed data, and produce plot in figure \ref{fig:cum_exp_var_pert}}
+\end{listing}
+
+\begin{listing}
+\begin{minted}
+[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{Python}
+mse_pert = {}
+for turb in list(dict_perturbed_norm_dfs.keys()):
+    Xstd = dict_perturbed_norm_dfs[turb].values
+    pca = PCA(n_components=2)
+    pca.fit(Xstd)
+    P=pca.components_
+    T = Xstd.dot(P.T)
+    Xhat = np.dot(T[:,0].reshape(-1,1),P[0,:].reshape(-1,1).T)
+    mse_pert[turb] = (np.square(Xstd - Xhat)).sum(axis=1)
+
+plt.figure(figsize=(12,8))
+for turb in list(mse_pert.keys()):
+    plt.plot(mse_pert[turb], label=turb)
+    
+# plt.title('Reconstruction Error when using two principal components', fontsize=20)
+plt.xlabel('Time', fontsize=14)
+plt.ylabel('Mean square reconstruction error',fontsize=14);
+plt.legend(fontsize=10)
+name = path_pictures + 'reconstruction_error_perturbed.png'
+plt.savefig(fname=name)
+\end{minted}
+\label{lst:recon_error_pert}
+\caption{Code used to calculate reconstruction error using perturbed data, and produce plot in figure \ref{fig:recon_error}}
+\end{listing}
+
+\begin{listing}
+\begin{minted}
+[
+frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+]
+{Python}
+plt.figure(figsize=(12,8))
+plt.plot(mse['WTUR12'], label='Original reconstruction error')
+plt.plot(mse_pert['WTUR12'], label='Perturbed reconstruction error')
+    
+# plt.title('Reconstruction Error when using two principal components', fontsize=20)
+plt.xlabel('Time', fontsize=14)
+plt.ylabel('Mean square reconstruction error',fontsize=14);
+plt.legend(fontsize=10)
+name = path_pictures + 'pert_vs_unpert_reconstruction_error.png'
+plt.savefig(fname=name)
+\end{minted}
+\label{lst:recon_error_pert_vs_unpert}
+\caption{Code used to produce plot in figure \ref{fig:recon_error_pert_vs_unpert}}
 \end{listing}
