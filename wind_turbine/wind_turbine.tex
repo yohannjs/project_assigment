@@ -139,7 +139,7 @@ When used for regression the target is predicted based on the points from the tr
 Random forests (RF) when used for regression tasks randomly create regressors which each give a prediction of the target variable \cite{high_freq_scada_perf_monit_sensitivity}. 
 Through the training process the model learns which regressors should have more weight in the final prediction. 
 
-\subsection{Regression-based Models}
+\subsection{Regression-based Models} \label{sec:reg_bas_mod}
 A frequent approach is to use a supervised learning model to capture the normal behaviour of a wind turbine, or wind turbine component, by predicting the value of one time dependent variable, or by recreating the input variables. 
 Then the deviation between the prediction and the actual value is used to detect anomalous behaviour. 
 If the system attempts to predict one variable this deviation is called the estimation error ($E_e$), if the system is intended to recreate the input the deviation is called the reconstruction error ($R_e$).

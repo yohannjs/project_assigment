@@ -155,7 +155,7 @@ In ICA one aims to reconstruct $S$ as well as possible.
 ICA is based on the central limit theorem which states that a sum of random variables with arbitrary probability distributions will tend towards a Gaussian distribution. 
 Hence, one chooses $W$ such that the resulting independent components are mutually independent and show as little Gaussian properties as possible.
 
-\section{Representation Methods}
+\section{Representation Methods} \label{sec:rep_methods}
 There are numerous ways which a time series can be represented. 
 \textcite{tsc_rev} define a time series representation given time series data $\{x_t\} = \{x_1, x_2, ... ,x_T\}$ as transforming the time series into another vector $\{x_t\} = \{\hat{x}_1, \hat{x}_2, ... ,\hat{x}_L\}$ where $L < T$. 
 In theory $L=T$, but most often the point in transforming a time series is to reduce the amount of information present in the raw time series to more easily reveal patterns of interest. \bigskip
@@ -183,11 +183,11 @@ In theory $L=T$, but most often the point in transforming a time series is to re
         Autoencoder.                            & \cite{auto_encoder_many_tsc_algorithms} \\
         \bottomrule
     \end{tabular}
-    \caption{Feature extraction based representation methods.}
+    \caption{Feature-based representation methods}
     \label{tab:feat_repr_meth}
 \end{table*}
 
-Table \ref{tab:feat_repr_meth} summarizes the different feature extraction based representation methods encountered in literature. 
+Table \ref{tab:feat_repr_meth} summarizes the different feature-based representation methods encountered in literature. 
 %% Signal statistics 
 Here the basic signal statistics category refers to the same values as in table \ref{tab:feat_ext_wt}: window average, max/min values and RMS values.
 basic signal statistics are usually coupled with a form of dimensionality reduction such as PCA. 
@@ -225,8 +225,8 @@ Hence, they transform a multivariate time series into a probability distribution
 They then extract the topological features of the trajectory curves, such as the number of holes, birth time and death time of holes. 
 Finally the measure similarity between time series as the euclidean distance between their topological features.
 %% Autoencoder
-\textcite{auto_encoder_many_tsc_algorithms} compare a feature extraction based representation method, to a raw-data based approach. 
-In the feature extraction based approach they train an autoencoder to reconstruct the time series used, then they separate the autoencoder into the encoder and the decoder parts. 
+\textcite{auto_encoder_many_tsc_algorithms} compare a feature-based representation method, to a raw-data based approach. 
+In the feature-based approach they train an autoencoder to reconstruct the time series used, then they separate the autoencoder into the encoder and the decoder parts. 
 They then used the compressed features at the output of the encoder as the representation of the time series in the clustering tasks. 
 They then go on to test a multitude of different clustering algorithms to cluster the compressed features. \bigskip
 
@@ -242,7 +242,7 @@ They then go on to test a multitude of different clustering algorithms to cluste
         State space model.          & \cite{stock_price_tsc_regr_trees_som, load_tsc_state_space_model, hier_clust_w_state_space_models} \\
         Varience ratio statistics.  & \cite{financial_tsc_variance_ratio} \\
         Copula based model.         & \cite{copula_fuzzy_tsc_spatial} \\
-        Network model.              & \cite{community_detection_networks_tsc, multivar_tsc_community_detection, } \\
+        Network model.              & \cite{community_detection_networks_tsc, multivar_tsc_community_detection} \\
         \bottomrule
     \end{tabular}
     \caption{Model based representation methods}
@@ -365,16 +365,30 @@ The power of membership degree must be fixed together with the number of cluster
 Hierarchical clustering algorithms come in many flavours, but they all build hierarchies of clusters \cite{espen}.
 A great advantage with hierarchical clustering algorithms is that the number of clusters is not specified beforehand. 
 Hierarchical clustering algorithms can be split into agglomorative, and divisive algorithms.
-Agglomorative hierarchical clustering algorithms start with all data objects as their own clusters. 
+Agglomorative hierarchical clustering algorithms start with all data objects as their own clusters, then iteratively merges clusters together until there is only one cluster containing all data objects.
+Divise hierarchical clustering starts with one cluster containing all data objects, and then iteratively splits the clusters into smaller clusters until every data object is contained in a separate cluster.
+To decide which clusters should be merged during a given iteration, the algorithm uses the similarity between clusters, which is called the \textit{linkage criterion}.
+There are four main types of linkage criteria: 
+\begin{itemize}
+    \item Single linkage:   Computes the similarity between two clusters as the dissimilarity as the dissimilarity between the two most similar data objects in each cluster \cite{dependency_tsc_energy_markets}.
+    \item Complete linkage: Computes the similarity between two clusters as the dissimilarity as the dissimilarity between the two least similar data objects in each cluster \cite{financial_tsc_variance_ratio}.
+    \item Average linkage:  Computes the similarity between two clusters as the average dissimilarity between all points in each cluster \cite{dependency_tsc_energy_markets}.
+    \item Wards linkage:    Computes the similarity between two clusters as the increase in sum of squared error by merging the two clusters \cite{copula_ica_tsc}.
+\end{itemize}
 
-\subsection{Self-organizing maps}
+After the algorithm has created a hierarchy of clusters, it produces what is called a dendrogram which shows what the different clusters would look like for a different number of clusters. 
+The correct structure is then found by cutting the dendrogram at the appropriate number of clusters. 
+The appropriate cutting of the dendrogram is chosen by calculating indices that evaluate the inter- and intra cluster variance such as the silhuette index \cite{BSLEX_nonlin_nonstat_tsc, copula_ica_tsc}, Duda-Hart index \cite{financial_tsc_variance_ratio} and Dunn's index \cite{tsc_total_variation_distance}.
+Another advantage of the hierarchical clustering algorithm is that it is deterministic in it's cluster hierarchy, 
+meaning that it will always produce the same dendrogram if it is given the same dissimilarity matrix \cite{espen}.
 
 \subsection{Expectation-maximization}
+
+\subsection{Self-organizing maps}
 
 \subsection{Spectral clustering}
 
 \section{Clustering Algorithms}
-
 
 \begin{table*}[h]
     \centering
@@ -404,7 +418,7 @@ Agglomorative hierarchical clustering algorithms start with all data objects as 
     \caption{Clustering algorithms encountered in literature}
     \label{tab:clust_alg}
 \end{table*}
-
+Table \ref{tab:clust_alg} shows the different clustering algorithms encountered in the literature. 
 %% K-means
 
 %% K-medoids
@@ -417,10 +431,16 @@ Agglomorative hierarchical clustering algorithms start with all data objects as 
 
 %% Fuzzy C-medoids
 
+% Hierarchical clustering
 
+%% BIRCH
+
+%% SOM
+Not relevant because hard to interpret.
 %% EM
-The expectation maximization algorithm is used for clustering when the approach uses a set of mixture models to represent the clusters. 
-\textcite{hier_clust_w_state_space_models}
+The expectation-maximization algorithm is used for clustering when each cluster center is represented by a mixture model. 
+The mixture models used to represent the cluster centers that have been enountered in literature are: ARMA models \cite{moar_mpl_tsc}, HMM \cite{mixture_gaussian_hmm}, Gaussian distributions \cite{auto_encoder_many_tsc_algorithms} and state space models \cite{hier_clust_w_state_space_models}.
+Common for all the articles is that they use expectation-maximization to assign the time series to the cluster which has the most likely generative process as cluster center.
 
 % Affinity propagation, mean shift, DBSCAN
 As mentiond in section \textcite{auto_encoder_many_tsc_algorithms} use the encoder part of an autoencoder to compress the time series produced by an energy research center. 
@@ -428,3 +448,20 @@ The test hierarchical clustering, K-means, spectral clustering, expectation-maxi
 The feature-based approach is compared to a raw-data based approach, and they found that the feature-based had better accuracy on a labelled dataset.
 
 \section{Discussion}
+In this chapter different representation methods, and clustering algorithms encountered in the literature have been explored. 
+Of the feature-representation methods PCA, and ICA are the most viable option for reducing the dimensionality of multivariate time series.
+Because they build on strong theoretical ground, without being overly complex methods they are straight forward to apply, and should be considered as a representation method for the master thesis. 
+PCA will in fact be tested for exploring the data from a particular wind farm in chapter \ref{chap:data_exp}.
+The piecewise aggregate approximation techniques of SAX and permutation based coding are also quite clear and could be considered for application in the master thesis.
+The other feature-based representation methods show great promise, but are not appropriate for the for exploration in the master thesis.
+The use of an autoencoder for feature extraction explored by \textcite{auto_encoder_many_tsc_algorithms} showed great promise in terms of classification accuracy, compared to the raw-data approach.
+However, it suffers the same issues as the regression based models described in section \ref{sec:reg_bas_mod}, a lack of interpretability. 
+Of the model-based representation methods ARMA models were found to be a frequent model used, 
+and the fact that there is such a great variation in the individual approaches means that there might be a flavour of ARMA models that could be used to model the time series produced by wind turbines.
+Additionally, the use of ARMA models to model the time series produced by wind turbines, or wind turbine components has already been explored \cite{ml_cm_wt_blade_ARMA_2018, fault_detection_and_isolation_using_classifier_fusion, lin_and_non_lin_feat_for_ice_detection_on_blades, dirt_n_mud_detection_using_guided_waves, vibration_ARMA_decision_tree_cm_wt}, which strengthens the argument that they are a representation method that should be explored in the master thesis. % Kanskje ta denne setningen i den siste diskusjonen
+The HMM is a model-based approach that has showed great promise in terms of representing time series, and has even be used to cluster the time series \cite{hmm_pm10_quantifying_impacts} in a simple manner.
+The approach of \textcite{hmm_pm10_quantifying_impacts} of representing all time series with the same HMM, and then clustering together time series which are in the same state is simple, but also elegant.
+It is elegant because it yields a simple method of observing how the different time series traverse through different clusters over time, which is quite usefull for long-term observation of a wind farm. 
+The approaches that represent time series with different HMM models, and measure dissimilarity based on model parameters \cite{} should also be considered for the master thesis.
+
+

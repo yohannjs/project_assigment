@@ -1,4 +1,4 @@
-\chapter{Data exploration}
+\chapter{Data exploration} \label{chap:data_exp}
 
 In this section we will explore the use of some basic techniques from PCA to explore a small dataset of 13 multivariate time series from a wind farm in Norway.  
 By reccomendation of Professor Adil Rasheed, the exploration will see if one can detect anomolous behaviour in single turbines in a wind farm by inspecting the cumulative explained varience for different number of principal components, and the reconstruction error.
@@ -25,7 +25,9 @@ Before estimating the principal components of the dataset, the dataset was first
 One interesting point of comparison for the different wind turbines is the cumulative explained variance of a wind turbine for a given set of principal components. 
 The total variance is the sum of the variences of the individual principal components. 
 Since these multivariate time series have four dimensions four principle components should then be able to explain the variance of the entire dataset, as they are the eigenvectors of the covarience matrix of the time series. 
-The explained variance of a principal component is the ration of the variance of said component to the total variance, and the cumulative explained variance of $n$ principal components is the sum of the explained variance of the $n$ first principal components. Since these turbines are in the same wind farm they are exposed to roughly the same environmental conditions, and one would expect them to have similar cumulative explained variance curves.
+The explained variance of a principal component is the ratio of the variance of said component to the total variance of all the principal components, 
+and the cumulative explained variance of $n$ principal components is the sum of the explained variance of the $n$ first principal components. 
+Since these turbines are in the same wind farm they are exposed to roughly the same external conditions, one would expect them to have similar cumulative explained variance curves.
 
 \begin{figure}[h]
     \begin{center}
@@ -52,6 +54,7 @@ This difference is not that substantial, from the plot in figure \ref{fig:cum_ex
 \end{figure}
 
 Another indicator of anomolous behaviour is if the multivariate time series associated with a turbine has a significantly different $R_e$ compared to the multivariate time series of the other turbines in the wind farm. 
+As mentioned in \ref{sec:rep_methods}, \textcite{multivariate_tsc_common_pca} even uses $R_e$ of the principal as a dissimilarity metric.
 Figure \ref{fig:recon_error} shows the total MSE of the reconstructed time series associated with the different wind turbines. 
 Here too, one can observe that the different wind turbines all follow approximately the same curve with regard to reconstruction error. 
 With the exception of turbine seven has a slight spike at round about 5000 samples. 
