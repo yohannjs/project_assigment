@@ -20,7 +20,7 @@ Before estimating the principal components of the dataset, the dataset was first
     \label{fig:data_one_wt}
 \end{figure}
 
-\section{Explained Varience and Reconstruction Error}
+\section{Explained Varience of Principal Components}
 
 One interesting point of comparison for the different wind turbines is the cumulative explained variance of a wind turbine for a given set of principal components. 
 The total variance is the sum of the variences of the individual principal components. 
@@ -41,6 +41,8 @@ However, as the number of principal components decreases there is a greater vari
 For only one principal component the biggest difference in cumulative explained varience is between turbine two at 75$\%$ explained variance, and turbine 13 at 70$\%$ explained variance.
 This difference is not that substantial, from the plot in figure \ref{fig:cum_exp_var} one can see that all the curves follow more or less the same shape, so one cannot conclude that any of these curves are due to anomolous behaviour. \smallskip
 
+\section{Reconstruction Error}
+
 \begin{figure}[h]
     \begin{center}
     \includegraphics[width=0.5\textwidth]{data_exp/reconstruction_error}
@@ -55,7 +57,7 @@ Here too, one can observe that the different wind turbines all follow approximat
 With the exception of turbine seven has a slight spike at round about 5000 samples. 
 To get a better reference of what constitutes anomolous behaviour, the data from one turbine will be artificially perturbed in the coming section. 
 
-\section{Artificially perturbing data}
+\section{Artificially Perturbation of Data}
 
 \begin{figure}
     \begin{center}
