@@ -2,6 +2,7 @@
 
 In this section we will explore the use of some basic techniques from PCA to explore a small dataset of 13 multivariate time series from a wind farm in Norway.  
 By reccomendation of Professor Adil Rasheed, the exploration will see if one can detect anomolous behaviour in single turbines in a wind farm by inspecting the cumulative explained varience for different number of principal components, and the reconstruction error.
+All the code used to construct the figures in this chapter can be found in the listings of Appendix C \ref{ap:code}.
 
 \section{Dataset}
 
@@ -70,7 +71,7 @@ To get a better reference of what constitutes anomolous behaviour, the data from
     \label{fig:illu_perturbed_data}
 \end{figure}
 
-To artificially perturb the data 2000 samples from turbine 12 are changed. 
+To artificially perturb the data, 2000 samples from turbine 12 are changed. 
 Sample 9000 to sample 1100 of the wind-speed and power time series are set to one and zero respectively.
 Figure \ref{fig:illu_perturbed_data} illustrates this. 
 This drastically changes the curve of cumulutive explained variance which is depicted in figure \ref{fig:cum_exp_var_pert}, and the reconstruction error of the time series associated with turbine 12 which is depicted in figure \ref{fig:recon_error_pert_vs_unpert} and \ref{fig:recon_error_pert}.

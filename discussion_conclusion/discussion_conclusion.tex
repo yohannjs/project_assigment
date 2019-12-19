@@ -4,30 +4,29 @@
 Machine learning methods used for wind turbine condition monitoring encountered in literature were divided into three categories: regression based models, supervised classification based models and unsupervised classification based models. 
 The regression based models all had in common that they used some machine learning model to forecast the value of one sensor, or reconstruct their inputs, and then use the estimation error, or reconstruction error to indicate whether the wind turbine was operating outside its normal condition.
 The supervised classification based models had in common that they trained supervised machine learning models directly to detect faults in the wind turbine based on the input of condition monitoring sensors, or images. 
-The unsupervised classification models had in common that they used trained unsupervised machine learning models to detect anomalous behaviour in the wind turbines. 
+The unsupervised classification models had in common that they trained unsupervised machine learning models to detect anomalous behaviour in the wind turbines. 
 A variety of machine learning models were applied, and a summary of their advantages and disadvantages can be found in table \ref{tab:ml_wt_sum}. \bigskip
 
-The supervised classification models where disgarded because they all required labelled datasets with faults, which will not be available for a master thesis. 
-The regression based models where also disgarded because they relied on complex machine learning models that would become too difficult to interpret, without labelled data. 
+Chapter 3 gives an insight into the different machine learning methods used for wind turbine monitoring. However, most of the approaches are not suited for the Kongsberg Digital has provided. 
+This is because they rely heavily on labelled datasets for training, or interpretation of detected anomalies. 
 One of the four unsupervised classification methods stood out as applicable to the dataset that would be available for the master thesis. \textcite{fault_detect_PARAFAC_k_means} used a generalization of PCA to reduce the dimensionality of the multivariate time series produced by the wind turbines, and then used K-means clustering to cluster the wind turbines after dimensionality reduction. They acheived some accuracy with their model, but it remains untested for variable wind conditions. 
-
 The literature revealed many approaches for feature-based and model-based representations of time series. 
 Of the feature-based approaches PCA stood out as the most viable option for dimensionality reduction of time series. 
-In chapter \ref{chap:data_exp} it is explored what the cumulative explained variance curve of the principal components, and reconstruction error can say about anomalous behaviour of single wind turbines in a wind farm. 
+In chapter \ref{chap:data_exp} the cumulative explained variance curve of the principal components, and reconstruction error are explored with regard tocan say about anomalous behaviour of single wind turbines in a wind farm. 
 When the data of one wind turbine was artificially perturbed, it was evident in the cumulative explained variance curves. 
-SAX was also found to be relevant for time series length compression. 
 Of the model based approaches the ARMA model was used quite often in literature. Since ARMA models already are used to some extent for feature extraction of wind turbines monetoring systems explored in chapter \ref{chap:wt_monitoring}, it is considered very relevant as an option for model-based representation. 
-HMM were also found to be viable options for model-based representation methods.
-Probabilistic clustering systems that represented cluster centers with mixture models, and then clustered time series using expectation-maximization were found to be too computationally complex consider for the master thesis. 
-Most of the clustering algorithms explored have open source implementations in python, and were considered worth testing with the exception of SOMs which would require careful design, and time consuming training, so they are not regarded useful for testing in a master thesis. 
+HMM, and SAX were also found to be viable options for model-based representation methods.
+Probabilistic clustering systems that represented cluster centers with mixture models, and then clustered the time series using expectation-maximization were found to require too much computational time and storage to be considered for the master thesis.
+Most of the clustering algorithms explored have open source implementations in python, and were considered worth testing with the exception of SOMs which would require careful design, and time consuming training. 
 
 \chapter{Conclusion and Future Work}
-The objectives of this literature review have been to: Get an overview of the different machine learning methods used for monitoring of wind turbines, get an overview of the different feature-based, and model-based TSC methods and determine which of TSC techniques would be applicable for the clustering of time series produced by wind turbines. 351 articles were screened, and 96 articles were included in the review to fulfill the objectives. An overview of machine learning methods used for monitoring of wind turbines was given, and so was an overview of feature-based, and model-based TSC methods. 
+The objectives of this literature review have been: To get an overview of the machine learning methods used for wind turbines monitoring, To get an overview of the different feature-based, and model-based TSC methods and determine which TSC techniques would be appropriate to test in the time series produced by wind turbines. 351 articles were screened, and 96 articles were included in the review to fulfill the objectives. An overview of machine learning methods used for monitoring of wind turbines was given, and so was an overview of feature-based, and model-based TSC methods. The techniques considered most relevant for clustering time series produced by wind turbines are the ARMA model-based approach, the feature-based approach of PCA. 
+Based on the findings in the literature and the results of chapter \ref{chap:data_exp} 
+PCA is considered to be a good tool for reducing the dimensionality of the time series. The specific approach to be considered is to use PCA for feature reduction of the multivariate time series, and then test different clustering algorithms on the principal component-reduced feature space, 
+similar to what has been done by \textcite{fault_detect_PARAFAC_k_means}. 
+If this goes well one could consider trying out the approach of \textcite{multivariate_tsc_common_pca}: Use principal components to represent cluster centers, and use the reconstruction error to measure similarity.
+The model-based approach should be to represent the time series with ARMA models, and cluster them with regard to their model parameters. First one should try to represent univariate time series with ARMA models, but if there is time one could also represent multivariate time series with vector AR models as done by \textcite{var_multivar_tsc}.
+Although there were many promising representation methods, not all of them can be tested in a master thesis. 
+Therefore, the use  HMMs to represent the time series, and the use of SAX to reduce the length of the time series are not reccomended in the first exploration of model-based representations of time series for clustering.. \bigskip
 
-For the master thesis the primary objective should be to test a model-based approach, and a feature-based approach. 
-Based on the findings in the literature and the results of chapte \ref{chap:data_exp} the feature-based approach chosen is to reduce the dimensionality of the time series using PCA, and then clustering the feature-reduced time series. 
-Similar to what has been done by \textcite{fault_detect_PARAFAC_k_means}. 
-If this goes well one could consider trying out the approach of \textcite{multivariate_tsc_common_pca}: Use principal components to represent cluster centers, and reconstruction error to measure similarity.
-The model-based approach should be to represent the time series with ARMA models, and cluster them with regard to their model parameters. Primarily one should try to represent univariate time series with ARMA models, but if there is time one could also represent multivariate time series with a vector AR model as done by \textcite{var_multivar_tsc}.
-
-The second objective, if there is time would be to explore the use of HMMs to represent the time series, and clustering them with regard to their model parameters. The use of SAX to compress the length of the time series seems interesting, but does not promising enough to be prioritized over the other approaches. 
+The only restriction that is set for which clustering algorithms to try is the ease of implementation. Most clustering algorithms have good open-source python implementations in the module scikit learn. However, some algorithms will require more careful thought such as SOMs therefore an evaluation must be made as to if implementing them will take to much time from the representation methods.

@@ -4,18 +4,18 @@ Clustering is a method used to categorize big amounts of data into groups known 
 It is a popular choice for extracting patterns from large datasets, because clustering falls within the category of \textit{unsupervised machine learning}, meaning that it does not require the dataset to be labelled. 
 Clustering is also a common step in data mining algorithms, where the goal is to learn rules relating the different variables in a dataset. 
 In the last decade clustering has started to become more common to use on time-series datasets as they are abundant, and labeling is often costly and time-consuming. 
-Time-series clustering has been applied on financial time series, medical time series and time series from a variety of other industries. \bigskip
+Time-series clustering (TSC) has been applied on financial time series, medical time series and time series from a variety of other industries. \bigskip
 
 \section{Motivation}
 
 As of 2018 wind power, together with solar power made up $7\%$ of the world's electricity production,\footnote{\url{https://www.iea.org/geco/electricity/}} and has been referred to as ''the fastest growing source of energy'' by the Norwegian company Statkraft\footnote{\url{https://www.statkraft.com/globalassets/old-contains-the-old-folder-structure/documents/wind-power-aug-2010-eng_tcm9-11473.pdf}}. 
 As the effects of climate change steadily are becoming a reality, shifting to renewable energy sources is imperative, and wind power will play a bigger part in meeting the worlds energy demand in the future. \bigskip
 
-To make wind power as a whole more lucrative, a good start would be to reduce the downtime, and improve the performance of turbines. The argument that time-series clustering may be a good approach for this is two-fold. 
+To make wind power as a whole more lucrative, a good start would be to reduce the downtime, and improve the performance of turbines. The argument that TSC may be a good approach for this is two-fold. 
 
 \begin{enumerate}
-    \item A single wind turbine can have several sensors sampling very often, meaning that a wind farm can produce colossal amounts of time-series data. An unsupervised approach is usefull because labelling of all this data is requires a lot of time and resources.
-    \item When wind farms become big enough it will become too costly to manually inspect every turbine to construct an effective model for condition monitoring, further automation is required \cite{espen}. Time-series clustering is therefore a good alternative for condition monitoring.
+    \item A single wind turbine can have several sensors sampling very often, meaning that a wind farm can produce colossal amounts of time-series data. An unsupervised approach is useful because labelling of all this data is requires a lot of time and resources.
+    \item When wind farms become big enough it will become too costly to manually inspect every turbine to construct an effective model for condition monitoring, further automation is required \cite{espen}. TSC is therefore a good alternative for condition monitoring.
 \end{enumerate}
 
 \section{Objective} \label{sec:objective}
@@ -34,8 +34,8 @@ This literature review has three objectives in the form of questions. \bigskip
 
     \begin{enumerate}
         \item What machine learning methods are currently being used to monitor the condition, and performance of wind turbines?
-        \item What are the different methods of feature-, and model-based time-series clustering currently used?
-        \item What time-series clustering methods (if any) are appropriate to test on time-series data produced by wind turbines? 
+        \item What are the different methods of feature-, and model-based TSC currently used?
+        \item What TSC methods (if any) are appropriate to test on time-series data produced by wind turbines? 
     \end{enumerate}
 \end{tcolorbox}
 
@@ -49,4 +49,5 @@ The rest of the review is organised as follows:
     \item \textbf{Chapter 5}: In this chapter a select technique for representing time series will be used to explore a dataset from a wind farm in Norway.
     \item \textbf{Chapter 6}: In this chapter a discussion will be given about the results found in the previous chapters, and a final answer will be given to the question in objective three.
     \item \textbf{Chapter 7}: The review will be wrapped up and concluded.
+    \item \textbf{Chapter 8}: Appendix A, and B contain summaries of articles used in the literature review and Appendix C contains the code used in chapter \ref{chap:data_exp}.
 \end{itemize}

@@ -1,19 +1,19 @@
 \begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} PCA Finding portions of explained variance}
 \PYG{n}{cumulative\PYGZus{}explained\PYGZus{}variance} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
-\PYG{k}{for} \PYG{n}{turb} \PYG{o+ow}{in} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{dict\PYGZus{}perturbed\PYGZus{}norm\PYGZus{}dfs}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{()):}
-    \PYG{n}{X} \PYG{o}{=} \PYG{n}{dict\PYGZus{}perturbed\PYGZus{}norm\PYGZus{}dfs}\PYG{p}{[}\PYG{n}{turb}\PYG{p}{]}\PYG{o}{.}\PYG{n}{values}
+\PYG{k}{for} \PYG{n}{turb} \PYG{o+ow}{in} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{dict\PYGZus{}norm\PYGZus{}dfs}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{()):}
+    \PYG{n}{X} \PYG{o}{=} \PYG{n}{dict\PYGZus{}norm\PYGZus{}dfs}\PYG{p}{[}\PYG{n}{turb}\PYG{p}{]}\PYG{o}{.}\PYG{n}{values}
     \PYG{n}{pca} \PYG{o}{=} \PYG{n}{PCA}\PYG{p}{()}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} project from 64 to 2 dimensions}
     \PYG{n}{cumulative\PYGZus{}explained\PYGZus{}variance}\PYG{p}{[}\PYG{n}{turb}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{cumsum}\PYG{p}{(}\PYG{n}{pca}\PYG{o}{.}\PYG{n}{explained\PYGZus{}variance\PYGZus{}ratio\PYGZus{}}\PYG{p}{)}
 
-\PYG{c+c1}{\PYGZsh{}fig, ax = plt.subplots(7,2)}
-\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{12}\PYG{p}{,}\PYG{l+m+mi}{8}\PYG{p}{))}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{l+m+mi}{8}\PYG{p}{))}
 \PYG{k}{for} \PYG{n}{turb} \PYG{o+ow}{in} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{cumulative\PYGZus{}explained\PYGZus{}variance}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{()):}
     \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{cumulative\PYGZus{}explained\PYGZus{}variance}\PYG{p}{[}\PYG{n}{turb}\PYG{p}{],} \PYG{n}{label}\PYG{o}{=}\PYG{n}{turb}\PYG{p}{)}
 
-\PYG{c+c1}{\PYGZsh{} plt.title(\PYGZsq{}Explained variance vs. Number of PCA components\PYGZsq{}, fontsize=20)}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Number of components\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{)}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Cumulative explained variance\PYGZsq{}}\PYG{p}{,}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{);}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
-\PYG{n}{name} \PYG{o}{=} \PYG{n}{path\PYGZus{}pictures} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}explained\PYGZus{}variance\PYGZus{}perturbed.png\PYGZsq{}}
+
+\PYG{n}{name} \PYG{o}{=} \PYG{n}{path\PYGZus{}pictures} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}cumulative\PYGZus{}explained\PYGZus{}variance.png\PYGZsq{}}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{n}{fname}\PYG{o}{=}\PYG{n}{name}\PYG{p}{)}
 \end{Verbatim}

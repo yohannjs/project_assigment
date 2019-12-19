@@ -13,7 +13,6 @@
 \PYG{k}{for} \PYG{n}{turb} \PYG{o+ow}{in} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{mse\PYGZus{}pert}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{()):}
     \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{mse\PYGZus{}pert}\PYG{p}{[}\PYG{n}{turb}\PYG{p}{],} \PYG{n}{label}\PYG{o}{=}\PYG{n}{turb}\PYG{p}{)}
 
-\PYG{c+c1}{\PYGZsh{} plt.title(\PYGZsq{}Reconstruction Error when using two principal components\PYGZsq{}, fontsize=20)}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Time\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{)}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Mean square reconstruction error\PYGZsq{}}\PYG{p}{,}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{);}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}

@@ -1,4 +1,4 @@
-\section{Appendix C: Code}
+\section{Appendix C: Code} \label{ap:code}
 To produce all the relevant plots all the listings can be posted and run in the same file, to produce all the relevant plots used in this report.
 They are split up into separate listings such that it is easier to link each listing to each plot.
 
@@ -126,12 +126,10 @@ for turb in list(dict_norm_dfs.keys()):
     pca = PCA().fit(X)  # project from 64 to 2 dimensions
     cumulative_explained_variance[turb] = np.cumsum(pca.explained_variance_ratio_)
 
-# Figure XX Plot explained variance for a given number of principal components
 plt.figure(figsize=(10,8))
 for turb in list(cumulative_explained_variance.keys()):
     plt.plot(cumulative_explained_variance[turb], label=turb)
     
-# plt.title('Explained variance vs. Number of PCA components', fontsize=18)
 plt.xlabel('Number of components', fontsize=14)
 plt.ylabel('Cumulative explained variance',fontsize=14);
 plt.legend(fontsize=10)
@@ -163,12 +161,10 @@ for turb in list(dict_norm_dfs.keys()):
     Xhat = np.dot(T[:,0].reshape(-1,1),P[0,:].reshape(-1,1).T)
     mse[turb] = (np.square(Xstd - Xhat)).sum(axis=1)
 
-# Figure XX Plot of reconstruction error using principal components
 plt.figure(figsize=(12,8))
 for turb in list(mse.keys()):
     plt.plot(mse[turb], label=turb)
     
-# plt.title('Reconstruction Error when using two principal components', fontsize=18)
 plt.xlabel('Time', fontsize=14)
 plt.ylabel('Mean square reconstruction error',fontsize=14);
 plt.legend(fontsize=10)
@@ -189,7 +185,6 @@ fontsize=\footnotesize,
 linenos
 ]
 {Python}
-# Figure XX Plot of values from perturbed WT versus non-perturbed
 dict_perturbed_norm_dfs = copy.deepcopy(dict_norm_dfs)
 dict_perturbed_norm_dfs['WTUR12'].columns
 for idx in range(9000,11000):
@@ -225,15 +220,13 @@ linenos
 cumulative_explained_variance = {}
 for turb in list(dict_perturbed_norm_dfs.keys()):
     X = dict_perturbed_norm_dfs[turb].values
-    pca = PCA().fit(X)  # project from 64 to 2 dimensions
+    pca = PCA().fit(X)
     cumulative_explained_variance[turb] = np.cumsum(pca.explained_variance_ratio_)
 
-#fig, ax = plt.subplots(7,2)
 plt.figure(figsize=(12,8))
 for turb in list(cumulative_explained_variance.keys()):
     plt.plot(cumulative_explained_variance[turb], label=turb)
     
-# plt.title('Explained variance vs. Number of PCA components', fontsize=20)
 plt.xlabel('Number of components', fontsize=14)
 plt.ylabel('Cumulative explained variance',fontsize=14);
 plt.legend(fontsize=10)
@@ -268,7 +261,6 @@ plt.figure(figsize=(12,8))
 for turb in list(mse_pert.keys()):
     plt.plot(mse_pert[turb], label=turb)
     
-# plt.title('Reconstruction Error when using two principal components', fontsize=20)
 plt.xlabel('Time', fontsize=14)
 plt.ylabel('Mean square reconstruction error',fontsize=14);
 plt.legend(fontsize=10)
@@ -293,7 +285,6 @@ plt.figure(figsize=(12,8))
 plt.plot(mse['WTUR12'], label='Original reconstruction error')
 plt.plot(mse_pert['WTUR12'], label='Perturbed reconstruction error')
     
-# plt.title('Reconstruction Error when using two principal components', fontsize=20)
 plt.xlabel('Time', fontsize=14)
 plt.ylabel('Mean square reconstruction error',fontsize=14);
 plt.legend(fontsize=10)

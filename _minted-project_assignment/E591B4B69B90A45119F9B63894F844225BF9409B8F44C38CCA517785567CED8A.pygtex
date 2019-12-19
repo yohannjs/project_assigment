@@ -1,5 +1,4 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{} Figure XX Plot of values from perturbed WT versus non\PYGZhy{}perturbed}
 \PYG{n}{dict\PYGZus{}perturbed\PYGZus{}norm\PYGZus{}dfs} \PYG{o}{=} \PYG{n}{copy}\PYG{o}{.}\PYG{n}{deepcopy}\PYG{p}{(}\PYG{n}{dict\PYGZus{}norm\PYGZus{}dfs}\PYG{p}{)}
 \PYG{n}{dict\PYGZus{}perturbed\PYGZus{}norm\PYGZus{}dfs}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}WTUR12\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{columns}
 \PYG{k}{for} \PYG{n}{idx} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{9000}\PYG{p}{,}\PYG{l+m+mi}{11000}\PYG{p}{):}

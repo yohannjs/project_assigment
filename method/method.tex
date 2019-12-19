@@ -7,7 +7,8 @@ Oria was preferred over other search engines such as Google Scholar because Oria
 Table \ref{tab:search_results} summarizes the search results. 
 The \textit{Title} and \textit{General content} columns show which terms were used in the different searches; which terms where required to be in the title, and which terms could be in the ''general content'', meaning any part of the article. 
 Let ''$\times$'' represent the AND operator between two search terms, and ''$\wedge$'' represent the OR operator. 
-The ''*'' operator means that the search will include any word beginning with the word before the star, e.g \textit{detect*} includes \textit{detection}, \textit{detecting}, \textit{detected}, etc. 
+The ''*'' operator means that the search will include any word beginning with the word before the star.
+For example \textit{detect*} includes words such as \textit{detection}, \textit{detecting} and \textit{detected}. 
 The $N_f$ and $N_i$ columns show how many results each search yielded, and how many articles from each search were included in the review, respectively. 
 The method of choosing which articles to include is outlined in section \ref{sec:screening}. \bigskip 
 
@@ -38,7 +39,9 @@ There were three levels of screening, screening of the title, abstract, and full
 Title-screening was primarily for seeding out duplicate articles returned from the search-engine. 
 The screening of the abstract and full-article were to identify the articles that were not relevant for the review and exclude them. 
 It has been a challenge to include enough literature to meet the objectives of the review, but also not more literature the author alone could handle. 
-So although the objectives is to get an overview of the different time series clustering methods, and an overview of the current machine learning methods used for monitoring wind turbines, the author does not claim to have made a complete exhaustive summary of all the possible methods. \bigskip
+So although the objectives are to get an overview of the different time series clustering methods, 
+and an overview of the current machine learning methods used for monitoring wind turbines, 
+the author does not claim to have made a complete exhaustive summary of all the possible methods. \bigskip
 
 Search number 1 was used to find existing literature reviews on condition monitoring of wind turbines. 
 Three good literature reviews on the subject where found, and one good review on machine learning methods used for condition monitoring of wind turbines was found in search 2. 
@@ -50,16 +53,16 @@ When screening articles from search 3 articles meeting one (or more) of the crit
     \ra{1.5}
     \begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
         \toprule
-        Criteria                                                                                               & Reason \\
+        Criteria                                                                                      & Reason \\
         \midrule
-        Primary goal is time-series prediction or time-series forecasting.                                                    & It is outside the scope of this assignment.\\
-        Uses subsequence time-series clustering methods.                                                       & It is outside the scope of this assignment.\\
-        Time-series clustering is used only as a minor preprocessing step.                                     & Not considered relevant enough to the objectives of the review.\\
-        Data used is not time series data.                                                                     & Not considered relevant enough to the objectives of the review.\\
-        Paper does not actually use clustering algorithms.                                                     & Not considered relevant enough to the objectives of the review.\\
-        The data used consists of image time series.                                                           & Data to different from data to be used in master thesis.\\
-        The time-series clustering methods explored in the work are \textbf{not} model-based or feature-based. & The raw-data-based approach has been somewhat covered in Espen Waaga's master thesis, hence it is emmitted in this review.\\
-        The specific model-based approach using the tail dependence of time series.                            & Method not found relevant enough for the data that will be used in the master thesis, more relevant for financial time series.\\
+        Primary goal is time-series prediction or time-series forecasting.                            & It is outside the scope of this assignment.\\
+        Uses the subsequence time-series clustering method.                                           & It is outside the scope of this assignment.\\
+        Time-series clustering is used only as a minor preprocessing step.                            & Not considered relevant enough to the objectives of the review.\\
+        Data used is not time series data.                                                            & Not considered relevant enough to the objectives of the review.\\
+        Paper does not actually use clustering algorithms.                                            & Not considered relevant enough to the objectives of the review.\\
+        The data used consists of image time series.                                                  & Data to different from data to be used in master thesis.\\
+        The time-series clustering methods explored in the work are not model-based or feature-based. & The raw-data-based approach has been somewhat covered in Espen Waaga's master thesis, hence it is emmitted in this review.\\
+        The specific model-based approach using the tail dependence of time series.                   & Method not found relevant enough for the data that will be used in the master thesis, more relevant for financial time series.\\
         \bottomrule
     \end{tabular}
     \caption{Exclusion criteria for articles in search 3}

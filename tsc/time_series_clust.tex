@@ -11,7 +11,7 @@ In a wind turbine, measurements of the temperature in the gear box made every 10
 While the set of measurements made every 10 seconds of the temperature in the gear box, the power produced by the turbine, and the wind speed ahead of the blades can be considered a multivariate time series. \bigskip
 
 \section{Overview of Time Series Clustering}
-There are three types of time-series clustering (TSC), \textit{whole-series TSC}, \textit{subsequence TSC} and \textit{time-point TSC}. 
+There are three types of TSC, \textit{whole-series TSC}, \textit{subsequence TSC} and \textit{time-point TSC}. 
 Whole-series TSC is when multiple ''whole'' time series are clustered with respect to each other. 
 Subsequence TSC comprises the clustering of subsequences of the same time series with respect to each other. 
 The defining difference between whole-series and subsequence TSC is that whole-series TSC clusters multiple time series while subsequence TSC clusters different subsequences of the same time series. 
@@ -31,14 +31,14 @@ The underlying assumption being that two time series that appear different might
     \begin{center}
     \input{tsc/tsc_appraches.tex}
     \end{center}
-    \caption{Illustration of the three approaches to TSC, and their components. The illustration is inspired by figure 2 in \textcite{tsc_rev}}.
+    \caption{Illustration of the three approaches to TSC, and their components. The illustration is inspired by figure 2 in \textcite{tsc_rev}.}
     \label{fig:tsc_approaches}
 \end{figure}
 
 The common denominator of the three approaches to TSC mentioned is that they are all made up of three distinct parts: representation method, similarity metric and clustering algorithm. 
 This is illustrated in figure \ref{fig:tsc_approaches}.
 The choice of representation is key, and is the task of retaining the valuable information while disregarding the irrelevant information. 
-When calculating the similarity between all combinations of time series one is clustering, the resulting similarity measures are stored in what is called a \textit{dissimilarity matrix}.
+When calculating the similarity between all combinations of time series, the resulting similarity measures are stored in what is called a \textit{dissimilarity matrix}.
 The choice of similarity metric is important in a raw-data approach as it decides which aspects of the time series will be used to measure (dis)similarity, and has a has a significant impact on the time-complexity of the clustering system. 
 However, the requirements of similarity measure are somewhat relaxed in the feature-based and model-based approaches as the representation method already limits the number of aspects which one can compare time series with, so many of the same similarity measures are used.
 
@@ -46,12 +46,13 @@ However, the requirements of similarity measure are somewhat relaxed in the feat
 To select suitable mathematical models for a dataset, we have to allow for the random nature of future observations. 
 This is done by assuming that each observation in a time series $x_t$ is a realization of a particular random variable $X_t$. 
 The time series can then be modelled as a collection/set of random variables $\{X_t\}$, also known as a \textit{stochastic process} \cite{brockwell_davis_advanced}. 
-In the following subsections the theory of the three most prevalant will be presented: ARMA models, HMM and PCA.
+In the following subsections the theory of the three most common representation methods encountered in literature will be presented: ARMA models, HMM and PCA.
 
-\subsection{Autoregressive Moving Average Model}
+\subsection{Autoregressive Moving Average Model} \label{sec:arma_model}
 To define an ARMA model, one needs to have a clear understanding of the terms white noise process, and stationary process. 
-The stochastic process $\{Z_t\}$ is said to be ''white noise'' with zero mean, and variance $\sigma^2$ ($\{Z_t\} \sim WN(0, \sigma^2)$) if and only if $\{Z_t\}$ is zero mean, and every random variable contained in $\{Z_t\}$ is uncorrelated with every other random variable contained in $\{Z_t\}$. 
-A stochastic process $\{X_t\}$ is said to be weakly wide-sense stationary if the mean, and variance are constant for all terms in the process. 
+The stochastic process $\{Z_t\}$ is said to be ''white noise'' with zero mean, and variance $\sigma^2$ ($\{Z_t\} \sim WN(0, \sigma^2)$) if and only if 
+every random variable contained in $\{Z_t\}$ is zero mean, and uncorrelated with every other random variable contained in $\{Z_t\}$. 
+A stochastic process $\{X_t\}$ is said to be weakly wide-sense stationary if the mean, and variance are constant for all terms contained in $\{X_t\}$. 
 $\{X_t\}$ is said to be weakly short-term stationary if the mean and variance of terms are constant for distinct time periods within the duration of the process, but are not constant for all terms in the process. 
 For brevity the term ''stationary process'' will be used when refering to a \textit{weakly wide-sense stationary process}. 
 An ARMA model descirbes a time series in terms of difference equations. 
@@ -133,6 +134,8 @@ PCA and ICA is are methods for choosing $W$.
 In PCA $W$ is chosen in such a manner that the resulting dimensions are the dimensions with the highest variance.
 The principal components are in fact the eigenvectors of the covarience matrix of $X$, so all the principal components are orthogonal. 
 This is best illustrated graphically as in figure \ref{fig:pca_illustrated} where $w_1$ and $w_2$ illustrate the first and second principal components respectively.
+In ICA one assumes that the matrix of observed variables is a linear combination of mutually independent variables with an addition of noise, as illustrated in equation \ref{eq:ica_basics}. 
+Where $X$ is the matrix of observed variables, $S$ is the matrix of independent hidden variables, $A$ is called a ''mixing matrix'', and creates linear combinations of the columns of $S$ and $E$ is a noise matrix. 
 
 \begin{figure}
     \begin{center}
@@ -140,10 +143,7 @@ This is best illustrated graphically as in figure \ref{fig:pca_illustrated} wher
     \end{center}
     \caption{Illustration of how the principal components are found} 
     \label{fig:pca_illustrated}
-\end{figure}
-
-In ICA one assumes that the matrix of observed variables is a linear combination of mutually independent variables with an addition of noise, as illustrated in equation \ref{eq:ica_basics}. 
-Where $X$ is the matrix of observed variables, $S$ is the matrix of independent hidden variables, $A$ is called a ''mixing matrix'' and $E$ is a noise matrix.  
+\end{figure} 
 
 \begin{equation}
     X = A S + E
@@ -152,7 +152,7 @@ Where $X$ is the matrix of observed variables, $S$ is the matrix of independent 
 
 In ICA one aims to reconstruct $S$ as well as possible.
 ICA is based on the central limit theorem which states that a sum of random variables with arbitrary probability distributions will tend towards a Gaussian distribution. 
-Hence, one chooses $W$ such that the resulting independent components are mutually independent and have propability distributions that are as dissimilar from the Gaussian distribution as possible.
+Hence, in ICA one chooses $W$ such that the resulting independent components are mutually independent and have propability distributions that are as dissimilar from the Gaussian distribution as possible.
 
 \section{Representation Methods} \label{sec:rep_methods}
 There are numerous ways which a time series can be represented. 
@@ -166,20 +166,20 @@ In theory $L=T$, but most often the point of transforming a time series is to re
         \toprule
         Feature extraction method & Articles \\
         \midrule
-        Basic signal statistics.                & \cite{ghsom_optimal_hedge_ratio, tsc_slaughterhouse, road_grade_china_pca_kmeans, auto_encoder_many_tsc_algorithms} \\
-        PCA or ICA.                             & \cite{hysteresis_tsc_tensor_decomp, road_grade_china_pca_kmeans, load_tsc_state_space_model, multivariate_tsc_common_pca, ica_tsc_sea_level, copula_ica_tsc, tsc_slaughterhouse} \\
-        % PCA                                   & \cite{hysteresis_tsc_tensor_decomp, road_grade_china_pca_kmeans, load_tsc_state_space_model, multivariate_tsc_common_pca, tsc_slaughterhouse} \\
-        % ICA                                   & \cite{ica_tsc_sea_level, copula_ica_tsc} \\
-        Time-frequency decomposition.           & \cite{shape_feat_mod_tsc_rfa, wavelet_multivar_tsc_multi_pca, ambient_air_vape_k_means, dwt_hac_kmeans_som, xml_dft_delaunay_traingulation, tsc_total_variation_distance, fragmented_periodogram, BSLEX_nonlin_nonstat_tsc}  \\
-        Matrix, or tensor decomposition.        & \cite{multivar_tsc_riemann_manifold, fuzzy_c_means_pso_svd, svd_birch_tsc_stock_price, hysteresis_tsc_tensor_decomp, tensor_multi_elastic_kernel_tsc} \\
-        % Covarience matrices.                  & \cite{multivar_tsc_riemann_manifold, } \\
-        % Singular value decomposition (SVD).   & \cite{fuzzy_c_means_pso_svd, svd_birch_tsc_stock_price, } \\
-        % Tensor decomposition.                 & \cite{hysteresis_tsc_tensor_decomp, tensor_multi_elastic_kernel_tsc} \\
-        Symbolic aggregate approximation (SAX). & \cite{clust_large_datasets_aghabozorg, apxdist_sax_k_modes, shape_feat_mod_tsc_rfa} \\
-        Permutation based coding.               & \cite{dependency_tsc_energy_markets} \\
-        Spline functions.                       & \cite{hier_clust_w_state_space_models} \\
-        Topological feature extraction.         & \cite{topology_for_shape_based_tsc} \\
-        Autoencoder.                            & \cite{auto_encoder_many_tsc_algorithms} \\
+        Basic signal statistics             & \cite{ghsom_optimal_hedge_ratio, tsc_slaughterhouse, road_grade_china_pca_kmeans, auto_encoder_many_tsc_algorithms} \\
+        PCA or ICA                          & \cite{hysteresis_tsc_tensor_decomp, road_grade_china_pca_kmeans, load_tsc_state_space_model, multivariate_tsc_common_pca, ica_tsc_sea_level, copula_ica_tsc, tsc_slaughterhouse} \\
+        % PCA                               & \cite{hysteresis_tsc_tensor_decomp, road_grade_china_pca_kmeans, load_tsc_state_space_model, multivariate_tsc_common_pca, tsc_slaughterhouse} \\
+        % ICA                               & \cite{ica_tsc_sea_level, copula_ica_tsc} \\
+        Time-frequency decomposition        & \cite{shape_feat_mod_tsc_rfa, wavelet_multivar_tsc_multi_pca, ambient_air_vape_k_means, dwt_hac_kmeans_som, xml_dft_delaunay_traingulation, tsc_total_variation_distance, fragmented_periodogram, BSLEX_nonlin_nonstat_tsc}  \\
+        Matrix, or tensor decomposition     & \cite{multivar_tsc_riemann_manifold, fuzzy_c_means_pso_svd, svd_birch_tsc_stock_price, hysteresis_tsc_tensor_decomp, tensor_multi_elastic_kernel_tsc} \\
+        % Covarience matrices               & \cite{multivar_tsc_riemann_manifold, } \\
+        % Singular value decomposition (SVD)& \cite{fuzzy_c_means_pso_svd, svd_birch_tsc_stock_price, } \\
+        % Tensor decomposition              & \cite{hysteresis_tsc_tensor_decomp, tensor_multi_elastic_kernel_tsc} \\
+        Symbolic aggregate approximation    & \cite{clust_large_datasets_aghabozorg, apxdist_sax_k_modes, shape_feat_mod_tsc_rfa} \\
+        Permutation based coding            & \cite{dependency_tsc_energy_markets} \\
+        Spline functions                    & \cite{hier_clust_w_state_space_models} \\
+        Topological feature extraction      & \cite{topology_for_shape_based_tsc} \\
+        Autoencoder                         & \cite{auto_encoder_many_tsc_algorithms} \\
         \bottomrule
     \end{tabular}
     \caption{Feature-based representation methods}
@@ -197,7 +197,7 @@ and then use PCA for dimensionality reduction. They then use Euclidean distance 
 then represent the time series with a 3-order hysteresis tensors.
 They then use multilinear PCA to reduce the dimensionality of the tensor, and use a selv-developed tensor distance metric to measure similarity between the tensor representations.
 \textcite{multivariate_tsc_common_pca} uses common PCA to represent the centers of clusters.
-The principal components of the principal components are used to reconstruct the time series, and the reconstruction error is used as a similarity metric.
+The principal components of time series in the same cluster are used to reconstruct the time series, and the reconstruction error is used as a similarity metric.
 %% time frequency decomp
 The category of time-frequency decomposition encompasses papers using the DWT, the continous wavelet transform, the DFT, spectral densities and fragmented periodograms.
 \textcite{shape_feat_mod_tsc_rfa, ambient_air_vape_k_means, dwt_hac_kmeans_som} all use the DWT to decompose the time series signals. 
@@ -206,11 +206,11 @@ The category of time-frequency decomposition encompasses papers using the DWT, t
 %% Matrix or tensor decomposition
 \textcite{multivar_tsc_riemann_manifold} suggest representing multivariate time series with their covariance matrices, then projecting them to a tangent space and using the Euclidean distance to measure the similarity between them.
 \textcite{fuzzy_c_means_pso_svd, svd_birch_tsc_stock_price} both use singular value decomposition (SVD) to decompose multivariate time series. 
-\textcite{fuzzy_c_means_pso_svd} uses SVD to represent the time series, and uses a particle swarm optimization to estimate the coefficients of an SVD representation of the cluster centre.
-On the other hand, \textcite{svd_birch_tsc_stock_price} extract windows of the different time series, represent them using SVD, and then reconstruct them with a lower resolution.
-Thus compressing the length time series, this approach can be considered a form of piecewise aggregate approximation. 
+\textcite{fuzzy_c_means_pso_svd} use SVD to represent the time series, and uses a particle swarm optimization to estimate the coefficients of an SVD representation of the cluster centre.
+\textcite{svd_birch_tsc_stock_price} extract windows of the different time series, represent them using SVD, and then reconstruct them with a lower resolution.
+Thus reduicing the time series length, this approach can be considered a form of piecewise aggregate approximation. 
 %% SAX and permutation based coding
-SAX is also a form of piecewise aggregate approximation, but in SAX one represents segments of time series of specified length, with symbols.
+Symbolix aggregate approximation (SAX) is also a form of piecewise aggregate approximation, but in SAX one represents segments of time series of specified length, with symbols.
 This method is also used to compress the length of the time series. 
 \textcite{clust_large_datasets_aghabozorg, apxdist_sax_k_modes} have an approach that uses SAX as a representation method for the time series, and both use the approximate distance as the similarity metric.
 \textcite{shape_feat_mod_tsc_rfa} experiments with SAX as an alternative to the other approaches (AR model, and DWT). For the SAX representation they use the minimum distance between symbolic representations.
@@ -253,7 +253,7 @@ Table \ref{tab:model_repr_meth} shows the different model based representation m
 as one can see the ARMA model is the representation method most frequently encountered. 
 However, within this approach there is also great variety, especially with regard to model complexity.
 \textcite{shape_feat_mod_tsc_rfa, struct_damage_ar_fuzzy_c_means, ar_metric_trimmed_fuzzy_tsc_pm10, tsc_ar_metric_air_pollution} fit the time series with an AR model, and use the similarity between the AR-coefficients to cluster the time series. 
-\textcite{garch_robust_tsc} models the time series with a generalized AR conditional heteroscedasticity model, which is a variation of the ARMA model that is better suited for non-stationary time series. 
+\textcite{garch_robust_tsc} models the time series with a generalized AR conditional heteroscedasticity (GARCH) model, which is a variation of the ARMA model that is better suited for non-stationary time series. 
 More specifically, in GARCH models one models the variance of the innovations component as an ARMA model itself. 
 They then test different similarity metrics based on squared Euclidean distance between the model coefficients to cluster the time series. 
 \textcite{temporal_tsc_threshold_ar_models, fstar_hac_tsc} both use forms of threshold AR models. 
@@ -278,7 +278,7 @@ The idea behind their state space model approach is to model every observed time
 %% Varience rato and Copula
 \textcite{financial_tsc_variance_ratio} use variance ratio statistics to represent the equity index time series, then they use cluster the time series into groups maximizing interdependence between the time series in clusters, and minimizing the interdependence between time series in different clusters. 
 \textcite{copula_fuzzy_tsc_spatial} uses spatial multivariate time series. 
-It extracts the spatial information from the multivariate time series, then goes on to decompose the univariate components into their deterministic and random components described in section \ref{sec:ts_models}.
+It extracts the spatial information from the multivariate time series, then goes on to decompose the univariate components into their deterministic and random components described in section \ref{sec:arma_model}.
 The extracted innovation components are then represented by multivariate cumulative distribution functions, which are called copulas. 
 The similarity metric for the multivariate time series is calculated as the $p$-norm of the difference between their copula representations.
 %% Network model.
@@ -358,13 +358,13 @@ This means that all data objects can have a degree of memberships to all cluster
 This fuzziness property leads to two other parameters that must be defined.
 The power of membership degree which decides how many clusters each data object can be members of, 
 and the degree of membership matrix which keeps track of the membership degrees of all data objects.
-The power of membership degree must be fixed together with the number of clusters, and the degree of membership matrix is updatated each iteration.
+The power of membership degree must be fixed together with the number of clusters, and the degree of membership matrix is updated each iteration.
 
 \subsection{Hierarchical clustering}
 Hierarchical clustering algorithms come in many varieties, but they all build hierarchies of clusters \cite{espen}.
 A great advantage with hierarchical clustering algorithms is that the number of clusters is not specified beforehand. 
 Hierarchical clustering algorithms can be split into agglomorative, and divisive algorithms.
-Agglomorative hierarchical clustering algorithms start with all data objects as their own clusters, then iteratively merges clusters together until there is only one cluster containing all data objects.
+Agglomorative hierarchical clustering algorithms start with all data objects as their own clusters, then iteratively merges clusters until there is only one cluster containing all data objects.
 Divise hierarchical clustering starts with one cluster containing all data objects, and then iteratively splits the clusters into smaller clusters until every data object is contained in a separate cluster.
 To decide which clusters should be merged during a given iteration, the algorithm uses the similarity between clusters, which is called the \textit{linkage criterion}.
 There are four main types of linkage criteria: 
@@ -387,14 +387,14 @@ it is usually used when the model contains hidden variables \cite{em_wikipedia}.
 The expectation algorithm is very complex, but \textcite{mixture_gaussian_hmm} give a good, simple explanation of it:
 It is made up of two steps, the E step and the M step. 
 First one randomly initializes the model parameters, then in the E step one computes the expected value of the hidden variables given the observed data and current model parameters.
-In the M step one then updates the model parameters according to the new values of the hidden variables, using maximum likelihood techniques.
+In the M step one then updates the model parameters according to the new values of the hidden variables, using maximum likelihood techniques \cite{em_wikipedia}.
 A big disadvantage of the expectation-maximization algorithm is that computational time, and storage requirements increase exponentially as the length of the time series increases \cite{mixture_gaussian_hmm},
-meaning that it might be inappropriate for datasets of very long time series, unless one can use a reduced or simplified version of the algorithm. 
+meaning that it might be inappropriate for datasets of very long time series. 
 
 \subsection{Other algorithms}
 %% SOM
 Self-organizing maps (SOM) is a type of ANN that is intended to reduce the dimensionality of high dimensional data objects.
-Different from the ANNs mentioned before is that they are trained with competitive learning, wheras the ANNs mentioned before are usually trained with error-correcting learning algorithms such as back-propagation. \cite{som_wikipedia}
+Different from the ANNs mentioned before is that they are trained with competitive learning, wheras the ANNs that have been mentioned before are usually trained with error-correcting learning algorithms such as back propagation with gradient descent. \cite{som_wikipedia}
 The architecture of the SOM is decided by the dimensions of the time series which are inputed, and the number of clusters one wants to partition the dataset into.
 Hence, the number of clusters the data are to be divided into must be specified beforehand. 
 %% Spectral 
@@ -484,8 +484,8 @@ then the clusters are split into sub-clusters and in the final step they merge t
 \textcite{tensor_multi_elastic_kernel_tsc} develop a multi-kernal clustering algorithm which is supposed to be paired with a tensor representation of time series. 
 \textcite{multivariate_tsc_common_pca} develop an algorithm that is similar to K-means and bases itself on principal component analysis. 
 First cluster centers are randomly initialized, then the cluster centers are represented by the common principle components of all the members in the cluster.
-They then estimates the reconstruction error of every time series using the prototypes of all clusters, and assigns the time series to cluster which minimizes reconstruction error of each time series. 
-Then the common principle components are estimated, and the cycle repeats until the clusters converge. % DENNE MÅ DU TESTE. 
+They then estimates the reconstruction error of every time series using the cluster centers of all clusters, and assigns the time series to cluster which minimizes reconstruction error of each time series. 
+Then the common principle components are estimated, and the cycle repeats until the clusters converge. 
 \textcite{var_multivar_tsc} develops two algorithms which are quite similar, one of them requires the number of clusters to be prespecified, and the other requires an upper limit to the number of cluster to be set. 
 They are based on clustering multivariate time series that are represented with a vector AR model, the euclidean distance between model parameters is measured, 
 and then uses statistical tests to determine whether time series are generated from the same process.

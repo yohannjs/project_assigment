@@ -23,7 +23,7 @@
 \addbibresource{references_other.bib}
 
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % Something about allowing more space between rows in fancy tables.
-\newtheorem{theorem}{Definition} % To allow labelled definitions
+\newtheorem{theorem}{Definition} % To allow labelled definitions 
 
 \begin{document}
 
@@ -32,29 +32,59 @@
 \pagestyle{fancy}
 
 \begin{titlepage}
-    \centering
+    \begin{center}
     
-    {\LARGE A Literature Review of Time-Series Clustering Techniques and Machine Learning Techniques Used for Monitoring of Wind Turbines} \\ [\baselineskip]
+    \LARGE 
+    A Literature Review of Time-Series Clustering Techniques and Machine Learning Techniques Used for Monitoring of Wind Turbines \\
+    \vspace{1cm}
+
+    \Large
+    Written by\\
+    \vspace{0.1cm}
+    \textbf{Yohann  Jacob Sandvik}\\
+    \vspace{1cm}
+    \large
+    Project Assignment TFE4580 \\
+    \vspace{0.5cm}
+    Supervised by\\
+    \vspace{0.1cm}
+    \textbf{Pierluigi Salvo Rossi}\\
+    \vspace{2cm}
+
+    \includegraphics[width=0.5\textwidth]{ntnu_logo}
     
-    {\Large Written by} \\ 
-    {\Large Yohann  Jacob Sandvik } \\
+    \vspace{1cm}
+    \large
+    Department of electronic systems\\
+    Faculty of Information Technology and Electrical Engineering\\
+    Norwegian University of Science and Technology\\
+    \today
 
-    \begin{abstract}
-        This literature review is intended to be a preliminary work for a master thesis. 
-        The objectives of the review were to get an overview of machine learning techniques used to monitor wind turbines,
-        get an overview of the different feature-based and model-based time-series clustering methods, and determine which
-        time-series clustering methods could be relevant for clustering the time series datasets produced by wind turbines in a wind farm.
-        96 articles are reviewed for the purpose of fulfilling these objectives. 
-        The machine learning methods used for monitoring wind turbines can categorized as regression based models, supervised classification based models
-        and unsupervised classification based models. 
-        A brief discussion of each category, and the machine learning algorithms within each category is held.
-        Many feature-based and model-based representation methods are discussed, as well as many clustering algorithms. 
-        The feature-based representation method of principle component analysis (PCA) is tested for exploring a multivariate time series dataset extracted from a wind farm in Norway.
-        Finally the different clustering techniques are discussed, and a choice is made as to which representation methods should be further explored in the master thesis: 
-        PCA, and autoregressive moving average models.
-    \end{abstract}
-
+\end{center}
 \end{titlepage}
+
+\begin{abstract}
+    This literature review is intended to be a preliminary work for a master thesis.
+    The master thesis intends to apply feature-based and model-based time-series clustering techniques on time series data
+    extracted from a wind farm in Norway using the platform Kognifai Empower, developed by Kongsberg Digital. 
+    The review is written to fulfill the requirements of the course TFE4580. 
+    The objectives of the review were to get an overview of machine learning techniques used to monitor wind turbines,
+    get an overview of the different feature-based and model-based time-series clustering methods, and determine which
+    time-series clustering methods could be relevant for clustering the time series datasets produced by wind turbines in a wind farm.
+    96 articles are reviewed for the purpose of fulfilling these objectives. 
+    The machine learning methods used for monitoring wind turbines can categorized as regression based models, supervised classification based models
+    and unsupervised classification based models. 
+    A brief discussion is given of each category, and the machine learning algorithms within each category.
+    Many feature-based and model-based representation methods for time-series clustering are discussed, as well as many clustering algorithms. 
+    The feature-based representation method of principle component analysis (PCA) is tested for exploring a multivariate time series dataset extracted from a wind farm in Norway.
+    Finally the different clustering techniques are discussed, and a choice is made as to which representation methods should be further explored in the master thesis: 
+    PCA, and autoregressive moving average models. \medskip
+
+    \begin{center} \textbf{Acknowledgements} \end{center}
+    I would like to thank my internal supervisor Pierluigi for helping me find, and screen literature, and guide me in writing the assignment.
+    I would like to thank my external supervisor Gerthory Touissaint, and his colleague Hilde Fuglstad at Kongsberg Digital for helping me use the Kognifai Empower platform to aquire time series datasets.
+    Lastly, I would like to thank NTNU professor Adil Rasheed with assistance in the use of PCA for data exploration.
+\end{abstract}
 
 \pagenumbering{arabic} % Page numbering in the table of contents
 \fancyhf{}
