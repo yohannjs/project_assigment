@@ -42,7 +42,7 @@
     \cite{svd_birch_tsc_stock_price}        & Piecewise SVD, and piecewise aggregate approximation.& Euclidean Distance.& BIRCH.& \\ \hline
     \cite{road_grade_china_pca_kmeans}      & Extracts signal statistics, and uses PCA for feature selection.& Euclidean distance.& K-means.& Analyses the correlations of specific features with different clusters.\\ \hline
     \cite{fragmented_periodogram}           & Fragmented periodogram.& Euclidean distance.& Spectral clustering.& \\ \hline
-    \cite{auto_encoder_many_tsc_algorithms} & Extract statistical features of time series, then use a convolutional auto-encoder for further feature extraction.& Mainly Euclidean distance for the model-based approach.& K-means, hierarchical clustering with Ward linkage, spectral clustering, Gaussian mixture models, BIRCH, affinity propagation, mean shift, DBSCAN. &Adjusted Rand index. \\ \hline
+    \cite{auto_encoder_many_tsc_algorithms} & Extract statistical features of time series, then use a convolutional auto-encoder for further feature extraction.& Mainly Euclidean distance for the model-based approach.& Tests many clustering algorithms, but will only consider K-means, hierarchical clustering with Ward linkage, expectation-maximization, spectral clustering and BIRCH. &Adjusted Rand index. \\ \hline
     \cite{load_tsc_state_space_model}       & Compares a feature-based approach using PCA, with a model-based approach using state-space models for the individual time series.& Inverse exponential Euclidean distance for feature based approach, and Euclidean distance for model-based approach.& & Silhouette index as stopping criterion.\\ \hline
     \cite{struct_damage_ar_fuzzy_c_means}   & AR model.& Euclidean distance.& Fuzzy C-means.& \\ \hline
     \cite{fstar_hac_tsc}                    & Flexible space-time autoregressive (FSTAR) models.& Use Wald statistic to compare model parameters of univariate STAR models, and p-value as a similarity metric.& Hierarchical agglomorative clustering.& ARI.\\ \hline
@@ -50,7 +50,7 @@
     \cite{tensor_multi_elastic_kernel_tsc}  & Map the time series to multiple high-dimensional tensors using multiple kernals.& Matrix $L^p$-norms.& Self-developed multi kernal clustering algorithm (MKC).& NMI and Rand Index (RI).\\ \hline
     \cite{var_multivar_tsc}                 & Vector autoregressive (VAR) models.& Euclidean distance.& Test two self-developed algorithms based on performing statistical test of whether time series come from same DGN. & Purity index.\\ \hline
     \hline
-    \caption{Summary of model based time-series clustering methods}
-    \label{tab:machine_learning_wt_cm_summary}
+    \caption{Summary of Summary of articles included from search three in table \ref{tab:search_results}}
+    \label{tab:tsc_summary}
 \end{longtable}
 
