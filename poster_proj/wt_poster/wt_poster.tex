@@ -1,0 +1,73 @@
+\documentclass[18pt, a3paper, portrait]{tikzposter}
+\usepackage[utf8]{inputenc}
+
+\makeatletter
+\def\title#1{\gdef\@title{\scalebox{\TP@titletextscale}{%
+\begin{minipage}[t]{\linewidth}
+\centering
+#1
+\par
+\vspace{0.5em}
+\end{minipage}%
+}}}
+\makeatother
+
+\title{A Literature Review of Time-Series Clustering Techniques and Machine Learning Techniques Used for Monitoring of Wind Turbines}
+\author{Yohann Jacob Sandvik}
+\date{\today}
+\institute{Institute of Electronic Systems - NTNU}
+ 
+\usepackage{blindtext}
+\usepackage{comment}
+\usepackage{tikz} % To make cool diagrams
+\usepackage{booktabs} % For fancy tables
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % Something about allowing more space between rows in fancy tables.
+ 
+\usetheme{Desert}
+ 
+\begin{document}
+ 
+\maketitle 
+
+\begin{columns}
+    \column{0.33}
+    \block{The Wind Turbine Parts}
+    {
+        Text and more text. I want to add a new line. \newline
+        Did it work?
+        \vspace{4cm}
+    }
+ 
+    \column{0.66}
+    \block{Objectives}
+    {
+        Here,  
+        \vspace{4cm}
+    }
+\end{columns}
+ 
+\begin{columns}
+    \column{0.5}
+    \block{Search terms used to find literature}
+    {
+        Text and more text. I want to add a new line. \newline
+        Did it work?
+        \vspace{4cm}
+    }
+ 
+    \column{0.5}
+    \block{Search term explanation}
+    {
+        Here,  
+        \vspace{4cm}
+    }
+\end{columns}
+
+\block{Screening method}
+{
+    \blindtext
+}
+\end{document}
+
+
