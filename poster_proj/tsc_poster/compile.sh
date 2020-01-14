@@ -1,1 +1,1 @@
-latexmk -pdf tsc_poster.tex
+latexmk -pdf -pvc tsc_poster.tex

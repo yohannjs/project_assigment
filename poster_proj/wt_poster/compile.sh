@@ -1,1 +1,1 @@
-latexmk -pdf wt_poster.tex
+latexmk -pdf -pvc wt_poster.tex

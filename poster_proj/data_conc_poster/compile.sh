@@ -1,1 +1,1 @@
-latexmk -pdf data_conc_poster.tex
+latexmk -pdf -pvc data_conc_poster.tex
