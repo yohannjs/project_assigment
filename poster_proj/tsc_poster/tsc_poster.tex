@@ -96,71 +96,90 @@
     \column{0.5}
     \block{Feature-based representations}
     {
-        he
+        \begin{tikzfigure}
+            \includegraphics[width=0.4\textwidth]{images/feature_based_rep_meth_table.png}
+        \end{tikzfigure}
     }
+    \begin{subcolumns}
+    \subcolumn{0.5}
+    \block{K-means}
+    {
+        \begin{itemize}
+            \item Family of hard clustering algorithms.
+            \item Number of clusters -> predetermined.
+            \item Iterative algorithm. 
+            \item Not deterministic.
+        \end{itemize}
+    }
+
+    \subcolumn{0.5}
+    \block{Fuzzy C-means}
+    {
+        \begin{itemize}
+            \item Family of soft clustering algorithms.
+            \item Number of clusters -> predetermined.
+            \item Iterative algorithm. 
+            \item Not deterministic.
+        \end{itemize}
+    }
+    \end{subcolumns}
  
+    \block{Discussion}
+    {
+        \begin{itemize}
+            \item PCA and ICA are considered to be the most viable options for feature-based representations. Because they
+                build on strong theoretical ground, without being overly complex methods they are fairly interpretable.
+            \item Of the model-based representation methods ARMA models were found to be a frequent model
+                used. Since they are also frequently used for feature extraction in wind turbine monitoring they should be considered for a master thesis.
+            \item The HMM is a model-based approach that has showed great promise in terms of
+                representing time series, and has even be used to cluster the time series [91] in a simple manner.
+            \item SOMs have been shown to work well on financial time series by [57, 93], so they
+                could be appropriate for the time series produced by wind turbines. However, ANNs in general
+                require careful design and and long training, so it might take a lot of time away that could be
+                used for testing other approaches. So SOM should not be considered as a primary model-based
+                clustering approach for wind turbine time series.
+        \end{itemize}
+    }
+
     \column{0.5}
     \block{Model-based representations}
     {
-        Here,  
-        \vspace{4cm}
+        \begin{tikzfigure}
+            \includegraphics[width=0.4\textwidth]{images/model_based_rep_meth_table.png}
+        \end{tikzfigure}
+        % \vspace{3cm}
     }
-\end{columns}
-
-%% Clustering algorithms
-\begin{columns}
-    \column{0.25}
-    \block{K-means}
-    {
-        Here,  
-        \vspace{4cm}
-    }
-
-    \column{0.25}
-    \block{Fuzzy C-means}
-    {
-        Here,  
-        \vspace{4cm}
-    }
-
-    \column{0.25}
+    \begin{subcolumns}
+    \subcolumn{0.5}
     \block{Hierarchical Clustering}
     {
-        Here,  
-        \vspace{4cm}
+        \begin{itemize}
+            \item Family of hard clustering algorithms.
+            \item Number of cluster -|> predetermined.
+            \item Builds hierarchies of clusters.
+            \item Similarity between clusters is defined by distance metric, and \textit{linkage}.
+            \item Deterministic.
+        \end{itemize}
     }
 
-    \column{0.25}
+    \subcolumn{0.5}
     \block{Expectation Maximization}
     {
-        Here,  
-        \vspace{4cm}
+        \begin{itemize}
+            \item Iterative algorithm used for estimating model parameters satisfying the ML criterion.
+            \item Is used for clustering by letting each cluster being a generative process.
+            \item Time and storage complexity increase exponentially with time-series length.
+        \end{itemize}
     }
-\end{columns}
-
-%% Clustering algorithms results
-\begin{columns}
-    \column{0.7}
+    \end{subcolumns}
     \block{Clustering Algorithms}
     {
-        Text and more text. I want to add a new line. \newline
-        Did it work?
-        \vspace{4cm}
-    }
- 
-    \column{0.3}
-    \block{~}
-    {
-        Here,  
-        \vspace{4cm}
+        \begin{tikzfigure}
+            \includegraphics[width=0.45\textwidth]{images/clustering_algorithms_table.png}
+        \end{tikzfigure}
     }
 \end{columns}
 
-%% Discussion 
-\block{Discussion}
-{
-    THIS IS THE DISCUSSION, OR IS IT?
-}
 \end{document}
 
 

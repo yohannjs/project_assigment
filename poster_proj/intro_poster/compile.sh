@@ -1,1 +1,1 @@
-latexmk -pdf intro_poster.tex
+latexmk -pdf -pvc intro_poster.tex
